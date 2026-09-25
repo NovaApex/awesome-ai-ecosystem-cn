@@ -1,0 +1,1926 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GitHub 项目简介索引</title>
+<style>
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: #f6f8fa; color: #1f2328;
+         font: 15px/1.7 -apple-system, "Segoe UI", "Microsoft YaHei", sans-serif; }
+  .page { max-width: 980px; margin: 0 auto; padding: 28px 24px 80px; }
+  h1 { font-size: 26px; border-bottom: 2px solid #d0d7de; padding-bottom: 10px; }
+  h2 { font-size: 20px; margin-top: 36px; }
+  blockquote { margin: 0 0 16px; padding: 2px 14px; border-left: 4px solid #d0d7de; color: #656d76; }
+  table { border-collapse: collapse; width: 100%; margin: 12px 0; background: #fff; }
+  th, td { border: 1px solid #d8dee4; padding: 7px 12px; text-align: left; vertical-align: top; }
+  th { background: #f6f8fa; }
+  tr:nth-child(even) td { background: #fbfcfd; }
+  a { color: #0969da; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  code { background: #eff1f3; border-radius: 5px; padding: 1px 5px;
+         font: 13px/1.5 Consolas, "Courier New", monospace; }
+  pre { background: #f6f8fa; border: 1px solid #d8dee4; border-radius: 8px;
+        padding: 12px 14px; overflow-x: auto; }
+  pre code { background: none; padding: 0; }
+  details { background: #fff; border: 1px solid #d0d7de; border-radius: 10px;
+            padding: 10px 16px; margin: 14px 0; }
+  summary { cursor: pointer; font-size: 15px; padding: 6px 4px; border-radius: 6px; user-select: none; }
+  summary:hover { background: #f6f8fa; }
+  .flash { animation: flash 1.6s ease-out 1; }
+  @keyframes flash { 0% { box-shadow: 0 0 0 3px #0969da66; } 100% { box-shadow: 0 0 0 3px #0969da00; } }
+  .searchbar { position: sticky; top: 0; z-index: 20; background: #f6f8fa;
+    padding: 12px 0; margin: 6px 0 2px; border-bottom: 1px solid #d0d7de; }
+  .searchbar input[type=search] { width: 100%; max-width: 560px; box-sizing: border-box;
+    padding: 9px 14px; font-size: 15px; border: 1px solid #d0d7de; border-radius: 8px;
+    background: #fff; color: #1f2328; }
+  .searchbar input[type=search]:focus { outline: 2px solid #0969da55; border-color: #0969da; }
+  .searchcount { margin-left: 10px; color: #656d76; font-size: 13px; white-space: nowrap; }
+  @media (max-width: 600px) { .searchbar input[type=search] { max-width: 100%; } }
+</style>
+</head>
+<body>
+<div class="page">
+<h1>GitHub 项目简介索引</h1>
+<blockquote>
+<p><strong>这是什么</strong>：59 个 GitHub 项目的中文速览索引，每个项目一个折叠块。<strong>怎么读</strong>：先扫目录表的「一句话」列找到感兴趣的，点项目名跳转，或直接在折叠块摘要行点开看细节（仓库 / 定位 / 能力 / 用法 / 要点 五段）。<br />
+<strong>名词口径</strong>：LLM = 大语言模型；Agent = 能自主调用工具完成任务的 AI 智能体；MCP = 让 AI 接入外部工具/数据的开放协议；skill = 给 AI Agent 安装的技能包；hook = 在 AI 工作流程特定节点自动触发的钩子；RAG = 先检索资料再让 AI 作答的技术；agent CLI = 命令行形态的 AI 编程助手；Star ≈ GitHub 收藏数（1k+ 算热门，10k+ 算现象级）。「用法」段的命令（npx / uv / pnpm / docker 等）面向会命令行的读者，看不懂可直接跳过，不影响理解项目本身。<br />
+<strong>维护说明</strong>：新增项目 = 复制一个 <code>&lt;details&gt;</code> 块追加到文末，并在其上方补一行 <code>&lt;a name=&quot;slug&quot; id=&quot;slug&quot;&gt;&lt;/a&gt;</code> 锚点、在下面目录表里加一行。</p>
+</blockquote>
+<h2>📁 项目目录</h2>
+<div class="searchbar">
+  <input type="search" id="ghSearch" placeholder="🔍 搜索项目名 / 仓库 / 简介 / 技术词（如 docker、MCP、TypeScript）" aria-label="搜索 GitHub 项目">
+  <span id="ghCount" class="searchcount"></span>
+</div>
+<table>
+<thead>
+<tr>
+<th>项目</th>
+<th>仓库</th>
+<th>一句话</th>
+</tr>
+</thead>
+<tbody>
+<tr><td colspan="3" style="background:#eaeef2;font-weight:600;">🛠️ 开发工具与运行环境（20）</td></tr>
+<tr>
+<td><a href="#markitdown">MarkItDown</a></td>
+<td><code>microsoft/markitdown</code></td>
+<td>微软开源，把各种文件转成 Markdown 喂给 LLM</td>
+</tr>
+<tr>
+<td><a href="#hyperframes">HyperFrames</a></td>
+<td><code>heygen-com/hyperframes</code></td>
+<td>HeyGen 开源：用写网页(HTML/CSS/JS)的方式做确定性视频，面向 AI 编程智能体</td>
+</tr>
+<tr>
+<td><a href="#chrome-devtools-mcp">chrome-devtools-mcp</a></td>
+<td><code>ChromeDevTools/chrome-devtools-mcp</code></td>
+<td>Chrome DevTools 团队出品：让 AI 编码代理控制/调试真实 Chrome 浏览器的 MCP 服务器</td>
+</tr>
+<tr>
+<td><a href="#playwright">Playwright</a></td>
+<td><code>microsoft/playwright</code></td>
+<td>微软开源：一套 API 驱动 Chromium/Firefox/WebKit 的 Web 测试与自动化框架，如今也是 AI Agent 操作浏览器的首选工具</td>
+</tr>
+<tr>
+<td><a href="#ghidra">Ghidra</a></td>
+<td><code>NationalSecurityAgency/ghidra</code></td>
+<td>美国 NSA 开源的软件逆向工程 (SRE) 框架：反汇编/反编译/图分析/脚本，比肩 IDA Pro</td>
+</tr>
+<tr>
+<td><a href="#voicestudio">VoiceStudio</a></td>
+<td><code>debpalash/VoiceStudio</code></td>
+<td>开源、完全本地的 ElevenLabs 替代：无需 API key 即可声音克隆、视频配音、听写与有声书制作</td>
+</tr>
+<tr>
+<td><a href="#coder">Coder</a></td>
+<td><code>coder/coder</code></td>
+<td>开源自托管云开发环境（CDE）平台：Terraform 定义工作区，AI 编码 agent 跑在自己的基础设施上</td>
+</tr>
+<tr>
+<td><a href="#cua">Cua</a></td>
+<td><code>trycua/cua</code></td>
+<td>开源 computer-use 基础设施：驱动 + 云/本地虚拟桌面 + 专用小模型 + 基准测试，给 AI agent 一台能用的电脑</td>
+</tr>
+<tr>
+<td><a href="#open-code-review-ocr">Open Code Review (ocr)</a></td>
+<td><code>alibaba/open-code-review</code></td>
+<td>阿里开源的 AI 代码审查 CLI：工程规则与 LLM Agent 混合架构，评论精确到具体代码行</td>
+</tr>
+<tr>
+<td><a href="#ai-memory">ai-memory</a></td>
+<td><code>akitaonrails/ai-memory</code></td>
+<td>给 20+ AI 编码 agent CLI 的长期记忆：git 版控 markdown wiki 为源，跨 agent / 跨机器交接，默认零 LLM 调用</td>
+</tr>
+<tr>
+<td><a href="#laya">Laya</a></td>
+<td><code>NandhaKishorM/laya</code></td>
+<td>多语言、非自回归的「系统 1」决策引擎，单次前向推理即在 33ms 内给出类型化判断</td>
+</tr>
+<tr>
+<td><a href="#jev-chat-jarvis">Jev Chat Jarvis</a></td>
+<td><code>jev-chat/jev-chat-jarvis</code></td>
+<td>Android 端非侵入式「对话副驾」，读屏识别聊天意图并生成候选回复但不自动发送</td>
+</tr>
+<tr>
+<td><a href="#claude-code-templates">Claude Code Templates</a></td>
+<td><code>davila7/claude-code-templates</code></td>
+<td>通过 npx 一键为 Claude Code 安装现成 agents / commands / hooks / MCP / skills 的 CLI 与模板库</td>
+</tr>
+<tr>
+<td><a href="#harvey-labs">Harvey LAB</a></td>
+<td><code>harveyai/harvey-labs</code></td>
+<td>面向真实法律场景的 LLM Agent 开源基准与执行评估工具链</td>
+</tr>
+<tr>
+<td><a href="#orca">Orca</a></td>
+<td><code>stablyai/orca</code></td>
+<td>面向并行 AI 编码智能体的桌面/移动 AI 开发环境（ADE）与 CLI</td>
+</tr>
+<tr>
+<td><a href="#officecli">OfficeCLI</a></td>
+<td><code>iOfficeAI/OfficeCLI</code></td>
+<td>专为 AI 代理设计的跨平台 Office CLI，单一二进制处理 Word/Excel/PPT</td>
+</tr>
+<tr>
+<td><a href="#supervision">supervision</a></td>
+<td><code>roboflow/supervision</code></td>
+<td>Roboflow 出品的 Python 计算机视觉工具库（检测/追踪/标注/数据集）</td>
+</tr>
+<tr>
+<td><a href="#prime-agent">Prime Agent</a></td>
+<td><code>PrimeIntellect-ai/prime-agent</code></td>
+<td>自进化的 RLM 编码/研究智能体运行时，含持久 Python 环境与后台 daemon</td>
+</tr>
+<tr>
+<td><a href="#hindsight">Hindsight</a></td>
+<td><code>vectorize-io/hindsight</code></td>
+<td>为 AI Agent 提供能随时间持续学习的长期记忆系统（而非只做对话历史召回）。</td>
+</tr>
+<tr>
+<td><a href="#cli-anything">CLI-Anything</a></td>
+<td><code>HKUDS/CLI-Anything</code></td>
+<td>把任意软件自动改造成 AI Agent 可直接调用的命令行工具。</td>
+</tr>
+<tr><td colspan="3" style="background:#eaeef2;font-weight:600;">🧩 Agent 技能、插件与组件（18）</td></tr>
+<tr>
+<td><a href="#i-have-adhd">i-have-adhd</a></td>
+<td><code>ayghri/i-have-adhd</code></td>
+<td>为 ADHD 读者改写 AI 回复的输出风格 skill：动作优先、编号步骤、可见进度</td>
+</tr>
+<tr>
+<td><a href="#ponytail">Ponytail</a></td>
+<td><code>DietrichGebert/ponytail</code></td>
+<td>反过度工程 skill：让 AI agent 像最懒的资深开发，只写任务真正需要的代码</td>
+</tr>
+<tr>
+<td><a href="#security-audit">security-audit</a></td>
+<td><code>cloudflare/security-audit-skill</code></td>
+<td>Cloudflare 开源：把编码 Agent 变成安全审计员的 skill，编排多个子 Agent 查漏洞并独立复核，产出结构化报告</td>
+</tr>
+<tr>
+<td><a href="#text-to-cad">text-to-cad</a></td>
+<td><code>earthtojake/text-to-cad</code></td>
+<td>造物向 agent 技能库：用一句话/一张图生成 CAD 模型，并一路打通到图纸、切片与 3D 打印</td>
+</tr>
+<tr>
+<td><a href="#browserskill-bsk">BrowserSkill (bsk)</a></td>
+<td><code>Tencent/BrowserSkill</code></td>
+<td>腾讯开源：让 AI Agent 借用你已登录的真实浏览器干活，不打断你自己的工作</td>
+</tr>
+<tr>
+<td><a href="#context-mode">Context Mode</a></td>
+<td><code>mksglu/context-mode</code></td>
+<td>给 AI 编码 Agent 治上下文膨胀：工具输出挡在上下文之外（省 98% token），会话历史落盘可检索</td>
+</tr>
+<tr>
+<td><a href="#fast-jev-compaction">fast-jev-compaction</a></td>
+<td><code>tamaratran/fast-jev-compaction</code></td>
+<td>Claude Code 插件：用 TypeSafe Jev 打分替代压缩摘要，只删过期工具调用、保留内容一字不改</td>
+</tr>
+<tr>
+<td><a href="#jev-ultrafast">Jev Ultrafast</a></td>
+<td><code>browser-use/jev-ultrafast</code></td>
+<td>browser-use 出品的极速浏览器 Agent：每步一次模型调用同时定「做什么 + 点哪里」，官方搜票演示 7.1 秒</td>
+</tr>
+<tr>
+<td><a href="#knowledge-work-plugins">Knowledge Work Plugins</a></td>
+<td><code>anthropics/knowledge-work-plugins</code></td>
+<td>Anthropic 官方开源：按职能岗打包 Claude 的插件市场（销售/法务/财务/数据/设计/工程…）</td>
+</tr>
+<tr>
+<td><a href="#video-use">video-use</a></td>
+<td><code>browser-use/video-use</code></td>
+<td>供编码智能体（Claude Code / Codex / Hermes）使用的视频剪辑 skill，把原始素材自动剪成成片</td>
+</tr>
+<tr>
+<td><a href="#agency-agents-zh">agency-agents-zh</a></td>
+<td><code>jnMetaCode/agency-agents-zh</code></td>
+<td>277 个即插即用中文 AI 专家角色，覆盖 20 个部门、20 种 AI 工具</td>
+</tr>
+<tr>
+<td><a href="#context7-skill">context7-skill</a></td>
+<td><code>netresearch/context7-skill</code></td>
+<td>为 AI 编码智能体提供 Context7 文档查询的轻量 skill（无 MCP 开销）</td>
+</tr>
+<tr>
+<td><a href="#taste-skill">taste-skill</a></td>
+<td><code>Leonxlnx/taste-skill</code></td>
+<td>给 AI 生成前端注入好品味的反套话（anti-slop）设计技能族</td>
+</tr>
+<tr>
+<td><a href="#caveman">Caveman</a></td>
+<td><code>JuliusBrussee/caveman</code></td>
+<td>让编码智能体像穴居人般说话的爆火 skill + 代理，压缩 65% token</td>
+</tr>
+<tr>
+<td><a href="#ui-ux-pro-max-skill">UI UX Pro Max</a></td>
+<td><code>nextlevelbuilder/ui-ux-pro-max-skill</code></td>
+<td>为 AI 编码助手自动生成专业 UI/UX 设计系统的技能（含 192 条规则）</td>
+</tr>
+<tr>
+<td><a href="#baoyu-skills">baoyu-skills</a></td>
+<td><code>JimLiu/baoyu-skills</code></td>
+<td>宝宇分享的 20+ 个 AI Agent 实用技能（图文/信息图/社媒发布等）</td>
+</tr>
+<tr>
+<td><a href="#ppt-master">PPT Master</a></td>
+<td><code>hugohe3/ppt-master</code></td>
+<td>让任意 AI 编码智能体把文档/主题一键生成原生 PowerPoint</td>
+</tr>
+<tr>
+<td><a href="#superpowers">Superpowers</a></td>
+<td><code>obra/superpowers</code></td>
+<td>面向编码智能体的可组合技能框架与软件开发方法论</td>
+</tr>
+<tr><td colspan="3" style="background:#eaeef2;font-weight:600;">🌐 平台与框架（15）</td></tr>
+<tr>
+<td><a href="#teamai">TeamAI</a></td>
+<td><code>Tencent/teamai-cli</code></td>
+<td>腾讯开源：跨多 Agent 统一管理并分发团队技能/规则/MCP/知识库（Make Every Team AI Native）</td>
+</tr>
+<tr>
+<td><a href="#ecc">ECC</a></td>
+<td><code>affaan-m/ECC</code></td>
+<td>Agent harness 性能优化系统：为多平台 AI 编程助手提供技能/本能/记忆/安全与研究优先开发</td>
+</tr>
+<tr>
+<td><a href="#openmaic">OpenMAIC</a></td>
+<td><code>THU-MAIC/OpenMAIC</code></td>
+<td>清华 MAIC 开源：把任意主题/文档变多智能体 AI 互动课堂（幻灯片/测验/模拟/PBL，可语音白板导出）</td>
+</tr>
+<tr>
+<td><a href="#weknora">WeKnora</a></td>
+<td><code>Tencent/WeKnora</code></td>
+<td>腾讯开源 LLM 知识平台：把原始文档变 RAG 问答 + 自主推理 Agent + 自维护 Wiki</td>
+</tr>
+<tr>
+<td><a href="#omnigent">Omnigent</a></td>
+<td><code>omnigent-ai/omnigent</code></td>
+<td>开源 AI Agent 元编排框架 (meta-harness)：统一编排 Claude Code/Codex/Cursor/Pi 等，强制策略与沙箱，跨设备实时协作</td>
+</tr>
+<tr>
+<td><a href="#openresearch-orx">OpenResearch (orx)</a></td>
+<td><code>alphaXiv/OpenResearch</code></td>
+<td>alphaXiv 开源：把编码 Agent 变成研究 Agent 的本地优先工作台</td>
+</tr>
+<tr>
+<td><a href="#agent-native">Agent-Native</a></td>
+<td><code>BuilderIO/agent-native</code></td>
+<td>Builder.io 开源：TypeScript agentic 应用框架，一份 action 同时给 agent 当工具、给 UI 当代码调用</td>
+</tr>
+<tr>
+<td><a href="#ax">AX</a></td>
+<td><code>google/ax</code></td>
+<td>Google 开源的声明式智能体编排运行时，用 YAML 清单在集群里沙箱化、规模化运行自主智能体任务</td>
+</tr>
+<tr>
+<td><a href="#univer">Univer</a></td>
+<td><code>dream-num/univer</code></td>
+<td>开源 Office 套件运行时 SDK，一套架构覆盖表格、文档、幻灯片、PDF 的嵌入编辑与无头处理</td>
+</tr>
+<tr>
+<td><a href="#treg">Treg</a></td>
+<td><code>superdesigndev/treg</code></td>
+<td>面向智能体工具的「OpenRouter」式统一注册表与代理网关，按调用计费并托管凭证</td>
+</tr>
+<tr>
+<td><a href="#agent-substrate">Agent Substrate</a></td>
+<td><code>agent-substrate/substrate</code></td>
+<td>为 Claude Code、CodeX 等 AI 编码智能体提供跨会话有状态运行环境的底层核心系统</td>
+</tr>
+<tr>
+<td><a href="#openhuman">OpenHuman</a></td>
+<td><code>tinyhumansai/openhuman</code></td>
+<td>本地优先的开源 AI 助手框架，集成持久记忆与多智能体编排</td>
+</tr>
+<tr>
+<td><a href="#deepseek-harness">DeepSeek Harness</a></td>
+<td><code>deepseek-ai/deepseek-harness</code></td>
+<td>DeepSeek 开源的插件化 Agent 构建框架（Everything is a Plugin）</td>
+</tr>
+<tr>
+<td><a href="#paperclip">Paperclip</a></td>
+<td><code>paperclipai/paperclip</code></td>
+<td>开源的工作场景 AI 智能体治理控制平面（control plane）</td>
+</tr>
+<tr>
+<td><a href="#semantica">Semantica</a></td>
+<td><code>semantica-agi/semantica</code></td>
+<td>面向上下文与可问责 AI 的图原生基础设施（知识图谱+MCP）</td>
+</tr>
+<tr><td colspan="3" style="background:#eaeef2;font-weight:600;">📚 学习资料与资源列表（7）</td></tr>
+<tr>
+<td><a href="#system-design-notes">System Design Notes</a></td>
+<td><code>liquidslr/system-design-notes</code></td>
+<td>基于《System Design Interview》(Alex Xu) 的分布式系统设计学习笔记，覆盖 28 个经典案例</td>
+</tr>
+<tr>
+<td><a href="#awesome-vibe-coding">Awesome Vibe Coding</a></td>
+<td><code>filipecalegario/awesome-vibe-coding</code></td>
+<td>vibe coding 资源大列表（Awesome List）：12 类工具 / 文档 / 社区全覆盖，五语种并行维护</td>
+</tr>
+<tr>
+<td><a href="#project-based-learning">Project-Based Learning</a></td>
+<td><code>practical-tutorials/project-based-learning</code></td>
+<td>精选的从零构建项目式编程教程索引（awesome list）</td>
+</tr>
+<tr>
+<td><a href="#ai-agent-book">深入理解 AI Agent</a></td>
+<td><code>bojieli/ai-agent-book</code></td>
+<td>开源教材《深入理解 AI Agent：设计原理与工程实践》（含 PDF 与 109 实验）</td>
+</tr>
+<tr>
+<td><a href="#build-your-own-x">Build Your Own X</a></td>
+<td><code>codecrafters-io/build-your-own-x</code></td>
+<td>codecrafters 维护的从零重建你最爱的技术分步教程合集</td>
+</tr>
+<tr>
+<td><a href="#awesome-design-md">Awesome DESIGN.md</a></td>
+<td><code>VoltAgent/awesome-design-md</code></td>
+<td>汇集各大品牌设计系统的 DESIGN.md 文件，供 AI 直接生成一致 UI</td>
+</tr>
+<tr>
+<td><a href="#ai-engineering-from-scratch">AI Engineering From Scratch</a></td>
+<td><code>rohitg00/ai-engineering-from-scratch</code></td>
+<td>从零构建 AI 的免费开源课程（20 阶段 523 课，含技能/MCP 产出）</td>
+</tr>
+<tr><td colspan="3" style="background:#eaeef2;font-weight:600;">🧠 方法论（1）</td></tr>
+<tr>
+<td><a href="#vibe-coding-cn">Vibe Coding CN</a></td>
+<td><code>2025Emma/vibe-coding-cn</code></td>
+<td>中文圈的 Vibe Coding 方法论指南（道法术器）：规划驱动 + 模块化的 AI 结对编程全流程，附工具链与提示词模板</td>
+</tr>
+</tbody>
+</table>
+<hr />
+
+<a name="markitdown" id="markitdown"></a>
+<details>
+<summary><b>MarkItDown</b> · <code>microsoft/markitdown</code> — 微软开源，把各种文件转成 Markdown 喂给 LLM</summary>
+
+<ul>
+<li><strong>仓库</strong>：<a href="https://github.com/microsoft/markitdown">https://github.com/microsoft/markitdown</a></li>
+<li><strong>定位</strong>：轻量 Python 工具，将 PDF / Office / 图片 / 音频 / 网页等转为 Markdown，给大语言模型当预处理喂料（保留结构、丢弃排版、省 token）。</li>
+<li><strong>支持格式</strong>：PDF、PPT、Word、Excel、图片（OCR）、音频（转写）、HTML、CSV/JSON/XML、ZIP、YouTube、EPUB。</li>
+<li><strong>用法</strong>：
+<ul>
+<li>CLI：<code>markitdown file.pdf &gt; out.md</code></li>
+<li>Python：<code>MarkItDown().convert(&quot;x.xlsx&quot;).markdown</code></li>
+<li>Docker：<code>docker run --rm -i markitdown:latest &lt; file.pdf &gt; out.md</code></li>
+</ul>
+</li>
+<li><strong>要点</strong>：分层安全 API（<code>convert</code>→<code>convert_local</code>→<code>convert_response</code>→<code>convert_stream</code>）；插件可扩展；可接 Azure 提升精度。</li>
+</ul>
+
+</details>
+
+<a name="hyperframes" id="hyperframes"></a>
+<details>
+<summary><b>HyperFrames</b> · <code>heygen-com/hyperframes</code> — HeyGen 开源：用写网页(HTML/CSS/JS)的方式做确定性视频，面向 AI 编程智能体</summary>
+
+<ul>
+<li><strong>仓库</strong>：<a href="https://github.com/heygen-com/hyperframes">https://github.com/heygen-com/hyperframes</a></li>
+<li><strong>定位</strong>：HeyGen 开源的视频工具链，核心理念是「视频 = 会动的网页」：用 HTML/CSS/JS 写画面，由 CLI 逐帧渲染成 MP4。所谓确定性，指同一输入永远产出完全相同的帧序列，可以像跑测试一样进 CI（持续集成：提交代码后自动构建/测试的流程）反复验证——这正是它面向 AI 编程智能体的原因：Agent 写网页远比操作传统视频软件可靠，官方为此附带 20+ 个 Agent 技能与 50+ 个可复用 blocks。</li>
+<li><strong>能力/特性</strong>：HTML/CSS/JS 写 composition | 动画适配器(GSAP/CSS/Lottie/Three.js/WAAPI) | 帧精确逐帧 seek 渲染 | 本地/Docker/AWS Lambda/云渲染 | 20+ Agent 技能 + 50+ 可复用 blocks</li>
+<li><strong>用法</strong>：
+<ul>
+<li>CLI: npx hyperframes init my-video &amp;&amp; cd my-video &amp;&amp; npx hyperframes render</li>
+<li>项目级 skill: 已装在 .workbuddy/skills/，对 WorkBuddy 说'用 hyperframes 做视频'自动路由子技能</li>
+<li>Agent: npx skills add heygen-com/hyperframes</li>
+</ul>
+</li>
+<li><strong>要点</strong>：Apache 2.0 免费开源；对比 Remotion 无需构建、不依赖 React；确定性: 同输入→同帧→同输出，可跑 CI；中文字体需 @font-face { src: local('Microsoft YaHei') } 声明；渲染需 Node 22+ 与 FFmpeg</li>
+</ul>
+
+</details>
+
+<a name="i-have-adhd" id="i-have-adhd"></a>
+<details>
+<summary><b>i-have-adhd</b> · <code>ayghri/i-have-adhd</code> — 为 ADHD 读者改写 AI 回复的输出风格 skill：动作优先、编号步骤、可见进度</summary>
+
+<ul>
+<li><strong>仓库</strong>：<a href="https://github.com/ayghri/i-have-adhd">https://github.com/ayghri/i-have-adhd</a></li>
+<li><strong>定位</strong>：输出风格类 skill（MIT 开源）。把 AI 回复重塑成 ADHD 脑更易行动的形态：先给下一步动作、多步任务编号、每轮重述进度、抑制题外话、给具体时间估算、让已完成成果可见、去客套。显式触发（<code>/i-have-adhd</code>），持续到 &quot;stop adhd mode&quot; 才关，不随话题切换失效。</li>
+<li><strong>能力/规则</strong>：10 条输出规则（动作先行、编号多步、结尾给一个 &lt;2 分钟的具体下一步、抑制题外、每轮重述状态、用具体时间单位、成果可见、错误就事论事、长列表分组排序、零客套）；并提供&quot;何时破例&quot;（用户要求解释/危险操作先确认/调试死循环/真实歧义/规则与任务冲突/规则与 harness 冲突）。</li>
+<li><strong>用法</strong>：
+<ul>
+<li>项目级 skill: 已装在 <code>.workbuddy/skills/i-have-adhd/</code>，对 WorkBuddy 说&quot;用 i-have-adhd 模式&quot;或输入 <code>/i-have-adhd</code> 触发</li>
+<li>原仓库多平台: Claude Code / Codex / Cursor / Gemini / OpenAI 均提供安装（含 SessionStart 的 always-on hooks 与 agents 命令）</li>
+</ul>
+</li>
+<li><strong>要点</strong>：frontmatter 含 <code>disable-model-invocation:true</code>（仅显式调用，不自动接管输出）；always-on hooks 需用户手动建 flag 文件才触发，且只打印规则文本、不跑命令/不联网；WorkBuddy 只读取 SKILL.md，Claude 专用 hooks/extensions/scripts 在本环境不运行。</li>
+</ul>
+
+</details>
+
+<a name="teamai" id="teamai"></a>
+<details>
+<summary><b>TeamAI</b> · <code>Tencent/teamai-cli</code> — 腾讯开源：跨多 Agent 统一管理并分发团队技能/规则/MCP/知识库（Make Every Team AI Native）</summary>
+
+<ul>
+<li><strong>仓库</strong>：<a href="https://github.com/Tencent/teamai-cli">https://github.com/Tencent/teamai-cli</a></li>
+<li><strong>定位</strong>：腾讯开源的团队 AI 协同 CLI（包名 <code>teamai-cli</code>，命令 <code>teamai</code>）。一句话：&quot;Make Every Team AI Native&quot;——把团队的技能(skills)、规则(rules)、MCP、知识库、agents、hooks 经共享 Git 仓库统一分发到 Claude Code / Codex / CodeBuddy / WorkBuddy / Cursor 等多种 AI Agent，实现 <code>push</code>→审查→<code>pull</code> 的团队协同。</li>
+<li><strong>能力（三层架构）</strong>：① Team Execution：经共享 Git 仓库分发技能/规则/文档/agents/hooks/MCP/环境变量，支持 Roles、Tags、Sources 精细控制；② Team Context(beta)：Stop hook 按&quot;摩擦信号&quot;自动建议沉淀经验、内置 <code>teamai-recall</code> 子代理（BM25 全文检索 + 代码图谱）自动召回团队知识、<code>teamai import</code> 把源码解析为 <code>teamwiki/</code> 结构化知识图谱；③ Team Improvement(beta)：知识健康维护、周报 <code>digest</code>、会话保存、可视化 <code>dashboard</code>。</li>
+<li><strong>用法</strong>：
+<ul>
+<li>安装：<code>npm install -g teamai-cli</code></li>
+<li>初始化(项目级)：<code>cd &lt;project&gt; &amp;&amp; teamai init &lt;team-repo&gt;</code></li>
+<li>初始化(用户级)：<code>teamai init &lt;team-repo&gt; --scope user</code></li>
+<li>常用：<code>teamai pull</code>(拉取注入) / <code>teamai push</code>(推送并发 MR) / <code>teamai recall enable</code>(开召回) / <code>teamai import --from-repo &lt;repo&gt;</code>(建代码图谱) / <code>teamai status</code> / <code>teamai doctor</code> / <code>teamai uninstall</code></li>
+</ul>
+</li>
+<li><strong>要点</strong>：MIT 开源；原生支持 WorkBuddy 与 CodeBuddy（本机即 CodeBuddy 环境），本地同步路径如 <code>~/.claude/skills</code>、<code>~/.codebuddy/skills</code>；Git 提供商支持 GitHub / GitLab / GitCode / CNB / TGit / 私有服务；Context/Improvement 两层仍处 beta。</li>
+</ul>
+
+</details>
+
+<a name="system-design-notes" id="system-design-notes"></a>
+<details>
+<summary><b>System Design Notes</b> · <code>liquidslr/system-design-notes</code> — 基于《System Design Interview》(Alex Xu) 的分布式系统设计学习笔记，覆盖 28 个经典案例</summary>
+
+<ul>
+<li><strong>仓库</strong>：<a href="https://github.com/liquidslr/system-design-notes">https://github.com/liquidslr/system-design-notes</a></li>
+<li><strong>定位</strong>：个人学习笔记，整理 Alex Xu《System Design Interview — An Insider's Guide》(Vol 1 &amp; 2, 2nd Ed) 的核心内容，作为系统设计面试/自学的参考资料。作者标注为 work in progress。</li>
+<li><strong>内容/涵盖（28 章）</strong>：从零扩容到百万用户、Back-of-the-envelope 估算、系统设计面试框架、限流器、一致性哈希、KV 存储、分布式唯一 ID、短链、爬虫、通知/新闻流/聊天系统、搜索补全、YouTube、Google Drive、近邻服务、Google Maps、分布式消息队列、监控告警、广告点击聚合、酒店预订、分布式邮件、类 S3 对象存储、实时游戏排行榜、支付 / 钱包 / 股票交易所等。</li>
+<li><strong>用法</strong>：直接读各章 <code>NN. Topic/</code> 下的 Markdown；或在线版 <a href="https://pagefy.io/system-design/system-design-interview-by-alex-xu">https://pagefy.io/system-design/system-design-interview-by-alex-xu</a>。免费自学资源，无需安装。</li>
+<li><strong>要点</strong>：配套 ByteByteGo 课程与 Alex Xu 原书；章节持续补充中（WIP）；适合面试冲刺与系统搭建知识框架，非独立权威教材，建议结合原书/课程使用。License 未在 README 中明确声明。</li>
+</ul>
+
+</details>
+
+<a name="ecc" id="ecc"></a>
+<details>
+<summary><b>ECC</b> · <code>affaan-m/ECC</code> — Agent harness 性能优化系统：为多平台 AI 编程助手提供技能/本能/记忆/安全与研究优先开发</summary>
+
+<ul>
+<li><strong>仓库</strong>：<a href="https://github.com/affaan-m/ECC">https://github.com/affaan-m/ECC</a></li>
+<li><strong>定位</strong>：Agent harness 性能优化系统（&quot;Skills, instincts, memory, security, and research-first development&quot;），面向 Claude Code / Codex / OpenCode / Cursor 等多种 AI 编程助手，统一注入技能、规则、记忆与安全加固。</li>
+<li><strong>能力/模块</strong>：<code>agents</code>(代理) / <code>commands</code>(命令) / <code>rules</code>(规则) / <code>hooks</code>(钩子) / <code>skills</code>(技能) / <code>contexts</code>(上下文) / <code>mcp-configs</code>(MCP 连接器配置)；安全侧重 prompt-injection 防护与 fail-closed 策略；记忆隔离持久化（<code>ECC_AGENT_DATA_HOME</code>）；研究优先（<code>research/</code>）与团队知识召回。</li>
+<li><strong>用法</strong>：
+<ul>
+<li>安装：仓库根 <code>./install.sh</code>(macOS/Linux) 或 <code>install.ps1</code>(Windows)，含交互式多 harness 引导安装（guided multi-harness installer）</li>
+<li>诊断：<code>ecc-universal doctor</code></li>
+<li>MCP 工作流示例：<code>ecc ito accept &lt;ticket-id&gt;</code></li>
+</ul>
+</li>
+<li><strong>要点</strong>：MIT 开源；适配 harness 极广——含 Claude / Codex / OpenCode / Cursor / Gemini / Qwen / Kimi / Trae / <strong>CodeBuddy(Tencent)</strong> / <strong>Hermes</strong> / OpenClaw / Kiro / VS Code 等（与你本机 CodeBuddy/Hermes 环境对口）；技术栈 JS·Node·TS + Python(LLM 模块) + Rust(<code>ecc2/</code>) + Shell。</li>
+</ul>
+
+</details>
+
+<a name="chrome-devtools-mcp" id="chrome-devtools-mcp"></a>
+<details>
+<summary><b>chrome-devtools-mcp</b> · <code>ChromeDevTools/chrome-devtools-mcp</code> — Chrome DevTools 团队出品：让 AI 编码代理控制/调试真实 Chrome 浏览器的 MCP 服务器</summary>
+
+<ul>
+<li><strong>仓库</strong>：<a href="https://github.com/ChromeDevTools/chrome-devtools-mcp">https://github.com/ChromeDevTools/chrome-devtools-mcp</a></li>
+<li><strong>定位</strong>：由 Chrome DevTools 团队（Google）维护，基于 MCP（Model Context Protocol）的浏览器控制与调试服务器，把 Chrome DevTools 的完整能力暴露给 AI 编码助手（Antigravity / Claude / Cursor / Copilot / Gemini 等），用于可靠的前端自动化、深度调试与性能分析。同时提供 <code>chrome-devtools</code> CLI 供非 MCP 场景使用。</li>
+<li><strong>能力/特性</strong>：性能洞察（录制 trace（性能追踪记录）并提取可执行性能建议，可接 Google CrUX 真实用户体验数据）；高级浏览器调试（分析网络请求、截图、读取带 source-map 的 console 堆栈）；可靠自动化（基于 Puppeteer，自动等待动作结果）；1.9.0 新增 Agent Plugins（<code>.claude-plugin</code> / <code>.cursor-plugin</code> / <code>.gemini</code> 扩展）、<code>get_css_styles</code>（含容器查询解析）、cookie 调试、<code>--slim</code> 精简模式、screencast 帧率选项、可配置文件系统根目录等。</li>
+<li><strong>用法</strong>：
+<ul>
+<li>MCP 客户端配置（写入对应客户端 config，如 <code>claude_desktop_config.json</code> / <code>.cursor/mcp.json</code>）：<pre><code class="language-json">{
+  &quot;mcpServers&quot;: {
+    &quot;chrome-devtools&quot;: {
+      &quot;command&quot;: &quot;npx&quot;,
+      &quot;args&quot;: [&quot;-y&quot;, &quot;chrome-devtools-mcp@latest&quot;]
+    }
+  }
+}
+</code></pre>
+</li>
+<li>仅基础浏览器任务：<code>args</code> 加 <code>&quot;--slim&quot;, &quot;--headless&quot;</code></li>
+<li>关闭使用统计遥测：args 加 <code>&quot;--no-usage-statistics&quot;</code>，或设环境变量 <code>CHROME_DEVTOOLS_MCP_NO_USAGE_STATISTICS</code> / <code>CI</code></li>
+<li>关闭 CrUX 真实数据回传：<code>--no-performance-crux</code></li>
+<li>首条测试 prompt：<code>Check the performance of https://developers.chrome.com</code></li>
+</ul>
+</li>
+<li><strong>要点</strong>：Apache-2.0 开源；官方仅支持 Google Chrome 与 Chrome for Testing；要求 Node.js LTS、Chrome 当前稳定版、npm；默认会采集匿名使用统计（可关闭）；默认周期性检查 npm 更新（可设 <code>CHROME_DEVTOOLS_MCP_NO_UPDATE_CHECKS</code> 关闭）；浏览器由首次工具调用触发启动，仅连上 MCP 不会自动起浏览器；在浏览器中的内容对 MCP 客户端可见，敏感信息勿共享。</li>
+</ul>
+
+</details>
+
+<a name="openmaic" id="openmaic"></a>
+<details>
+<summary><b>OpenMAIC</b> · <code>THU-MAIC/OpenMAIC</code> — 清华 MAIC 开源：把任意主题/文档变多智能体 AI 互动课堂（幻灯片/测验/模拟/PBL，可语音白板导出）</summary>
+
+<ul>
+<li><strong>仓库</strong>：<a href="https://github.com/THU-MAIC/OpenMAIC">https://github.com/THU-MAIC/OpenMAIC</a>（中文文档：README-zh.md）</li>
+<li><strong>定位</strong>：Open Multi-Agent Interactive Classroom（开源多智能体互动课堂）。将任意主题或文档一键转化为丰富互动学习体验：自动生成演示幻灯片、测验、HTML 交互式模拟与项目制学习（PBL），由 AI 老师和 AI 同学进行语音讲解、白板绘图并实时讨论。</li>
+<li><strong>能力/特性</strong>：两阶段课堂流水线（大纲生成→场景生成）；四类场景组件——🎓 幻灯片（聚光灯/激光笔讲解）、🧪 测验（AI 实时判分）、🔬 交互式 HTML 模拟、🏗️ PBL 角色协作；深度交互模式（v0.2.0+）含 3D 可视化/模拟/游戏/思维导图/在线编程；多智能体讨论、圆桌辩论、共享白板实时推导；TTS（文字转语音）语音合成（VoxCPM2 音色克隆）、ASR（语音转文字）语音识别、网络搜索；11 种语言国际化、暗色模式；可导出可编辑 <code>.pptx</code>、自包含交互式 <code>.html</code>、课堂 ZIP，外部资源以 <code>data:</code> URI 内联，完全离线播放。</li>
+<li><strong>用法</strong>：
+<ul>
+<li>环境：Node.js &gt;= 22.19、pnpm &gt;= 10</li>
+<li>本地：<code>git clone https://github.com/THU-MAIC/OpenMAIC.git &amp;&amp; cd OpenMAIC &amp;&amp; pnpm install</code></li>
+<li>配置：<code>cp .env.example .env.local</code>（至少填一个 LLM API Key，如 <code>OPENAI_API_KEY=sk-...</code>）</li>
+<li>开发：<code>pnpm dev</code>（访问 http://localhost:3000）；生产：<code>pnpm build &amp;&amp; pnpm start</code></li>
+<li>Docker：<code>docker compose up --build</code>（先填 <code>.env.local</code>）；可选持久化（PostgreSQL）/ 视频导出渲染服务 / Vercel 一键部署</li>
+<li>Agent 集成：内置 OpenMAIC Skill，可直接在 OpenClaw、Codex、DeepSeek、<strong>WorkBuddy</strong> 等 Agent 工作台或飞书/Slack 等 20+ 聊天应用里生成课堂（零配置）</li>
+</ul>
+</li>
+<li><strong>要点</strong>：MIT 开源（v0.3.0 起由 AGPL-3.0 改为 MIT，可免费商用；<code>packages/mathml2omml</code> 为 LGPL-3.0-or-later 例外）；技术栈 Next.js 16 + React 19 + Tailwind 4 + LangGraph 1.1；支持 OpenAI/Azure/Anthropic/Bedrock/Gemini/DeepSeek/通义/Qwen/Kimi/MiniMax/Grok/智谱/豆包/混元/Ollama 等广泛模型与本地推理；商业合作联系 <code>thu_maic@mail.tsinghua.edu.cn</code>。</li>
+</ul>
+
+</details>
+
+<a name="weknora" id="weknora"></a>
+<details>
+<summary><b>WeKnora</b> · <code>Tencent/WeKnora</code> — 腾讯开源 LLM 知识平台：把原始文档变 RAG 问答 + 自主推理 Agent + 自维护 Wiki</summary>
+
+<ul>
+<li><strong>仓库</strong>：<a href="https://github.com/Tencent/WeKnora">https://github.com/Tencent/WeKnora</a></li>
+<li><strong>定位</strong>：腾讯开源的企业级 LLM 知识平台（&quot;Turn Documents into Living Knowledge with RAG, Agents and Auto-Wiki&quot;）。围绕三大场景：① RAG 快速问答；② ReAct Agent（推理与行动交替进行的自主智能体，自主编排检索、MCP 工具、技能沙箱与联网搜索）；③ Wiki 模式（Agent 把原始文档蒸馏为自维护、互联的 Markdown 知识库与知识图谱）。强调模块化、可私有化部署（数据主权）、多租户 RBAC（基于角色的访问控制）、跨会话长期记忆。</li>
+<li><strong>能力/特性</strong>：
+<ul>
+<li><strong>智能对话</strong>（ReACT 多步推理、RAG 问答、Wiki 自动生成/编辑、技能沙箱 shell_exec 与文件操作、跨会话长期记忆 <code>search_memory</code>）</li>
+<li><strong>知识管理</strong>（FAQ/文档/Wiki 三类知识库、文件夹树保留目录结构、分块编辑与版本回滚、飞书/GitLab/腾讯 IMA/Notion/语雀/RSS 自动同步、支持 PDF/Word/Excel/PPT/图片/XMind 等 10+ 格式、BM25/稠密向量/GraphRAG/父子分块/HNSW-pgvector 检索）</li>
+<li><strong>平台集成</strong>（20+ LLM、多种向量库与对象存储、企业微信/飞书/Slack/Telegram 等 IM、网站嵌入组件、官方 MCP Server <code>tencent-weknora-mcp</code> 含 29 个工具、AES-256-GCM 加密、SSRF（服务端请求伪造）防护、OIDC（统一登录认证）、RBAC 审计、Langfuse 追踪）</li>
+</ul>
+</li>
+<li><strong>用法</strong>：
+<ul>
+<li>前置：Docker + Docker Compose + Git</li>
+<li>启动：<code>git clone https://github.com/Tencent/WeKnora.git &amp;&amp; cd WeKnora &amp;&amp; cp .env.example .env &amp;&amp; docker compose pull &amp;&amp; docker compose up -d</code>（访问 http://localhost，后端 API http://localhost:8080）</li>
+<li>升级：在 <code>.env</code> 设 <code>WEKNORA_VERSION</code> 后 <code>docker compose pull &amp;&amp; docker compose up -d</code></li>
+<li>命令行 CLI：<pre><code class="language-bash">weknora profile add prod --host https://kb.example.com --use
+weknora auth login
+weknora kb list
+weknora link --kb my-knowledge-base   # 绑定当前目录
+weknora doc upload notes.md
+weknora chat &quot;summarise the design doc&quot;
+</code></pre>
+（CI/无头环境设 <code>WEKNORA_API_KEY</code> + <code>WEKNORA_HOST</code> 跳过登录）</li>
+</ul>
+</li>
+<li><strong>要点</strong>：MIT 开源；部署形态 Local / Docker / Kubernetes(Helm)，支持私有云与离线；客户端覆盖 Web UI / REST API / CLI / Chrome 扩展 / 网站嵌入 / 微信小程序；支持 OpenAI/Azure/Anthropic/DeepSeek/通义/智谱/混元/豆包/Gemini/Ollama 等广泛模型与向量库；与你本机的 CodeBuddy/WorkBuddy MCP 生态对口。</li>
+</ul>
+
+</details>
+
+<a name="ponytail" id="ponytail"></a>
+<details>
+<summary><b>Ponytail</b> · <code>DietrichGebert/ponytail</code> — 反过度工程 skill：让 AI agent 像最懒的资深开发，只写任务真正需要的代码</summary>
+
+<ul>
+<li><strong>仓库</strong>：<a href="https://github.com/DietrichGebert/ponytail">https://github.com/DietrichGebert/ponytail</a></li>
+<li><strong>定位</strong>：一款反过度工程（over-engineering）的 AI agent skill/插件，核心口号 <em>&quot;Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.&quot;</em>（最好的代码是你从没写过的代码）。实测基于真实 Claude Code 会话：相比无技能基线 LOC -54%、tokens -22%、cost -20%、time -27%，安全性保持 100%。与 <code>caveman</code>（压缩对话文本）互补——ponytail 精简构建出的代码，caveman 精简说的话。</li>
+<li><strong>能力/特性</strong>：决策阶梯（写码前停在第一个成立处：① 需要存在吗（YAGNI：You Ain't Gonna Need It，别为想象中的需求写代码）→② 代码库已有→③ 标准库→④ 平台原生→⑤ 已装依赖→⑥ 一行搞定→⑦ 才写最小可用）；<code>ponytail:</code> 前缀注释标记刻意简化，供 <code>/ponytail-debt</code> 统计；安全底线永不裁减（trust-boundary/数据丢失/安全/可访问性）；规则自动注入 Agent 生成的子代理（可用 <code>PONYTAIL_SUBAGENT_MATCHER</code> 正则控制）。</li>
+<li><strong>用法</strong>：
+<ul>
+<li>环境：需 <code>node</code> 在 PATH（插件跑两个微小 Node 生命周期 hooks）；缺失则 skill 仍可用但 always-on 激活静默失效</li>
+<li>Claude Code 安装：分两次发送 <code> /plugin marketplace add DietrichGebert/ponytail</code> 与 <code>/plugin install ponytail@ponytail</code></li>
+<li>其它平台示例：Codex <code>codex plugin add ponytail@ponytail</code>；OpenCode 在 <code>opencode.json</code> 加 <code>{&quot;plugin&quot;:[&quot;@dietrichgebert/ponytail&quot;]}</code>；Gemini CLI <code>gemini extensions install https://github.com/DietrichGebert/ponytail</code>；Grok Build <code>grok plugin install DietrichGebert/ponytail --trust</code>；Cursor/Windsurf/Cline 等复制规则文件；VS Code+Codex/Junie/Amp/Jules 利用根目录 <code>AGENTS.md</code> 零配置生效</li>
+<li>命令：<code>/ponytail [lite|full|ultra|off]</code>（设强度/关闭，无参报当前级别）、<code>/ponytail-review</code>（审 diff 过度工程）、<code>/ponytail-audit</code>（审计全仓）、<code>/ponytail-debt</code>（收集捷径到账本）、<code>/ponytail-gain</code>（影响记分牌）、<code>/ponytail-help</code>；默认模式 <code>full</code>，可用 <code>PONYTAIL_DEFAULT_MODE</code> 或 <code>~/.config/ponytail/config.json</code> 的 <code>defaultMode</code> 设置</li>
+<li>卸载：先 <code>node scripts/uninstall.js</code> 清理状态，再执行 host 移除命令（如 <code>/plugin remove ponytail</code>）</li>
+</ul>
+</li>
+<li><strong>要点</strong>：MIT 开源（作者称 <em>&quot;The shortest license that works.&quot;</em>）；宣称兼容 20 个 agents（Claude Code/Codex/Devin/OpenCode/Gemini CLI/Hermes/OpenClaw 等原生支持，Cursor/Windsurf/Cline/Copilot 等用规则文件适配器，VS Code+Codex/Junie/Amp/Jules 零配置）；与你本机 Hermes Agent 环境对口。</li>
+</ul>
+
+</details>
+
+<a name="open-code-review-ocr" id="open-code-review-ocr"></a>
+<details>
+<summary><b>Open Code Review (ocr)</b> · <code>alibaba/open-code-review</code> — 阿里开源的 AI 代码审查 CLI：工程规则与 LLM Agent 混合架构，评论精确到具体代码行</summary>
+
+<ul>
+<li><strong>仓库</strong>：<a href="https://github.com/alibaba/open-code-review">https://github.com/alibaba/open-code-review</a>（官网 <a href="https://open-codereview.ai">https://open-codereview.ai</a>，中文文档 docs/i18n/README.zh-CN.md）</li>
+<li><strong>定位</strong>：AI 驱动的代码审查 CLI（命令 <code>ocr</code>，npm 包 <code>@alibaba-group/open-code-review</code>）。源自阿里集团内部的官方 AI 代码审查助手——该助手两年间服务数万开发者、发现数百万代码缺陷，现已开源。读取 Git diff → 交给具备工具调用能力的可配置 LLM Agent → 产出带行级精度的结构化审查评论；Agent 可读完整文件、搜索代码库、查看其他变更文件补充上下文。除 diff 审查外，<code>ocr scan</code> 可整文件/整目录扫描（无需 git 历史），用于审计陌生代码库。</li>
+<li><strong>核心设计（确定性工程 × Agent 混合）</strong>：工程侧硬约束——精确文件选择（不漏重要变更）、智能文件打包（相关文件捆成单审查单元，如中英 properties 一起，各包作为子 Agent 隔离上下文，天然支持大变更集并发）、细粒度规则匹配（模板引擎驱动，比纯自然语言更稳定可预测）、外置定位与反思模块（独立提升评论位置与内容准确度）；Agent 侧动态决策——场景调优提示词（提效降 token）与场景调优工具集（从大规模生产数据的工具调用轨迹提炼，比通用工具包更稳）。</li>
+<li><strong>基准表现</strong>：同模型下相比通用 Agent（Claude Code）<strong>Precision 与 F1 显著更高</strong>，仅消耗约 <strong>1/9 的 token</strong>、速度更快；Recall 刻意低于通用 Agent，属&quot;精度优先于噪声&quot;的主动取舍。基准集 AACR-Bench：50 个热门开源仓库 + 200 个真实 PR + 10 种语言，80+ 资深工程师交叉校验（1,505 条标注 ground-truth 问题），已发布在 Hugging Face。</li>
+<li><strong>能力/特性</strong>：内置多语言规则集（NPE 空指针、线程安全、XSS、SQL 注入等）；兼容 OpenAI 与 Anthropic 协议；<strong>委托模式（Delegation Mode）</strong>——由宿主编码 Agent 用自家 LLM 执行审查，OCR 只管文件选择与规则解析，无需配置 API Key；<strong>会话查看器</strong>——浏览器中浏览/重放审查会话，标记评论为已修复/已忽略；OpenTelemetry 可观测性；中断恢复（<code>session list</code> + <code>--resume</code>）；<code>--format json --output</code> 供 AI 宿主 Agent 消费。</li>
+<li><strong>用法</strong>：
+<ul>
+<li>前置：Git &gt;= 2.41</li>
+<li>安装：<code>npm install -g @alibaba-group/open-code-review</code>（另支持安装脚本 / GitHub Release 二进制 / 源码编译）；装完全局可用 <code>ocr</code></li>
+<li>配置模型（委托模式可跳过）：<code>ocr config provider</code> 选内置或自定义供应商 → <code>ocr config model</code> 选模型；交互式引导填 API Key 并自动测连通</li>
+<li>审查：<pre><code class="language-bash">ocr review                                   # 工作区模式：暂存+未暂存+未跟踪的全部变更
+ocr review --from main --to feature-branch   # 分支区间（从两分支共同祖先起算）
+ocr review --commit abc123                   # 单个提交
+ocr session list &amp;&amp; ocr review --from main --to feature-branch --resume &lt;session-id&gt;   # 恢复中断
+ocr scan                                     # 全仓整文件扫描（无 git 历史亦可）
+ocr scan --path internal/agent               # 指定目录/文件
+ocr review --format json --output result.json # 结果落盘（推荐给 AI 宿主 Agent）
+ocr delegate preview / ocr delegate rule src/main.go   # 委托模式
+</code></pre>
+</li>
+<li>平台集成：Claude Code / Codex / Cursor / OpenCode / QCA Forward 均有插件（斜杠命令或原生工具），Skill 兼容型 Agent 装可移植 skill；CI/CD 支持 GitHub Actions、GitLab CI、GitFlic CI、Gerrit；可通过 MCP Server 扩展审查 Agent 的外部工具。</li>
+</ul>
+</li>
+<li><strong>要点</strong>：Apache-2.0 开源（Copyright 2026 Alibaba）；主语言 <strong>Go</strong>，另有 Node/TS（<code>bin/ocr.js</code> 启动器、<code>extensions/vscode</code> VS Code 扩展）；GitHub 约 28.9k Star / 2.06k Fork（2026-09 数据），698 Commits，最新版 <strong>v1.12.3</strong>（2026-09-16，含密钥路径 allowlist 保护、工具调用 JSON 容错、防路径穿越修复）；仓库创建于 2026-05-18，更新活跃；获 OpenSSF Best Practices <strong>Gold</strong> 徽章；提供 Windows/macOS/Linux 全平台预编译二进制（含 Windows amd64/arm64）。</li>
+</ul>
+
+</details>
+
+<a name="openresearch-orx" id="openresearch-orx"></a>
+<details>
+<summary><b>OpenResearch (orx)</b> · <code>alphaXiv/OpenResearch</code> — alphaXiv 开源：把编码 Agent 变成研究 Agent 的本地优先工作台</summary>
+
+<ul>
+<li><strong>仓库</strong>：<a href="https://github.com/alphaXiv/OpenResearch">https://github.com/alphaXiv/OpenResearch</a>（官网 <a href="https://openresearch.sh">https://openresearch.sh</a>，文档 openresearch.sh/docs）</li>
+<li><strong>定位</strong>：面向 research agents 与 autoresearch 的 <strong>local-first</strong>（本地优先：数据与运行都留在自己机器上）工作台（&quot;Turn your coding agents into research agents&quot;）。把 Claude Code / Codex / OpenCode / Cursor 改造成能做文献调研、提出假设、跑实验、产出研究制品的研究型 Agent。CLI 命令为 <code>orx</code>，跑起来后在本机 <code>http://127.0.0.1:4791</code> 打开 dashboard。GitHub 曾获 Trending #1 Repository of the Day。</li>
+<li><strong>能力/特性（六项官方卖点）</strong>：① <strong>并行探索</strong>——每个研究方向一个独立 agent session + 独立 git worktree（工作树：同一仓库的多份并行检出）；② <strong>可复现实验</strong>——变体以 git-native 实验树追踪，每次 run 都拿到其记录 commit 的不可变归档；③ <strong>证据在上下文里</strong>——日志、diff、文件、结果、制品始终与产出它们的工作绑定；④ <strong>Agent 自选</strong>——Claude Code / Codex / OpenCode / Cursor 任选，harness 与模型按 session 指定；⑤ <strong>算力自选</strong>——本地、自建基础设施或托管算力；⑥ <strong>本地归属</strong>——项目/对话/实验/run/日志/代码/制品全部留在本机。<strong>Autoresearch</strong>：可自主跑完整闭环（提想法 → 改代码 → 起实验 → 看证据 → 决定下一步），多 Agent 并行探索不同方向，实验树保留血缘。</li>
+<li><strong>运行环境</strong>：同一 committed source snapshot 可本地、SSH 远程、或 Slurm / Kubernetes / Ray / Hugging Face Jobs / Modal / Tinker / 托管算力上运行，<strong>无需先发布仓库</strong>。远程模式 <code>orx up --remote user@host</code>（支持 SSH config 别名与自定义端口）；注意远程服务只绑 loopback 且<strong>无应用层鉴权</strong>，同主机其他用户可访问。</li>
+<li><strong>用法</strong>：
+<ul>
+<li>安装（macOS / Linux）：<code>curl -LsSf https://openresearch.sh/install.sh | sh</code></li>
+<li>启动：<code>orx up</code>（打开 <code>http://127.0.0.1:4791</code> 本地 dashboard）</li>
+<li>Windows：<strong>Beta</strong>，从 Release 下 <code>openresearch-cli-x86_64-pc-windows-msvc.zip</code>，需先装 Git for Windows；Release 另提供 <code>openresearch-cli-installer.ps1</code> / <code>.sh</code></li>
+<li>macOS 还有 <code>.dmg</code> 桌面版；要求 macOS 11+</li>
+<li>装入编码 Agent：<code>orx install-skills</code></li>
+<li>常用命令：<pre><code class="language-sh">orx projects                     # 列项目
+orx project view &lt;project-id&gt;    # 看单个项目
+orx runs &lt;project-id&gt;            # 列 runs
+orx logs &lt;run-id&gt;                # 看日志
+orx exp run &lt;experiment-id&gt;      # 跑实验
+orx discover keyword &lt;query&gt;     # 关键词发现
+orx paper &lt;arxiv-id-or-doi&gt;      # 拉论文（arXiv / DOI）
+</code></pre>
+</li>
+<li>本地模型：支持 LM Studio、oMLX、Ollama 或自定义端点（走 OpenCode），见 docs/local-models.md</li>
+</ul>
+</li>
+<li><strong>要点</strong>：MIT 开源；主语言 <strong>Rust</strong>；约 3.5k Star / 230 Fork（2026-09 数据），最新 <strong>v0.2.3</strong>（2026-09-16），仓库创建于 2026-06-07，迭代很快（尚处 0.x）；官方说明默认本地优先——<code>127.0.0.1</code> + 本地 SQLite，建项目/跑 run 不会发布代码，openresearch.sh 账号仅用于组织与托管算力等服务端能力；遥测为<strong>可退出的粗粒度</strong>用法事件（随机安装 ID，不含代码/提示词/文件内容与路径/仓库名/token/邮箱/项目与实验标识），可用 <code>orx telemetry off</code> / <code>--no-telemetry</code> 关闭，源码与开发构建不发遥测。</li>
+</ul>
+
+</details>
+
+<a name="ghidra" id="ghidra"></a>
+<details>
+<summary><b>Ghidra</b> · <code>NationalSecurityAgency/ghidra</code> — 美国 NSA 开源的软件逆向工程 (SRE) 框架：反汇编/反编译/图分析/脚本，比肩 IDA Pro</summary>
+
+<ul>
+<li><strong>仓库</strong>：<a href="https://github.com/NationalSecurityAgency/ghidra">https://github.com/NationalSecurityAgency/ghidra</a>（topics: disassembler / reverse-engineering / software-analysis）</li>
+<li><strong>定位</strong>：由 NSA 研究局创建并维护的软件逆向工程框架，内置一整套高端软件分析工具，可分析 Windows / macOS / Linux 等多平台编译产物。能力覆盖<strong>反汇编、汇编、反编译（内置高质量反编译器）、图分析、脚本编写</strong>等数百项特性；支持大量处理器指令集与可执行格式；既能交互式 GUI 使用，也能 headless 自动化运行（analyzeHeadless）。NSA 借它解决复杂逆向任务上的<strong>规模化与团队协作</strong>问题（如恶意代码分析、漏洞洞察）——业界普遍视为 IDA Pro 的免费替代/竞争者。</li>
+<li><strong>扩展机制</strong>：支持用 <strong>Java 或 Python</strong> 编写自定义扩展组件与脚本（Python 走 PyGhidra / Jython 路线）；官方发布内置 Eclipse 的 <strong>GhidraDev</strong> 插件（位于 <code>Extensions/Eclipse/GhidraDev/</code>），也支持 VS Code 编辑脚本（Script Manager 点 VS Code 图标，或在 CodeBrowser 里 <em>Tools → Create VSCode Module project</em> 建全功能模块工程）；配套 <strong>Ghidra Server</strong> 支持团队协同逆向。</li>
+<li><strong>用法</strong>：
+<ul>
+<li>安装：先装 <strong>JDK 25 64-bit</strong>（Adoptium Temurin），再从 Releases 的 Assets 里下载官方多平台包 <code>ghidra_&lt;version&gt;_&lt;release&gt;_&lt;date&gt;.zip</code>（注意别下成 &quot;Source Code&quot;）</li>
+<li>解压（<strong>不要覆盖到已有安装目录上</strong>），启动：<code>./ghidraRun</code>（Windows 双击 <code>ghidraRun.bat</code>）；或启动 PyGhidra：<code>./support/pyghidraRun</code>（Windows <code>support\pyghidraRun.bat</code>）</li>
+<li>疑难排查看安装目录根下的 GettingStarted 文档</li>
+<li>从源码构建：JDK 25 + Gradle 9.1.0+（或自带 wrapper）+ Python3 3.9–3.14；Linux/macOS 需 GCC/Clang + make，Windows 需 VS2017+（MSVC、Windows SDK、C++ ATL）<pre><code class="language-sh">gradle -I gradle/support/fetchDependencies.gradle   # 拉取额外构建依赖
+gradle buildGhidra                                  # 产物在 build/dist/
+</code></pre>
+</li>
+<li>深度开发 Ghidra 本体：官方推荐 Eclipse（<code>gradle prepdev eclipse buildNatives</code> 后导入工程）</li>
+</ul>
+</li>
+<li><strong>要点</strong>：Apache-2.0 开源；主语言 <strong>Java</strong>；约 <strong>76.9k Star / 8.5k Fork</strong>（2026-09 数据，与 Open Code Review 同为可对标的 Agent/逆向两类工具）；仓库创建于 2019-03，默认分支 master，持续活跃维护；最新 <strong>12.1.3</strong>（2026-08-18，单一 zip 资产，本版 SHA-256 <code>93a5d11a...8fd54</code>）；⚠️ README 明确<strong>部分版本存在已知安全漏洞</strong>，使用前应先读 Security Advisories 页面；安装包体量大（12.1.3 zip 约 569MB），落地目录自选即可（本项目惯例放 D 盘）。</li>
+</ul>
+
+</details>
+
+<a name="voicestudio" id="voicestudio"></a>
+<details>
+<summary><b>VoiceStudio</b> · <code>debpalash/VoiceStudio</code> — 开源、完全本地的 ElevenLabs 替代：无需 API key 即可声音克隆、视频配音、听写与有声书制作</summary>
+
+<ul>
+<li><strong>仓库</strong>：<a href="https://github.com/debpalash/VoiceStudio">https://github.com/debpalash/VoiceStudio</a>（原名 OmniVoice-Studio；官网 <a href="https://voicestudio.sh">https://voicestudio.sh</a>，文档 voicestudio.sh/docs）</li>
+<li><strong>定位</strong>：local-first 语音创作工作室（&quot;在自己的硬件上克隆声音、配音视频、听写并制作长音频&quot;）。<strong>本地工作流无需账户、API key、订阅或用量计费</strong>；16 种 TTS 引擎 · 11 种 ASR 引擎 · 646 种语言目录；支持 macOS / Windows / Linux / Docker。官方定位为 ElevenLabs 的开源、可自托管替代。</li>
+<li><strong>能力/特性</strong>：① <strong>声音克隆</strong>——从短参考片段零样本（zero-shot）合成；② <strong>声音设计</strong>——按年龄/口音/音高/风格/表达指令创建声音；③ <strong>视频配音</strong>——转录→翻译→保留说话人→合成→导出视频（含字幕与多语言输出）；④ <strong>听写</strong>——系统级快捷键、实时转录、可选本地 LLM 清理；⑤ <strong>语音转写 (STT)</strong>——含说话人分离 Diarization（Pyannote/WhisperX）；⑥ <strong>有声书/故事</strong>——多声音脚本、EPUB/PDF 导入、章节渲染、<code>.m4b</code> 导出；另含人声分离（Demucs）、批量队列与文件夹监视、模型目录（安装/路由）、AI 水印（AudioSeal 嵌入与检测）、MCP Server、GPU 自动探测与诊断。</li>
+<li><strong>引擎与生态</strong>：TTS 含默认 VoiceStudio（基于 <code>k2-fsa/OmniVoice</code>）、CosyVoice 3、GPT-SoVITS、VoxCPM2、MOSS-TTS、KittenTTS、MLX-Audio、Sherpa-ONNX、IndexTTS 2.5、PocketTTS、Supertonic 3、Confucius4-TTS 等；ASR 含 WhisperX（默认）、Faster-Whisper、MLX Whisper、Parakeet、Moonshine、FunASR、sherpa-onnx、OpenAI-compatible ASR 等；大量权重托管于 Hugging Face。</li>
+<li><strong>用法</strong>：
+<ul>
+<li>桌面安装包（推荐）：从 Releases 下 <strong>Windows 10/11 x64 MSI</strong>（含 <code>VoiceStudio_Current_User_...msi</code> 免管理员当前用户版）、macOS 13.3+ DMG（Apple Silicon / Intel）、Linux x86_64 AppImage（glibc 2.39+）；首次启动自动创建托管 Python 环境并下载默认模型。</li>
+<li>Docker：<code>docker run -d -p 127.0.0.1:3900:3900 -v omnivoice-data:/app/omnivoice_data --name voicestudio palashdeb/omnivoice-studio:stable</code>（官方镜像仅 <code>linux/amd64</code>）。</li>
+<li>从源码：<code>git clone</code> 后需 Node 20+/Bun 与 Python 3.11+，<code>bun install</code> → <code>bun run desktop</code>（桌面，首次经 uv 自动装 Python 依赖）或 <code>bun run dev</code>（仅浏览器 UI）。</li>
+<li>卸载：Release 资产含 <code>uninstall.ps1</code> / <code>uninstall.sh</code>。</li>
+</ul>
+</li>
+<li><strong>本地数据与隐私</strong>：默认数据目录 <code>omnivoice_data/</code>（Projects、voices、settings、logs、SQLite 状态），Docker 挂载为 <code>/app/omnivoice_data</code>；项目/声音/设置/产出默认留在本机。桌面端仅与 <code>localhost:3900</code> 回环后端通信；<strong>分析默认关闭</strong>（opt-in 后仅发允许列表内的无内容元数据，绝不含文本/音频/文件名/项目）；远程访问需 share PIN/API key，远程 worker 与 OpenAI-compatible ASR 为显式 opt-in。</li>
+<li><strong>外部集成</strong>：本地后端暴露 OpenAI 兼容音频接口 <code>http://localhost:3900/v1</code>（TTS/STT）与 MCP Server <code>http://localhost:3900/mcp</code>（<code>generate_speech</code>/<code>clone_voice</code>/<code>transcribe</code>，供 Claude Desktop/Cursor 等调用）；<code>npx skills add debpalash/VoiceStudio</code> 可将 Agent Skills 装入 Claude Code / Codex / Cursor。</li>
+<li><strong>要点</strong>：主应用 <strong>AGPL-3.0</strong>（自由运行/修改/内部使用；若改后提供网络服务须按 AGPL 提供源码；自有代码可购商业许可，不重授权第三方模型），主语言 <strong>Python</strong>（另含 Tauri/Node/TS 桌面壳、MLX 等）；约 <strong>31.2k Star / 3.7k Fork</strong>（2026-09-16 数据），仓库创建于 2026-04-09，迭代极快；最新 <strong>v0.5.2</strong>（2026-09-10，提供 Windows x64 MSI / macOS DMG / Linux AppImage 及 SHA256SUMS）。⚠️ <strong>C 盘相关</strong>：Windows MSI 默认落 C 盘（当前用户版可免管理员但仍在用户目录），且首次启动会从 HF 拉数 GB 模型权重——按你的减负习惯，建议用 Docker 并把数据卷挂到 D 盘，或装好后在设置里把 <code>omnivoice_data</code> 指向 D 盘；<strong>模型许可独立</strong>：默认 OmniVoice 权重 CC-BY-NC、音频分词器受 Boson Higgs Audio 2 与 Meta Llama 社区条款约束，其他引擎各有独立许可（MIT / Apache-2.0 / OpenRAIL-M / Bilibili 等），商用生成音频前须逐一审查所选模型条款。</li>
+</ul>
+
+</details>
+
+<a name="omnigent" id="omnigent"></a>
+<details>
+<summary><b>Omnigent</b> · <code>omnigent-ai/omnigent</code> — 开源 AI Agent 元编排框架 (meta-harness)：统一编排 Claude Code/Codex/Cursor/Pi 等，强制策略与沙箱，跨设备实时协作</summary>
+
+<ul>
+<li><strong>仓库</strong>：<a href="https://github.com/omnigent-ai/omnigent">https://github.com/omnigent-ai/omnigent</a>（官网 <a href="https://omnigent.ai">https://omnigent.ai</a>，文档 omnigent.ai/docs）</li>
+<li><strong>定位</strong>：开源的 <strong>meta-harness（元编排框架）</strong>，为各类 AI 编码 Agent 提供通用编排层。一句话：把 Claude Code、Codex、Cursor、OpenCode、Hermes、Pi、Antigravity 乃至自研 Agent 统一编排——<strong>无需重写即可切换/混用不同 harness</strong>，强制策略与沙箱隔离，并支持从终端、浏览器、手机或原生桌面任意设备实时协作。可视为 Claude Code / Codex 等底层 harness 之上的上层元编排器（包裹并管理它们，而非替代）。</li>
+<li><strong>能力/特性</strong>：① <strong>跨设备会话同步</strong>——终端/浏览器/手机间消息、子代理、终端、文件保持同步；② <strong>多代理监督与混合</strong>——同会话混用不同 Agent，可让一个审查另一个或按特长分工（示例代理 Polly 把编码工作并行委派给 Claude Code/Codex/Pi 并交叉审查）；③ <strong>任意模型</strong>——第一方 API Key、Claude/ChatGPT 订阅、兼容网关（OpenRouter、Ollama 等）、Databricks 工作区；④ <strong>实时协作</strong>——共享会话、队友共同驾驶（<code>omnigent attach</code>）、分叉续跑（<code>omnigent run --fork</code>）；⑤ <strong>云沙箱</strong>——Modal / Daytona / E2B / Kubernetes / Databricks 等托管主机运行会话；⑥ <strong>代理治理 (Policies)</strong>——在危险操作前暂停审批、限制支出上限、限制可用工具，分服务器级/代理级/会话级三层；⑦ <strong>YAML 自定义 Agent</strong>——声明提示词与工具（本地 Python 函数、MCP 服务器、子代理）；⑧ <strong>遥测可退出</strong>——默认收集匿名无 PII 数据，可关。</li>
+<li><strong>用法</strong>：
+<ul>
+<li>安装：<code>curl -fsSL https://raw.githubusercontent.com/omnigent-ai/omnigent/main/scripts/install_oss.sh | sh</code>；或 <code>uv tool install omnigent</code> / <code>pip install omnigent</code> / Homebrew；<strong>Windows 不支持 bootstrap 脚本</strong>，须 <code>uv tool install --python 3.12 omnigent</code>。</li>
+<li>桌面：macOS 原生桌面应用（封装 Web UI + 系统通知/dock 角标）。</li>
+<li>本地运行：<code>omnigent</code>（自动选模型，启终端会话 + 本地 Web UI <code>http://localhost:6767</code>）；<code>omnigent start</code> / <code>omnigent server</code>（可 <code>--background</code>，设 <code>OMNIGENT_AUTH_ENABLED=1</code> 开多用户）。</li>
+<li>自托管：<code>docker compose up</code>（VPS/家庭服务器）；另支持 Render / Railway / Fly.io / Hugging Face Spaces / Modal / Cloudflare / Databricks Apps；可经 Cloudflare quick tunnel 或 Tailscale 暴露。登录/登记主机：<code>omnigent login/ host https://your-host</code>。</li>
+<li>直接起底层 harness：<code>omnigent claude</code> / <code>omnigent codex</code> / <code>omnigent cursor</code> / <code>omnigent pi</code> / <code>omnigent opencode</code> / <code>omnigent hermes</code> / <code>omnigent agy</code>（Antigravity）；还内置 Devin、Grok Build、Kiro（厂商 CLI 登录）。</li>
+</ul>
+</li>
+<li><strong>本机数据与配置</strong>：状态目录 <code>~/.omnigent</code>（用户全局配置 <code>~/.omnigent/config.yaml</code>，<code>omnigent config set --global</code> 可改如会话标题规则；<code>omnigent ... --purge</code> 会先备份再移除此目录）；工作区默认 <code>~/omnigent</code>（<code>--purge-workspace</code> 才动，默认保留）。卸载 <code>--purge</code> 仅删状态目录。</li>
+<li><strong>隐私/安全</strong>：默认遥测为匿名无 PII，可退出；对 Grok/Devin 等不存储其凭据，由厂商 CLI 自读盘登录；执行隔离经 <code>bwrap</code>（Linux）/ <code>seatbelt</code>（macOS）/ Windows Job Object 做进程/文件/网络隔离；Policies 在危险动作前请求审批、限制支出与工具。</li>
+<li><strong>要点</strong>：<strong>Apache-2.0</strong> 开源；主语言 <strong>Python</strong>；约 <strong>10.0k Star / 1.6k Fork</strong>（2026-09-16 数据），仓库创建于 2026-06-11，迭代活跃（v0.14.0 发布于 2026-09-15，无预编译二进制资产、纯包分发）；最新版 <strong>v0.14.0</strong> 重点：多 GitHub 仓库 PR 同会话跟踪与并行克隆多仓沙箱、重做的 composer（工作区/Agent/模型/effort/权限）、Claude 上下文管理与 <code>/compact</code> 原生压缩、扩展沙箱与数据库支持（Gensee、K8s 专用节点池、CockroachDB）。⚠️ <strong>C 盘相关 / 平台限制</strong>：状态目录 <code>~/.omnigent</code> 在 Windows 上即落 C 盘，随会话/沙箱增长；且 Windows 为<strong>降级模式</strong>——缺 tmux/bwrap 沙箱与原生 PTY 封装，仅支持 SDK harness 与 Web UI，官方建议用 <strong>WSL/Linux/macOS</strong> 获得完整功能；系统要求 Python 3.12+、<code>uv</code>、<code>git</code> 必备，另需 Node.js 22 LTS + <code>npm</code>（harness CLI）+ <code>pnpm</code>（Web UI）、Linux 还需 <code>bwrap</code>、各原生 harness 封装需 <code>tmux</code>。</li>
+</ul>
+
+</details>
+
+<a name="browserskill-bsk" id="browserskill-bsk"></a>
+<details>
+<summary><b>BrowserSkill (bsk)</b> · <code>Tencent/BrowserSkill</code> — 腾讯开源：让 AI Agent 借用你已登录的真实浏览器干活，不打断你自己的工作</summary>
+
+<ul>
+<li><strong>仓库</strong>：<a href="https://github.com/Tencent/BrowserSkill">https://github.com/Tencent/BrowserSkill</a>（中文文档 README.zh-CN.md；topics: agent / browser-use / dsh-plugin）</li>
+<li><strong>定位</strong>：本地桥接工具（<code>bsk</code> CLI + 浏览器扩展），把 Cursor / Claude Code / Codex / OpenClaw / <strong>CodeBuddy</strong> / <strong>WorkBuddy</strong> / Pi / Hermes Agent / DeepSeek Harness 等 AI Agent 接到你<strong>已经登录</strong>的浏览器上。核心机制是<strong>标签页借用（borrow）</strong>——Agent 要用你已打开的标签页必须先显式借用、用完归还，浏览器其余部分完全隔离不受打扰。一句话：<em>&quot;Let AI agents use your browser without interrupting your work.&quot;</em> 不锁定模型/框架/harness，任何能调 shell 的 Agent 都能通过 <code>bsk</code> CLI 直接使用。</li>
+<li><strong>能力/特性</strong>：① <strong>真实登录态复用</strong>——直接操作用户已登录的站点，无需另开测试账号；② <strong>Agent Window</strong>——浏览器任务跑在独立的可见窗口里，用户可继续用自己的浏览器；③ <strong>人机协同 (human-in-loop)</strong>——遇验证码/登录/确认对话框等只有人才能做的步骤，Agent 可 <code>request-help</code> 请求用户接管，处理完继续；④ <strong>长页面整页截图</strong>（扩展内 <code>Quick actions → Full-page screenshot</code>，或 <code>bsk screenshot --session &lt;id&gt; --full-page --out page.png</code>）；⑤ <strong>自动化设置开关</strong>（默认均开启，由用户浏览器侧权威控制）——<em>Confirm before borrowing tabs</em> 与 <em>Allow requests for human help</em>；⑥ <strong>远程浏览器连接</strong>——Agent 跑在服务器上也能配对本地浏览器（内置认证服务或兼容网关）；⑦ <strong>DeepSeek Harness 专用插件</strong>（npm <code>@wxg-prc-cpg/browser-skill-dsh-plugin</code>，提供原生 <code>browser_*</code> 工具与 Web UI 实时会话视图）。</li>
+<li><strong>架构</strong>：Agent Harness → shell 执行 <code>bsk ...</code> → <strong>bsk CLI</strong> → 本地 IPC → <strong>bsk daemon</strong> → <code>127.0.0.1</code> WebSocket → <strong>浏览器扩展</strong> → 驱动 Agent Window。仓库为 Cargo + pnpm workspace：<code>crates/bsk-cli</code>（CLI 与本地 daemon）、<code>crates/bsk-protocol</code>（共享线类型与 JSON schema）、<code>apps/extension</code>（浏览器扩展）、<code>packages/ui</code> 与 <code>packages/i18n</code>（扩展 UI 支持，含英语/简体中文/韩语）、<code>packages/dsh-plugin-browserskill</code>、<code>evals/browser</code>（确定性本地页面与代理中立的浏览器能力评测）。</li>
+<li><strong>用法</strong>：
+<ul>
+<li><strong>交给 Agent 安装（推荐）</strong>：把下面这句发给受支持的 Agent，它会自动装好 CLI 与 skill 并引导加载扩展<pre><code class="language-text">Set up browser-skill on this machine by following https://raw.githubusercontent.com/Tencent/BrowserSkill/main/AGENT_INSTALL.md
+</code></pre>
+</li>
+<li>Windows 装 <code>bsk</code> CLI：<code>irm https://raw.githubusercontent.com/Tencent/BrowserSkill/main/install.ps1 | iex</code>（macOS/Linux 用 <code>install.sh</code>）；验证 <code>bsk --version</code></li>
+<li>装浏览器扩展：Chrome Web Store <code>hhcmgoofomhgciiibhipgmgkgnoenaoi</code> / Edge Add-ons <code>emacgiaaaiojkkpkddmmdfhmokgmnikg</code> / 其他 Chromium 系装 Chrome 版本</li>
+<li>装 skill：<code>bsk install-skill</code>（<code>--harness cursor --json</code> 指定 harness、<code>--source ./SKILL.md</code> 自定义源、<code>--force</code> 强制重装）；连通性自检 <code>bsk doctor</code></li>
+<li>常用：<code>bsk session start</code>（加 <code>--no-focus</code> 不抢焦点）/ <code>bsk tab borrow --timeout 60s</code> / <code>bsk session list --json</code> / <code>bsk status</code> / <code>bsk update --yes</code>；斜杠命令：<code>/browser-skill open example.com and summarize what is on the page.</code></li>
+<li>DeepSeek Harness：<code>dsh plugin --profile web add @wxg-prc-cpg/browser-skill-dsh-plugin</code>，再 <code>dsh --profile web</code></li>
+</ul>
+</li>
+<li><strong>要点</strong>：<strong>MIT</strong> 开源；主语言 <strong>TypeScript</strong>（Rust 体量相近，另含 Shell / PowerShell / CSS）；约 <strong>4.2k Star / 300 Fork / 51 open issues</strong>（2026-09-18 数据），500 Commits，仓库创建于 2026-06-22，最新版 <strong>cli-v0.3.0</strong>（2026-09-17），更新活跃。平台支持 macOS(Apple Silicon/Intel) / Linux(x64·ARM64) / <strong>Windows x64</strong>；浏览器官方支持 <strong>Chrome 与 Edge</strong>（其他 Chromium 系预期可用，Firefox 计划中）；CLI 需 daemon protocol <strong>1.3</strong>（兼容 1.0–1.2）。⚠️ <strong>0.3.0 起弃用</strong> <code>--unattended</code>、<code>tab borrow --no-confirm</code>、<code>BSK_REQUEST_HELP=off</code> 等旧参数。⚠️ <strong>C 盘相关</strong>：Windows 默认装到 <code>$HOME\.local\bin</code> 并写入用户 PATH 与 <code>~/.bashrc</code>，daemon 状态默认落 <code>$HOME\.bsk</code>——按你的减负习惯，安装前先设 <code>$env:BSK_INSTALL_DIR</code>（如 <code>D:\tools\bsk\bin</code>）与 <code>$env:BSK_HOME</code>（如 <code>D:\tools\bsk\state</code>）再跑脚本。✅ 与你本机 <strong>CodeBuddy / WorkBuddy / Hermes</strong> 三个 harness 都在官方支持列表内，对口度高。</li>
+</ul>
+
+</details>
+
+<a name="security-audit" id="security-audit"></a>
+<details>
+<summary><b>security-audit</b> · <code>cloudflare/security-audit-skill</code> — Cloudflare 开源：把编码 Agent 变成安全审计员的 skill，编排多个子 Agent 查漏洞并独立复核，产出结构化报告</summary>
+
+<ul>
+<li><strong>仓库</strong>：<a href="https://github.com/cloudflare/security-audit-skill">https://github.com/cloudflare/security-audit-skill</a>（配套博客《Build your own vulnerability harness》：<a href="https://blog.cloudflare.com/build-your-own-vulnerability-harness">https://blog.cloudflare.com/build-your-own-vulnerability-harness</a>）</li>
+<li><strong>定位</strong>：一个 coding-agent <strong>skill</strong>（不是独立工具），把编码 Agent 改造成安全审计员。它编排一批<strong>相互隔离的子 Agent</strong>依次完成：侦察 → 覆盖驱动的漏洞狩猎 → 候选验证 → 结构化输出 → 独立记录复核 → 目标中立报告。官方说明这是 Cloudflare 内部<strong>漏洞发现 harness 的种子 skill</strong>——那个 harness 后来长成了多阶段、全舰队规模的系统，本仓库是它演化起点的那份单仓版本。</li>
+<li><strong>审计流程（六阶段）</strong>：① <strong>侦察</strong>——摸清架构、信任边界、输入面、既有证据与确定性覆盖面，产出 <code>architecture.md</code> 与 <code>coverage-ledger.json</code>；② <strong>覆盖驱动狩猎</strong>——按 ledger 单元派发隔离子 Agent（hunter）逐项检查并记录，再用覆盖批评者（coverage critic）找缺口；③ <strong>候选验证</strong>——每个候选交给一个<strong>全新的验证者</strong>去<strong>证伪</strong>它；④ <strong>结构化输出</strong>——把 <code>confirmed</code> / <code>needs_validation</code> / <code>rejected</code> 三类记录写进 <code>findings.json</code>，并按 <code>report-schema.json</code> 校验；⑤ <strong>独立记录复核</strong>——由新 Agent 复核最终来源断言，<strong>重大替换要再过一个独立验证者</strong>；⑥ <strong>目标中立报告</strong>——从已复核记录与覆盖账本派生 <code>REPORT.md</code> / <code>FINDINGS-DETAIL.md</code> / <code>NEEDS-VALIDATION.md</code>。父 Agent 在 ledger 创建后及每次更新后都要跑 <code>validate-coverage-ledger.cjs</code>，Phase 4 与每次 Phase 5 替换后跑 <code>validate-findings.cjs</code>。</li>
+<li><strong>三类判定口径（彼此不混）</strong>：<code>confirmed</code> = 有完整来源追溯 + 有界观测结果；<code>needs_validation</code> = 有精确的未决事实、<strong>不给严重性等级</strong>；<code>rejected</code> = 记录被证伪的候选。<strong>多次运行是叠加式（additive）</strong>——复用历史 ledger 与 findings 去定位缺口、重验变更过的源码、把当前源码证据结转下去，不把陈旧或未决的工作当作已覆盖。</li>
+<li><strong>攻击类知识库（10 个分类文档）</strong>：核心/通配/明显问题、内存安全与二进制与内核、AI 与 LLM（提示注入 / Agent 与工具 / 输出处理）、Web 协议与认证（请求分帧 / 缓存 / 认证协议）、客户端（DOM（网页文档结构）注入 / 消息信任 / UI 重定向 / 原型污染）、供应链与发布（依赖 / CI / 发布 / 签名 / 更新 / 插件 / 扩展）、云与部署（IAM / IaC / 容器 / 无服务器 / 入口 / 运行时配置）、RPC 与消息（序列化 / 队列 / broker / webhook / 流式协议）、资源耗尽与可用性（共享资源 / 配额 / 队列 / worker / 费用）、数据隔离与生命周期（租户隔离 / 缓存 / 搜索 / 导出 / 备份 / 迁移 / 删除 / 恢复）、桌面移动与本地 IPC（原生应用 / deep-link / webview / 导出组件 / 助手 / daemon / 本地 IPC）。</li>
+<li><strong>设计原则</strong>：① <strong>只确认已确立的边界失效</strong>——来源可信但被挡住的线索仍保持 <code>needs_validation</code> 并带上精确未决事实；② <strong>对抗式验证</strong>——查的人永远不能是找的人；③ <strong>严重性必须有影响</strong>（似然 × 影响，而非&quot;偏离清单&quot;）；④ <strong>纵深防御缺口不算漏洞</strong>——A 层已防住，缺 B 层只算加固建议；⑤ <strong>多次运行提升覆盖率</strong>——官方测试中<strong>单次运行只找到重复运行总发现量的大约一半</strong>。</li>
+<li><strong>用法</strong>：
+<ul>
+<li>安装（Skills CLI，<a href="https://skills.sh">https://skills.sh</a>）：<pre><code class="language-bash">npx skills add https://github.com/cloudflare/security-audit-skill --skill security-audit
+npx skills add https://github.com/cloudflare/security-audit-skill --skill security-audit --global   # 用户级
+</code></pre>
+</li>
+<li>触发（在待审代码库里启动编码 Agent，然后自然语言下达）：<pre><code class="language-text">security audit this codebase
+find security vulnerabilities in ./src
+do a security review, output to ~/audits/my-project
+</code></pre>
+</li>
+<li>触发词匹配（security audit / find vulnerabilities / pen-test the code 等）后自动激活；直接的代码库审计或渗透请求走 <strong>full audit mode</strong>，安全提问与聚焦型漏洞工作走 <strong>guidance mode</strong>（除非你要报告产物）。full audit mode 未指定输出目录时默认落 <code>~/security-audit-skill/&lt;repo-name&gt;/run-&lt;N&gt;</code>；只有你显式选定被版本控制忽略的目录时才会往目标仓库里写东西。</li>
+</ul>
+</li>
+<li><strong>要点</strong>：<strong>MIT</strong> 开源；主语言 <strong>JavaScript</strong>（零依赖校验器 <code>.cjs</code> + Markdown 提示词文档，代码量很小）；约 <strong>10.8k Star / 575 Fork / 30 open issues</strong>（2026-09-18 数据），仅 <strong>14 Commits</strong>，仓库创建于 2026-06-18，最近推送 2026-09-14；<strong>无 release、无 tag</strong>（纯 skill 仓库，跟随 main 分发）。运行要求：① 一个<strong>支持 tool use 与并行子 Agent</strong> 的模型；② <strong>Node.js</strong>（跑两个零依赖校验器）；③ ⚠️ <strong>OS 级强制沙箱</strong>——执行目标代码（构建/测试/进程/浏览器/模拟器/fuzzer/fixture）必须做到禁外网、净化并白名单化的环境、强制资源上限、只允许写指定的 scratch 路径；<strong>没有这些控制时工作流会跳过执行目标代码，把线索保持为 <code>needs_validation</code></strong>。⚠️ <strong>C 盘相关</strong>：默认输出目录 <code>~/security-audit-skill/</code> 与 <code>--global</code> 的用户级 skill 安装目录在 Windows 上都落 C 盘——按你的减负习惯，每次审计显式指定 D 盘输出目录，并把 skill 装到项目级 skill 目录而非 <code>--global</code>。反馈/交流邮箱 <code>security-ai-research@cloudflare.com</code>。</li>
+</ul>
+
+</details>
+
+<a name="text-to-cad" id="text-to-cad"></a>
+<details>
+<summary><b>text-to-cad</b> · <code>earthtojake/text-to-cad</code> — 造物向 agent 技能库：用一句话/一张图生成 CAD 模型，并一路打通到图纸、切片与 3D 打印</summary>
+
+<ul>
+<li><strong>仓库</strong>：<a href="https://github.com/earthtojake/text-to-cad">https://github.com/earthtojake/text-to-cad</a>（官网/文档 <a href="https://www.texttocad.dev">https://www.texttocad.dev</a>，Discord <a href="https://discord.gg/5FGB9DwJYU">5FGB9DwJYU</a>；topics: agents / ai-agents / cad / mechanical-engineering / robotics / step / stl / stp / text-to-cad）</li>
+<li><strong>定位</strong>：面向 <strong>CAD / CAE / CAM</strong> 的 agent 技能库（&quot;A library of agent skills for CAD, CAE and CAM&quot;）。从本地项目文件出发，用自然语言或图片<strong>生成、检查、选型、切片并交付</strong> CAD 制品与机器人描述文件，把过去需要专业软件的机械设计/仿真/制造链路拆成一组可被 AI Agent 调用的技能。一句话：<strong>文本（或图片）→ STEP 模型 → 预览 → 图纸/切片/G-code → 上机打印</strong>。</li>
+<li><strong>技能清单（11 个，<code>skills/</code> 目录）</strong>：
+<ul>
+<li><strong>CAD</strong>——从自然语言或图片创建/编辑 CAD 模型，<strong>STEP 为主产物</strong>，可再导出 <strong>STL / 3MF / GLB</strong>（含 <code>scripts/gen</code> 建渲染包、<code>scripts/export</code> 导出、<code>scripts/snapshot</code> 无头渲染出图、Python 几何检查）</li>
+<li><strong>CAD Viewer</strong>——本地浏览器预览 CAD 与机器人文件</li>
+<li><strong>step.parts</strong>——检索现成 STEP 标准件（螺钉、轴承、电机、连接器）</li>
+<li><strong>DXF</strong>——生成轮廓/模板/垫片/下料排版等 2D 图纸</li>
+<li><strong>URDF</strong>——写机器人结构文件（links / joints / limits / inertials / meshes）</li>
+<li><strong>SRDF</strong>——给 URDF 补 MoveIt2 规划组、末端执行器、位姿与碰撞规则</li>
+<li><strong>SDF</strong>——搭仿真模型与场景（坐标系、物理、传感器、灯光）</li>
+<li><strong>SendCutSend</strong>——上传钣金/激光切割前校验 DXF 与 STEP</li>
+<li><strong>DfAM Check</strong>——按工艺量测网格可打印性（壁厚、悬垂、支撑体积、摆放朝向）</li>
+<li><strong>G-code</strong>——调真实切片器 CLI，把网格切成经校验、匹配打印机配置的 FDM <code>.gcode</code></li>
+<li><strong>Bambu Labs</strong>——对校验过的 <code>.gcode</code> 做干跑、上传、谨慎启动本机拓竹打印</li>
+</ul>
+</li>
+<li><strong>支持格式</strong>：主输出 <strong>STEP(.step/.stp)</strong>；导出 <strong>STL / 3MF / GLB / DXF</strong>；机器人侧 <strong>URDF / SRDF / SDF</strong>；隐式参数化模型 <code>.implicit.js</code>；查看器用 three.js/WebGL 渲染，快照出图支持 view / orbit / section / list 等模式（静态图或 GIF 转台动画）。</li>
+<li><strong>用法</strong>：
+<ul>
+<li><strong>Skills CLI（官方首选）</strong>：<code>npx skills add earthtojake/text-to-cad</code>（<strong>更新也用这条</strong>，会重取并覆盖；<code>npx skills update</code> 只刷 lockfile 里已有的技能、会漏掉新版新增的；退场技能需手动 <code>npx skills remove &lt;skill&gt;</code>）</li>
+<li>原生插件安装：Codex（需 <strong>0.142.0+</strong>）<code>codex plugin marketplace add earthtojake/text-to-cad &amp;&amp; codex plugin add cad@text-to-cad</code>；Claude Code <code>claude plugin marketplace add earthtojake/text-to-cad &amp;&amp; claude plugin install cad@text-to-cad</code>；Grok Build <code>grok plugin install earthtojake/text-to-cad --trust &amp;&amp; grok plugin enable cad</code>（复用仓库内 <code>.claude-plugin/marketplace.json</code>，无单独 Grok 清单）</li>
+<li>装完技能不出现就重启 Agent；本地开发从 <code>main</code> 拉分支、PR 也提回 <code>main</code></li>
+<li>环境：<strong>Python 3.11+</strong>（几何内核 <strong>OCP</strong>，即 OpenCascade 的 Python 绑定，配套 <strong>build123d</strong>）；JS 侧 <code>npm ci</code> 装 <code>packages/cadgen-js</code>、<code>apps/viewer</code>、<code>apps/docs</code>；CLI 另有 <code>cadgen</code>（wheel 随 Release 发布）</li>
+</ul>
+</li>
+<li><strong>要点</strong>：<strong>MIT</strong> 开源；主语言 <strong>Python</strong>（另含 TS/JS：viewer、docs、cadgen-js）；约 <strong>16.1k Star / 1.67k Fork / 8 open issues / 87 watchers</strong>（2026-09-19 数据），<strong>1,377 Commits</strong>，仓库创建于 2026-04-22，更新极活跃；最新 <strong>v0.6.5</strong>（2026-09-18，Release 资产仅有 <code>cadgen-0.6.5-py3-none-any.whl</code>（约 2.58MB）与 <code>.tar.gz</code>，即技能真正依赖的是这个 PyPI 包，而非 Release 二进制）。仓库本身体量约 <strong>272MB</strong>（含 <code>assets/</code> 演示 GIF 与 <code>models/</code> 夹具语料库——<code>models/</code> 以 <strong>Git LFS 指针</strong>形式存在，用技能本身不需要它，<strong>浅克隆/不要拉 LFS</strong> 可省大量空间）。
+<ul>
+<li>⚠️ <strong>Windows 11 最大的坑——Smart App Control 会拦死 CAD 技能</strong>：OCP 的 wheel 内含<strong>未签名原生模块</strong>，Win11 全新安装默认开启的 Smart App Control 会直接拒绝加载，表现为所有 <code>cadgen</code> 命令与 <code>import build123d</code> 报 <code>ImportError: DLL load failed while importing OCP</code>，事件查看器 <code>CodeIntegrity › Operational</code> 记 <strong>Event ID 3077</strong>；<code>cadgen doctor</code> 能识别这种情况。Smart App Control <strong>无按应用例外</strong>，只能①彻底关掉（设置 › 隐私和安全性 › Windows 安全中心 › 应用和浏览器控制 › 智能应用控制；<strong>关掉后只能靠重装 Windows 才能再开</strong>）或②把 CAD 技能放到 <strong>WSL</strong> 里跑（该策略在 WSL 内不适用）。wheel 由 cadquery-ocp 项目构建，本仓库无法自行签名 → 受影响的技能为 <code>cad</code> / <code>cad-viewer</code> / <code>dxf</code> / <code>urdf</code> / <code>srdf</code> / <code>sdf</code>。</li>
+<li>⚠️ <strong>C 盘相关</strong>：主要体积来自 Python 侧的 OCP/build123d 依赖（数百 MB 级原生库）与 <code>npx skills add</code> 的技能落点——按你的减负习惯，建议 ① 在 <strong>D 盘建 venv/uv 环境</strong>装 <code>cadgen</code>/<code>build123d</code>，② 把技能装到<strong>项目级 skill 目录</strong>而非用户级（用户级在 Windows 上会落 C 盘 <code>~/.claude</code>、<code>~/.codex</code>），③ 克隆时<strong>跳过 LFS</strong>。若你打算在本机试，我可以先出一份「D 盘 venv + 项目级技能 + 跳过 LFS」的落地方案给你确认，再动手。</li>
+</ul>
+</li>
+</ul>
+
+</details>
+
+<a name="playwright" id="playwright"></a>
+<details>
+<summary><b>Playwright</b> · <code>microsoft/playwright</code> — 微软开源：一套 API 驱动 Chromium/Firefox/WebKit 的 Web 测试与自动化框架，如今也是 AI Agent 操作浏览器的首选工具</summary>
+
+<ul>
+<li><strong>仓库</strong>：<a href="https://github.com/microsoft/playwright">https://github.com/microsoft/playwright</a>（官网/文档 <a href="https://playwright.dev">https://playwright.dev</a>，API 参考 <a href="https://playwright.dev/docs/api/class-playwright">https://playwright.dev/docs/api/class-playwright</a>；topics: automation / test / testing / testing-tools / e2e-testing / end-to-end-testing / test-automation / chromium / chrome / firefox / webkit / electron / web / javascript）</li>
+<li><strong>定位</strong>：微软开源的 Web 测试与自动化框架，用<strong>同一套 API 驱动 Chromium、Firefox、WebKit</strong> 三大引擎，官方描述覆盖三种场景——&quot;in your tests, in your scripts, and as a tool for AI agents&quot;。Linux / macOS / Windows 全平台支持 headless 与 headed；另有 Python / .NET / Java 官方绑定。Chromium 默认用开源构建（即 Chrome for Testing），也可切换已装的 Google Chrome / Microsoft Edge（channel: <code>chrome</code> / <code>msedge</code> / <code>chrome-beta</code> / <code>msedge-beta</code> / <code>chrome-dev</code> / <code>msedge-dev</code> / <code>chrome-canary</code> / <code>msedge-canary</code>）。</li>
+<li><strong>四条产品线（README 现行结构）</strong>：
+<ul>
+<li><strong>Playwright Test</strong> — 全功能端到端测试运行器：<strong>浏览器级隔离</strong>（每个测试独立 context ≈ 全新浏览器 profile，可用 <code>storageState</code> 保存并复用登录态）、<strong>自动等待 + web-first 断言</strong>（无人工 timeout，断言自动重试）、面向用户视角的 <strong>Locator</strong>（<code>getByRole</code> / <code>getByLabel</code> / <code>getByPlaceholder</code> / <code>getByTestId</code>）、trace 录制与 Trace Viewer 逐步回放（DOM 快照 / 网络 / console / 截图）、默认并行</li>
+<li><strong>Playwright CLI</strong> — 专为<strong>编码 Agent</strong> 设计的命令行（独立仓库 microsoft/playwright-cli）。官方明确<strong>比 MCP 更省 token</strong>——命令不把大型工具 schema 与无障碍树灌进模型上下文；<code>playwright-cli install --skills</code> 装 agent 技能，<code>playwright-cli show</code> 开可视化 dashboard 看所有运行中会话的实时画面并点击接管</li>
+<li><strong>Playwright MCP</strong> — MCP 服务器（独立仓库 microsoft/playwright-mcp），让 AI Agent 用<strong>结构化无障碍快照</strong>（element ref 形如 <code>e5</code> / <code>e10</code>）确定性地点击/输入，<strong>不需要视觉模型或截图</strong>；工具覆盖导航、表单、截图、网络 mock、存储管理</li>
+<li><strong>Playwright Library</strong> — 当库直接写自动化脚本（<code>npm i playwright</code>）：截图、生成 PDF、模拟移动设备、拦截/伪造网络请求等，不需要测试运行器</li>
+<li>另有 <strong>VS Code 扩展</strong>（<code>ms-playwright.playwright</code>）：一键跑/调试、CodeGen 录制自动生成测试代码、悬停拾取最佳 Locator、Trace Viewer 集成</li>
+</ul>
+</li>
+<li><strong>v1.63.0 新版要点（2026-09-04）</strong>：
+<ul>
+<li>🔒 <strong>Test locks</strong>——<code>test('update user settings', { lock: 'user-settings' }, async ({ page }) =&gt; {...})</code>，持同名锁的测试跨文件/worker/project 绝不并发，其余照常并行，<code>test.describe()</code> 也可整组加锁，用于外部服务、全局账号设置这类共享资源</li>
+<li>🪟 <strong>跨 frame 定位</strong>——<code>page.frameLocator()</code> / <code>frame.frameLocator()</code> 不带选择器时在子树任意 frame 内查找，不必先定位 iframe，多 frame 命中会报错</li>
+<li>👁️ <strong><code>locator.visible()</code></strong> 返回只匹配可见元素的 locator，官方推荐取代 <code>:visible</code> 伪类</li>
+<li>🧾 <strong>步骤结构化数据</strong>——Playwright API 步骤上报目标 locator 与调用参数，<code>test.step()</code> 支持 <code>subtitle</code> / <code>params</code>，reporter 经 <code>testStep.subtitle</code> / <code>testStep.params</code> 取用，trace viewer 与 HTML 报告在步骤标题旁渲染</li>
+<li>🖼️ <strong>trace 快照可选内容</strong>——<code>trace: { mode: 'on', snapshots: { dom: true, aria: true, screen: true } }</code>，Trace Viewer 新增 <strong>Display Aria</strong> 模式（截图与 aria 快照并排、悬停 aria 节点高亮）</li>
+<li>🆕 <strong>其它新增</strong>——<code>locator.ariaSnapshotJSON()</code> / <code>page.ariaSnapshotJSON()</code>（JSON 代替 YAML，支持 <code>mode</code> / <code>depth</code> / <code>boxes</code>）、<code>page.on('dialogclosed')</code> 与 <code>browserContext.on('dialogclosed')</code>、<code>opfs</code> 存储态（源私有文件系统可持久化）、<code>httpCredentials</code> 支持数组（按 origin 取首个匹配，无 origin 的条目匹配任意请求）、<code>apiRequestContext.get&lt;User&gt;()</code> 类型化响应、<code>reducedMotion</code> / <code>forcedColors</code> / <code>contrast</code> 测试选项、<code>--add-reporter</code>（在既有 reporter 之上追加而非替换）、内置 <strong>Perfetto reporter</strong>（输出 Trace Event Format 给 Perfetto UI / <code>chrome://tracing</code>）、HTML 报告步骤旁加耗时瀑布图</li>
+<li>⚠️ <strong>弃用与移除</strong>——三个实验包 <code>@playwright/experimental-ct-react</code> / <code>-react17</code> / <code>-vue</code> <strong>停止更新</strong>（按迁移指南转到 1.62 起的 stories 模型）、<strong>Ubuntu 20.04 不再支持</strong>。</li>
+</ul>
+</li>
+<li><strong>用法</strong>：
+<ul>
+<li>测试：<code>npm init playwright@latest</code>；或手动 <code>npm i -D @playwright/test &amp;&amp; npx playwright install</code>；跑 <code>npx playwright test</code>；看 trace <code>npx playwright show-trace trace.zip</code></li>
+<li>Agent CLI：<code>npm install -g @playwright/cli@latest</code> → <code>playwright-cli install --skills</code> → 直接下命令<pre><code class="language-bash">playwright-cli open https://demo.playwright.dev/todomvc/ --headed
+playwright-cli type &quot;Buy groceries&quot;
+playwright-cli press Enter
+playwright-cli screenshot
+playwright-cli show          # 可视化 dashboard，看所有会话并接管
+</code></pre>
+</li>
+<li>MCP 客户端配置（VS Code / Cursor / Claude Desktop / Windsurf 等）：<pre><code class="language-json">{
+  &quot;mcpServers&quot;: {
+    &quot;playwright&quot;: {
+      &quot;command&quot;: &quot;npx&quot;,
+      &quot;args&quot;: [&quot;@playwright/mcp@latest&quot;]
+    }
+  }
+}
+</code></pre>
+Claude Code 一行装：<code>claude mcp add playwright npx @playwright/mcp@latest</code></li>
+<li>库用法：<code>npm i playwright</code>，然后 <code>chromium.launch()</code> → <code>browser.newPage()</code> → <code>page.goto(...)</code> → <code>page.screenshot({ path })</code> / <code>page.pdf({ path, format: 'A4' })</code> / <code>browser.newContext(devices['iPhone 15'])</code> / <code>page.route('**/*.{png,jpg,jpeg}', r =&gt; r.abort())</code></li>
+<li>浏览器管理：<code>npx playwright install [chromium|firefox|webkit]</code>、<code>install --with-deps</code>（连系统依赖，CI 常用）、<code>install --only-shell</code>（只下 headless shell 不下完整 Chromium）、<code>install --no-remove</code>、<code>install --list</code>（列全机所有安装的浏览器）、<code>uninstall [--all]</code></li>
+</ul>
+</li>
+<li><strong>要点</strong>：<strong>Apache-2.0</strong> 开源；主语言 <strong>TypeScript</strong>；约 <strong>96.4k Star / 6.5k Fork / 202 open issues / 609 watchers</strong>（2026-09-20 数据），仓库创建于 <strong>2019-11-15</strong>，默认分支 <code>main</code>，当日仍有推送、极活跃；最新 <strong>v1.63.0</strong>（2026-09-04，<strong>Release 无任何二进制资产</strong>，纯 npm 分发）；README 徽标显示 main 已跟进 <strong>Chromium 154.0.8037.0 / Firefox 156.0 / WebKit 26.6</strong>，而 v1.63.0 发布说明记录的是 Chromium 153.0.8010.12 / Firefox 155.0 / WebKit 26.6，并测过 Chrome 153 / Edge 153 稳定版；仓库体量约 <strong>236MB</strong>（<code>size</code> 242060 KB）。⚠️ <strong>C 盘相关（按你的减负习惯重点）</strong>：① 浏览器二进制<strong>默认落 <code>%USERPROFILE%\AppData\Local\ms-playwright</code>（即 C 盘）</strong>，三个浏览器合计约 <strong>650MB</strong>（Chromium ~281M / Firefox ~187M / WebKit ~180M），且<strong>每次升级 Playwright 都可能要重跑 <code>install</code> 重下</strong> → 安装前与运行时都显式设 <code>PLAYWRIGHT_BROWSERS_PATH=D:\tools\pw-browsers</code>（官方并建议写进 shell 配置）；② 设 <strong><code>PLAYWRIGHT_BROWSERS_PATH=0</code></strong> 则装进项目内 <code>node_modules/playwright-core/.local-browsers</code>（官方称 hermetic install），最省 C 盘、且随项目走；③ 该变量<strong>不影响</strong> Google Chrome / Microsoft Edge 的安装位置——它们仍装到操作系统全局位置；④ 只跑 headless 时用 <code>--only-shell</code> 省掉完整 Chromium 的下载；⑤ Playwright 会自动垃圾回收「没有客户端再用」的旧版浏览器，不想被删可设 <code>PLAYWRIGHT_SKIP_BROWSER_GC=1</code> 或加 <code>--no-remove</code>；⑥ 内网/自定义制品库可用 <code>PLAYWRIGHT_DOWNLOAD_HOST</code>，分浏览器还可设 <code>PLAYWRIGHT_CHROMIUM_DOWNLOAD_HOST</code> / <code>PLAYWRIGHT_FIREFOX_DOWNLOAD_HOST</code> / <code>PLAYWRIGHT_WEBKIT_DOWNLOAD_HOST</code>（优先级高于前者），默认从微软 CDN 下载。✅ 与本机已装的 <strong><code>playwright-cli</code> 技能</strong>（codebuddy-plugins-official/playwright-cli 0.1.0）以及本文件里的 <code>browser-skill</code> 条目同属「Agent 操作浏览器」这条线，可对照着看：<strong>Playwright 系是自带独立浏览器实例</strong>（干净、可复现、适合 CI），<strong>BrowserSkill 是借用你已登录的真实浏览器</strong>（有登录态、需人机协同）。</li>
+</ul>
+
+</details>
+
+<a name="knowledge-work-plugins" id="knowledge-work-plugins"></a>
+<details>
+<summary><b>Knowledge Work Plugins</b> · <code>anthropics/knowledge-work-plugins</code> — Anthropic 官方开源：按职能岗打包 Claude 的插件市场（销售/法务/财务/数据/设计/工程…）</summary>
+
+<ul>
+<li><strong>仓库</strong>：<a href="https://github.com/anthropics/knowledge-work-plugins">https://github.com/anthropics/knowledge-work-plugins</a>（插件安装入口 <a href="https://claude.com/plugins/">https://claude.com/plugins/</a>）</li>
+<li><strong>定位</strong>：Anthropic 官方开源的插件集合。一句话：把 Claude 变成<strong>你所在岗位的专家</strong>——为 <a href="https://claude.com/product/cowork">Claude Cowork</a> 打造、同时兼容 <a href="https://claude.com/product/claude-code">Claude Code</a>。每个插件按「岗位职能」打包该角色需要的 <strong>skills（领域知识）+ connectors（MCP 工具连接）+ 斜杠命令 + 子代理</strong>，开箱即用，也可按公司自己的工具/术语/流程改写。</li>
+<li><strong>官方插件（仓库根 17 个）</strong>：productivity（任务/日历/日程）、sales（客户研究/外呼/预测）、customer-support（工单分诊/知识库）、product-management（规格/路线图/用户研究）、marketing（内容/投放/品牌调性）、legal（合同审查/NDA/合规）、finance（记账/对账/报表/审计）、data（SQL/可视化/看板）、enterprise-search（跨全部公司工具检索）、bio-research（临床前研发：文献/基因组/靶点）、cowork-plugin-management（造/改插件）、design（设计评审/设计系统/可访问性）、engineering（站会/CR/架构决策/事故响应）、human-resources（招聘/入职/绩效/薪酬）、operations（供应商/流程/容量规划）、small-business（小微企业预置工作流）、pdf-viewer（PDF 查看/批注/签名）。合作方插件另收在 <code>partner-built/</code>（Slack、Apollo、Common Room、Brand Voice、Zoom）。⚠️ <strong>README 表格只列了 11 个</strong>，后 6 个（design / engineering / human-resources / operations / small-business / pdf-viewer）未进表，但仓库与 marketplace 里都有。</li>
+<li><strong>marketplace 规模</strong>：权威清单是 <code>.claude-plugin/marketplace.json</code>，除官方插件外还聚合大量合作方/第三方插件（Figma、Canva、Box、Dropbox、Zapier、Airtable、monday.com、HubSpot、Datadog、Grafana、Langfuse、CockroachDB、ClickHouse、PlanetScale、Prisma、Auth0、Twilio、Unity、Adobe、Miro、Oracle NetSuite、BlackRock、LSEG、S&amp;P Global、Carta、Intuit QuickBooks 等），<strong>共 115 项</strong> —— 本仓库实质就是 Anthropic 的<strong>官方 Claude 插件市场源</strong>。</li>
+<li><strong>统一结构（每个插件）</strong>：<pre><code>plugin-name/
+├── .claude-plugin/plugin.json   # 清单
+├── .mcp.json                    # 工具连接（MCP）
+├── commands/                    # 斜杠命令（显式触发）
+└── skills/                      # 领域知识（相关时自动生效）
+</code></pre>
+</li>
+<li><strong>用法</strong>：
+<ul>
+<li>Cowork：从 <a href="https://claude.com/plugins/">https://claude.com/plugins/</a> 安装</li>
+<li>Claude Code：<pre><code class="language-bash">claude plugin marketplace add anthropics/knowledge-work-plugins
+claude plugin install sales@knowledge-work-plugins
+</code></pre>
+</li>
+<li>装完自动生效：skills 相关时触发；斜杠命令形如 <code>/sales:call-prep</code>、<code>/data:write-query</code>、<code>/finance:reconciliation</code>、<code>/product-management:write-spec</code></li>
+<li>定制路径：改 <code>.mcp.json</code> 换连接器 → 把公司术语/组织架构/流程写进 skill 文件 → 改 skill 指令贴合真实做法 → 用 <code>cowork-plugin-management</code> 造新插件</li>
+</ul>
+</li>
+<li><strong>要点</strong>：<strong>Apache-2.0</strong> 开源；GitHub 语言标为 <strong>Python</strong>，但内容<strong>几乎全是 Markdown + JSON</strong>（README 明确 &quot;no code, no infrastructure, no build steps&quot;）；约 <strong>25.3k Star / 3.0k Fork / 89 open issues / 177 watchers</strong>（2026-09-21 数据），仓库创建于 2026-01-23，默认分支 <code>main</code>，2026-09-20 仍在推送；<strong>无 release、无 tag</strong>（跟随 main 分发），仓库体量约 <strong>6.3MB</strong>；贡献方式就是「fork → 改 markdown → 提 PR」。
+<ul>
+<li>⚠️ <strong>与本机 WorkBuddy 的关系</strong>：安装格式是 Claude Code/Cowork 专有约定（<code>.claude-plugin/</code>、<code>.mcp.json</code>、<code>commands/</code>），<strong>WorkBuddy 不能直接装</strong>；但 <code>skills/</code> 下每个技能都是标准 <code>SKILL.md</code> + 附属文件，<strong>可单独抽出来移植</strong>到 <code>.workbuddy/skills/</code>。按你的减负习惯，若想试，建议只挑需要的单个 skill 复制到<strong>项目级 skill 目录</strong>（D 盘），别整仓克隆。</li>
+</ul>
+</li>
+</ul>
+
+</details>
+
+<a name="video-use" id="video-use"></a>
+<details>
+<summary><b>video-use</b> · <code>browser-use/video-use</code> — 供编码智能体（Claude Code / Codex / Hermes）使用的视频剪辑 skill，把原始素材自动剪成成片</summary>
+
+<ul>
+<li><strong>仓库</strong>：<a href="https://github.com/browser-use/video-use">https://github.com/browser-use/video-use</a></li>
+<li><strong>定位</strong>：给「想用编码智能体剪视频、但不想自己写剪辑脚本」的人。它以 SKILL.md 加 helpers/ 脚本的形式注册到任意有 shell 的智能体下，你只需把原始素材丢进文件夹、说一句「edit these into a launch video」，它就会盘点素材、提出剪辑策略、等你确认后产出 <code>edit/final.mp4</code>，全程不擅自转写、保持 skill 目录干净。</li>
+<li><strong>能力/特性</strong>：智能体 skill 形态（SKILL.md + helpers/ 编辑脚本）；支持 Claude Code / Codex / Hermes / Openclaw 等带 shell 的智能体；可经 Browser Use Box 跑在自有 VPS 或 Telegram；可选 HyperFrames 动画；依赖 ffmpeg + ElevenLabs（配音）API</li>
+<li><strong>用法</strong>：
+<ul>
+<li>安装提示（贴进智能体会话）：<code>Set up https://github.com/browser-use/video-use for me.</code></li>
+<li>日常：把素材放进 <code>&lt;videos_dir&gt;/</code>，在智能体里说 <code>edit these into a launch video</code>，成片落在 <code>&lt;videos_dir&gt;/edit/final.mp4</code></li>
+</ul>
+</li>
+<li><strong>要点</strong>：MIT 许可；安装前先读 install.md 接线 ffmpeg、注册 skill、配置 ElevenLabs key；所有产物落在素材目录的 <code>edit/</code>，skill 目录保持干净</li>
+</ul>
+
+</details>
+
+<a name="agency-agents-zh" id="agency-agents-zh"></a>
+<details>
+<summary><b>agency-agents-zh</b> · <code>jnMetaCode/agency-agents-zh</code> — 277 个即插即用中文 AI 专家角色，覆盖 20 个部门、20 种 AI 工具</summary>
+
+<ul>
+<li><strong>仓库</strong>：<a href="https://github.com/jnMetaCode/agency-agents-zh">https://github.com/jnMetaCode/agency-agents-zh</a></li>
+<li><strong>定位</strong>：普通提示词只告诉 AI 你是一个专家，而本库为每个智能体提供明确身份、关键规则、工作流与交付物定义；搭配编排器可让多位专家按 DAG 自动协作，避免重复编写复杂提示词。</li>
+<li><strong>能力/特性</strong>：277 专家角色(译 213+原创 64) | 20 部门(经营/工程/设计/营销/金融) | 20 工具适配 | 编排器(agency-orchestrator) | 在线专家库</li>
+<li><strong>用法</strong>：
+<ul>
+<li>安装：<code>./scripts/install.sh --tool claude-code</code></li>
+<li>复制：<code>cp -r marketing/*.md ~/.claude/agents/</code></li>
+<li>编排：<code>npm i -g agency-orchestrator</code> + <code>ao compose &quot;...&quot; --run</code></li>
+</ul>
+</li>
+<li><strong>要点</strong>：载体 Markdown+脚本(Shell/PowerShell/JS)；含 lint/计数一致性/CI 校验；中国市场原创含小红书/抖音/微信/飞书/钉钉等；支持 DAG 协作</li>
+</ul>
+
+</details>
+
+<a name="context7-skill" id="context7-skill"></a>
+<details>
+<summary><b>context7-skill</b> · <code>netresearch/context7-skill</code> — 为 AI 编码智能体提供 Context7 文档查询的轻量 skill（无 MCP 开销）</summary>
+
+<ul>
+<li><strong>仓库</strong>：<a href="https://github.com/netresearch/context7-skill">https://github.com/netresearch/context7-skill</a></li>
+<li><strong>定位</strong>：Agent 在编码时常需查阅最新库文档，而 MCP 上下文开销大；本 skill 用轻量 REST API 封装(context7.sh)让 Claude Code 等直接拉取 Context7 文档，免去 MCP 通道负担。</li>
+<li><strong>能力/特性</strong>：REST API 封装 | 多安装方式(marketplace/npx/git/composer/npm) | 插件目录自加载</li>
+<li><strong>用法</strong>：
+<ul>
+<li>市场：<code>/plugin marketplace add netresearch/claude-code-marketplace</code> + <code>/plugin install context7@...</code></li>
+<li>npx：<code>npx skills add https://github.com/netresearch/context7-skill --skill context7</code></li>
+<li>clone：<code>git clone ... ~/.claude/skills/context7</code></li>
+</ul>
+</li>
+<li><strong>要点</strong>：语言 Shell(POSIX)+文档(Markdown)；MIT + CC-BY-SA-4.0 双许可；v1.7.2；依赖 @netresearch/agent-skill-coordinator；提供 release 打包</li>
+</ul>
+
+</details>
+
+<a name="taste-skill" id="taste-skill"></a>
+<details>
+<summary><b>taste-skill</b> · <code>Leonxlnx/taste-skill</code> — 给 AI 生成前端注入好品味的反套话（anti-slop）设计技能族</summary>
+
+<ul>
+<li><strong>仓库</strong>：<a href="https://github.com/Leonxlnx/taste-skill">https://github.com/Leonxlnx/taste-skill</a></li>
+<li><strong>定位</strong>：AI 生成的前端常陷入千篇一律的套话与陈词滥调；taste-skill 以可移植的 Agent Skills 提供布局/排版/动效/间距规范与硬约束（如禁止 em-dash、强制预检），让 Codex/Cursor/Claude Code 产出有设计感的界面。</li>
+<li><strong>能力/特性</strong>：实现技能(design-taste-frontend v2) | GPT 特化(gpt-taste) | 图像生成技能(参考板) | 改版技能(redesign) | 风格变体(soft/minimalist/brutalist) | 输出强制(output)</li>
+<li><strong>用法</strong>：
+<ul>
+<li>安装：<code>npx skills add https://github.com/Leonxlnx/taste-skill</code></li>
+<li>单技能：<code>npx skills add ... --skill &quot;design-taste-frontend&quot;</code></li>
+<li>旧版：<code>--skill &quot;design-taste-frontend-v1&quot;</code></li>
+</ul>
+</li>
+<li><strong>要点</strong>：语言 Markdown(SKILL.md)+脚本；MIT；v2 实验版(简报推断/设计系统映射/GSAP 骨架/预检)；含 image-to-code、brandkit 等；框架无关</li>
+</ul>
+
+</details>
+
+<a name="caveman" id="caveman"></a>
+<details>
+<summary><b>Caveman</b> · <code>JuliusBrussee/caveman</code> — 让编码智能体像穴居人般说话的爆火 skill + 代理，压缩 65% token</summary>
+
+<ul>
+<li><strong>仓库</strong>：<a href="https://github.com/JuliusBrussee/caveman">https://github.com/JuliusBrussee/caveman</a></li>
+<li><strong>定位</strong>：Agent 按字数计费却写得像求职信、读得像消防水龙头；Caveman 从两端下手——skill 压缩 Agent 说的话，proxy/middleware 压缩 Agent 读的日志/测试/JSON/diff，且每次压缩都留备份可还原，已在 30+ agent 验证。</li>
+<li><strong>能力/特性</strong>：skill(规则文件, 30+ agent) | proxy(本地, 压缩读入) | middleware(LangChain/Vercel AI/OpenAI/Anthropic 包装) | commit/review/compress 子命令 | MCP 工具</li>
+<li><strong>用法</strong>：
+<ul>
+<li>skill：<code>npx skills add JuliusBrussee/caveman -g</code></li>
+<li>proxy：<code>npm i -g @caveman-ai/cli &amp;&amp; caveman claude</code></li>
+<li>middleware：<code>pip install 'caveman-middleware[langchain]' caveman-sdk</code></li>
+<li>全装：`curl .../install.sh</li>
+<li>bash`</li>
+</ul>
+</li>
+<li><strong>要点</strong>：语言 TypeScript(CLI/middleware)+Python(middleware)；拆分许可(MIT skill/CLI/SDK + BSL-1.1 engine/proxy)；GitHub Trending 2026-07 第一；10 万+ stars；本地运行、遥测可关</li>
+</ul>
+
+</details>
+
+<a name="ui-ux-pro-max-skill" id="ui-ux-pro-max-skill"></a>
+<details>
+<summary><b>UI UX Pro Max</b> · <code>nextlevelbuilder/ui-ux-pro-max-skill</code> — 为 AI 编码助手自动生成专业 UI/UX 设计系统的技能（含 192 条规则）</summary>
+
+<ul>
+<li><strong>仓库</strong>：<a href="https://github.com/nextlevelbuilder/ui-ux-pro-max-skill">https://github.com/nextlevelbuilder/ui-ux-pro-max-skill</a></li>
+<li><strong>定位</strong>：专业 UI/UX 需要大量人工经验选型配色/排版/风格并规避反模式；本技能用内置 BM25 搜索与 192 条行业推理规则，在需求提出时秒级生成完整设计系统（模式/风格/颜色/字体/效果加交付前检查清单）。</li>
+<li><strong>能力/特性</strong>：设计系统生成器(v2.0) | 79 UI 风格 | 192 配色方案 | 74 字体配对 | 25 图表类型 | 22 技术栈指南 | 119 UX 指南 | 持久化(MASTER.md)</li>
+<li><strong>用法</strong>：
+<ul>
+<li>市场：<code>/plugin marketplace add nextlevelbuilder/ui-ux-pro-max-skill</code> + <code>/plugin install ui-ux-pro-max@...</code></li>
+<li>CLI：<code>npm i -g ui-ux-pro-max-cli &amp;&amp; uipro init --ai claude</code></li>
+<li>脚本：<code>python3 .../search.py &quot;beauty spa&quot; --design-system</code></li>
+</ul>
+</li>
+<li><strong>要点</strong>：语言 Python(搜索脚本, 仅标准库)+TypeScript/Node(CLI)；跨 20+ AI 工具(Claude Code/Cursor/Copilot/CodeBuddy 等)；数据层 CSV/JSON；含 Premium 版</li>
+</ul>
+
+</details>
+
+<a name="baoyu-skills" id="baoyu-skills"></a>
+<details>
+<summary><b>baoyu-skills</b> · <code>JimLiu/baoyu-skills</code> — 宝宇分享的 20+ 个 AI Agent 实用技能（图文/信息图/社媒发布等）</summary>
+
+<ul>
+<li><strong>仓库</strong>：<a href="https://github.com/JimLiu/baoyu-skills">https://github.com/JimLiu/baoyu-skills</a></li>
+<li><strong>定位</strong>：常见内容创作、图文/漫画/信息图生成、社媒发布与文档格式转换等任务，被封装为标准化技能供 AI Agent 直接调用，降低手动操作成本、实现工作流自动化。</li>
+<li><strong>能力/特性</strong>：内容技能(xhs-images/infographic/diagram/cover/slide-deck/comic) | 社媒发布(post-to-x/wechat/weibo) | AI 生成(image-gen) | 实用工具(youtube-transcript/url-to-markdown/translate/compress-image)</li>
+<li><strong>用法</strong>：
+<ul>
+<li>安装：<code>npx skills add jimliu/baoyu-skills</code></li>
+<li>市场：<code>/plugin marketplace add JimLiu/baoyu-skills</code></li>
+<li>调用：<code>/baoyu-xhs-images posts/ai-future/article.md --style notion</code></li>
+<li>生图：<code>/baoyu-image-gen --prompt &quot;...&quot; --provider openai</code></li>
+</ul>
+</li>
+<li><strong>要点</strong>：语言 TypeScript/JavaScript(Bun 运行时)+Markdown；20+ 技能；支持 Plugin Marketplace/ClawHub 分发；含 EXTEND.md 自定义；多语言文档</li>
+</ul>
+
+</details>
+
+<a name="ppt-master" id="ppt-master"></a>
+<details>
+<summary><b>PPT Master</b> · <code>hugohe3/ppt-master</code> — 让任意 AI 编码智能体把文档/主题一键生成原生 PowerPoint</summary>
+
+<ul>
+<li><strong>仓库</strong>：<a href="https://github.com/hugohe3/ppt-master">https://github.com/hugohe3/ppt-master</a></li>
+<li><strong>定位</strong>：做 PPT 常困于模板与排版；PPT Master 以 skill 形式装入 Claude Code 等 agent，由 agent 驱动流水线，产出带原生形状/转场/动画、数据图表、演讲者语音旁白且可用自有 .pptx 模板的成片，不要求用户写代码。</li>
+<li><strong>能力/特性</strong>：原生 PowerPoint 输出 | 原生形状/转场/动画 | 数据图表/表格 | 演讲者语音旁白 | 自有模板支持 | 图像获取(AI 生成/网络搜索)</li>
+<li><strong>用法</strong>：
+<ul>
+<li>安装：<code>git clone ... &amp;&amp; pip install -r requirements.txt</code></li>
+<li>市场：<code>npx skills add hugohe3/ppt-master</code> 或 <code>/plugin marketplace add hugohe3/ppt-master</code></li>
+<li>更新：<code>python3 skills/ppt-master/scripts/update_repo.py</code></li>
+</ul>
+</li>
+<li><strong>要点</strong>：语言 Python(后处理脚本)+Markdown(skill)；作者推荐 Claude Code/Kimi K3 驱动；支持 VS Code/Cursor/Cline/Copilot 等；依赖 image_gen/image_search 脚本</li>
+</ul>
+
+</details>
+
+<a name="superpowers" id="superpowers"></a>
+<details>
+<summary><b>Superpowers</b> · <code>obra/superpowers</code> — 面向编码智能体的可组合技能框架与软件开发方法论</summary>
+
+<ul>
+<li><strong>仓库</strong>：<a href="https://github.com/obra/superpowers">https://github.com/obra/superpowers</a></li>
+<li><strong>定位</strong>：编码 Agent 常跳过规划直接写码、重复劳动或烧 token；Superpowers 以一组可组合 skills（TDD、系统调试、头脑风暴、写计划/执行计划、并行派发等）加启动引导，确保 agent 在动手前先走结构化工作流。</li>
+<li><strong>能力/特性</strong>：测试(test-driven-development) | 调试(systematic-debugging/verification) | 协作(brainstorming/writing-plans/executing-plans) | 并行(dispatching-parallel-agents) | 元(writing-skills/using-superpowers)</li>
+<li><strong>用法</strong>：
+<ul>
+<li>Cursor：<code>/add-plugin superpowers</code></li>
+<li>Devin：<code>devin plugins install obra/superpowers</code></li>
+<li>Pi：<code>pi install git:github.com/obra/superpowers</code></li>
+<li>Hermes：<code>hermes plugins install obra/superpowers --enable</code></li>
+<li>Muse：<code>muse plugins install ./superpowers</code></li>
+</ul>
+</li>
+<li><strong>要点</strong>：语言 Markdown(SKILL.md)+脚本；跨 Claude Code/Codex/Cursor/Gemini/Pi/Muse/Hermes 等；含 diagnosing-superpowers 排错技能；遥测可关(SUPERPOWERS_DISABLE_TELEMETRY)</li>
+</ul>
+
+</details>
+
+<a name="context-mode" id="context-mode"></a>
+<details>
+<summary><b>Context Mode</b> · <code>mksglu/context-mode</code> — 给 AI 编码 Agent 治上下文膨胀：工具输出挡在上下文之外（省 98% token），会话历史落盘可检索</summary>
+
+<ul>
+<li><strong>仓库</strong>：<a href="https://github.com/mksglu/context-mode">https://github.com/mksglu/context-mode</a>（官网 <a href="https://context-mode.com">https://context-mode.com</a>；npm 包 <code>context-mode</code>）</li>
+<li><strong>定位</strong>：面向 AI 编码 Agent 的<strong>上下文窗口优化器</strong>（作者自称&quot;上下文问题的另一半&quot;、&quot;The other half of the context problem&quot;）。形态是 <strong>MCP 服务器 + hooks 插件</strong>，从四个方向解决上下文被工具输出撑爆的问题：
+<ol>
+<li><strong>省上下文</strong>——把工具原始输出挡在上下文窗外，<strong>315 KB → 5.4 KB，降 98%</strong>；</li>
+<li><strong>会话续接</strong>——每次文件编辑、git 操作、任务、错误、用户决策都记进 <strong>SQLite</strong>；压缩时不再把历史倒回上下文，而是索引进 <strong>FTS5</strong>（SQLite 全文检索扩展）、用 <strong>BM25</strong> 只捞相关片段，模型接着上次继续；不加 <code>--continue</code> 则上轮数据立即删除（新会话 = 清白开局）；</li>
+<li><strong>用代码思考</strong>——让模型<strong>写脚本去算</strong>，而不是把数据读进上下文（<code>47 × Read() = 700 KB</code> → <code>1 × ctx_execute() = 3.6 KB</code>，作者称省 100 倍），且这是全部支持平台上的强制范式；</li>
+<li><strong>不干预文风</strong>——只规定&quot;数据往哪走&quot;，不规定模型怎么组织最终答案（README 引述称激进简写提示词会拉低编码/推理基准）。工具原始数据不进上下文，但&quot;话说多少&quot;仍由模型或你自己的 <code>CLAUDE.md</code> / <code>AGENTS.md</code> 决定。</li>
+</ol>
+</li>
+<li><strong>能力/工具</strong>：<strong>11 个 MCP 工具</strong> = 6 个沙箱工具（<code>ctx_batch_execute</code> / <code>ctx_execute</code> / <code>ctx_execute_file</code> / <code>ctx_index</code> / <code>ctx_search</code> / <code>ctx_fetch_and_index</code>）+ 5 个元工具（<code>ctx_stats</code> / <code>ctx_doctor</code> / <code>ctx_upgrade</code> / <code>ctx_purge</code> / <code>ctx_insight</code>）；<strong>6 个 hook</strong>（PreToolUse / PostToolUse / UserPromptSubmit / PreCompact / SessionStart / Stop）；斜杠命令 <code>/context-mode:ctx-stats</code>、<code>ctx-doctor</code>、<code>ctx-index</code>、<code>ctx-search</code>、<code>ctx-upgrade</code>、<code>ctx-purge</code>、<code>ctx-insight</code>；可选状态栏显示「本次省下 $ · 跨会话累计省下 $ · 效率 %」（Claude Code 需手改一次 <code>~/.claude/settings.json</code>）；<code>ctx_insight</code> 打开托管看板（面向团队的 AI 编码分析）。</li>
+<li><strong>支持平台</strong>：README 描述与正文都写 <strong>17 个平台</strong>，但安装章节实际列出 <strong>18 个标题</strong>（其中「OpenClaw / Pi Agent」一条含两个，逐项计为 19 个客户端）：Claude Code · Gemini CLI · VS Code Copilot · JetBrains Copilot · GitHub Copilot CLI · Cursor · OpenCode · KiloCode · OpenClaw · Pi Agent · Codex CLI · Kimi Code · Qwen Code · Antigravity IDE · Antigravity CLI(<code>agy</code>) · Kiro · Zed · Pi Coding Agent · OMP(Oh My Pi)。<strong>能挂 hook 的平台自动强制路由</strong>（不往项目里写文件，靠 SessionStart hook 运行时注入）；非 hook 平台需一次性拷贝路由文件。</li>
+<li><strong>用法</strong>：
+<ul>
+<li>Claude Code（插件市场，全自动）：<code>/plugin marketplace add mksglu/context-mode</code> → <code>/plugin install context-mode@context-mode</code> → 重启或 <code>/reload-plugins</code> → 用 <code>/context-mode:ctx-doctor</code> 自检（全 <code>[x]</code> 为正常，会校验运行时、hooks、FTS5、插件注册）；需 Claude Code v1.0.33+</li>
+<li>仅 MCP（无 hooks / 无斜杠命令）：<code>claude mcp add context-mode -- npx -y context-mode</code>，11 个工具都能用，只是不会被&quot;劝&quot;优先于原生 Bash/Read/WebFetch</li>
+<li>其它平台：<code>npm install -g context-mode</code>，再在各自配置里注册 MCP 与 hook（如 <code>~/.gemini/settings.json</code> 一个文件搞定四项）；<strong>要求 Node.js &gt;= 22.5</strong>（或 Bun）</li>
+<li>无斜杠命令的平台直接在对话里说 <code>ctx stats</code> / <code>ctx doctor</code> / <code>ctx index</code> / <code>ctx search</code> / <code>ctx upgrade</code> / <code>ctx insight</code>，模型会自动调 MCP 工具</li>
+<li>状态栏：<code>~/.claude/settings.json</code> 加 <code>&quot;statusLine&quot;: { &quot;type&quot;: &quot;command&quot;, &quot;command&quot;: &quot;context-mode statusline&quot; }</code></li>
+</ul>
+</li>
+<li><strong>要点</strong>：<strong>Elastic License 2.0 (ELv2)</strong>（README 徽标标注；GitHub API 侧显示为 &quot;Other / NOASSERTION&quot;，动手前建议核对 LICENSE 原文）；主语言 <strong>TypeScript</strong>；约 <strong>23.8k Star / 1.7k Fork / 264 open issues / 98 watchers</strong>（2026-09-21 数据），仓库创建于 <strong>2026-02-23</strong>，2026-09-20 仍在推送；仓库体量约 <strong>31.2MB</strong>；曾登 <strong>Hacker News #1（570+ points）</strong>；README 所列&quot;使用团队&quot;含 Microsoft / Google / Meta / Amazon / IBM / NVIDIA / ByteDance / Stripe / Datadog / Salesforce / GitHub / Red Hat / Supabase / Canva / Notion / Hasura / Framer / Cursor —— ⚠️ 这些是<strong>作者自我宣称</strong>（徽标链接为 <code>#</code>），无独立证据。
+<ul>
+<li>⚠️ <strong>与 WorkBuddy 的关系</strong>：hooks 与斜杠命令是 Claude Code 插件机制，WorkBuddy <strong>不能原样安装</strong>；但 MCP 部分是标准协议，理论上可把它当 MCP 服务器接入。按你的减负习惯，<code>npm install -g</code> 会落 C 盘 —— 建议先只看不装，或改用 <code>npx -y context-mode</code> 免安装试跑；其 SQLite/FTS5 知识库与缓存目录的默认落点也要留意。</li>
+</ul>
+</li>
+</ul>
+
+</details>
+
+<a name="jev-ultrafast" id="jev-ultrafast"></a>
+<details>
+<summary><b>Jev Ultrafast</b> · <code>browser-use/jev-ultrafast</code> — browser-use 出品的极速浏览器 Agent：每步一次模型调用同时定「做什么 + 点哪里」，官方搜票演示 7.1 秒</summary>
+
+<ul>
+<li><strong>仓库</strong>：<a href="https://github.com/browser-use/jev-ultrafast">https://github.com/browser-use/jev-ultrafast</a>（官网 <a href="https://browser-use.com">https://browser-use.com</a>；姊妹项目 <a href="https://github.com/browser-use/browser-use">browser-use</a> 与 <a href="https://github.com/browser-use/browser-harness">browser-harness</a>）</li>
+<li><strong>定位</strong>：<strong>带动态索引动作空间的浏览器 Agent</strong>（&quot;A browser agent with a dynamic, indexed action space&quot;）。给它<strong>一个自然语言目标</strong>即可；每一步由 <a href="https://docs.typesafe.ai/introduction">TypeSafe 的 Jev</a> 选出一个<strong>操作</strong>和一个<strong>元素</strong>，只有当操作是 <code>TYPE_TEXT</code> 时才再叫一个<strong>小 LLM</strong> 生成文本。官方演示：Zurich → London 的 Google Flights 搜票 <strong>7.1 秒</strong>（含真实文本生成与加载等待）。仓库描述就是三个词：<em>&quot;i. am. speed.&quot;</em></li>
+<li><strong>动作空间</strong>：每次观察生成一张<strong>带编号的元素表</strong>（形如 <code>[2] combobox Where from? · San Francisco</code>）；可选操作只有 <code>CLICK</code> / <code>TYPE_TEXT</code> / <code>SELECT</code> / <code>SCROLL_UP</code> / <code>SCROLL_DOWN</code> / <code>WAIT</code> / <code>DONE</code> / <code>BLOCKED</code>，且<strong>只提供页面上真实存在的操作与目标</strong>。操作头与目标头<strong>共享同一次观察</strong>，所以&quot;两个决策 = 一次网络往返&quot;；目标问题是<strong>投机式</strong>的（操作是 <code>CLICK</code> 时只有 <code>click_target</code> 能执行），每个目标头只含兼容元素，原生下拉选项带观察到的元素/选项索引。<strong>没有站点专用动作脚本，也没有预制字段字符串</strong>——Flights 示例只给目标，再由独立检查验证结果；截图渲染器是事后加标签，不驱动浏览器。</li>
+<li><strong>为什么快（工程要点）</strong>：
+<ul>
+<li>一个决策周期只发一次请求</li>
+<li><strong>默认循环不用截图</strong>（Jev 吃结构化状态，截图只给 inspector 与录像用）</li>
+<li><strong>每次快照</strong><strong>只一次浏览器调用</strong>，原子读出可见控件及其名称/值/文本并保留真实 DOM 节点引用</li>
+<li><strong>校验选中目标</strong>（点击前检查 document、表单值、目标与邻近上下文，解析当前几何，拒绝被遮挡控件，动画本身不触发重新预测）</li>
+<li><strong>等有用状态</strong>（combobox 输入后等可见建议，上限 200ms；其它交互最多两帧或 50ms；这些读取发生在执行被记录之后）</li>
+<li><strong>保持隐藏标签页渲染</strong>（焦点模拟避免后台动画节流，且不切换 Chrome 可见标签）</li>
+<li><strong>只发可见文本</strong>（离屏正文与页脚不进模型上下文）</li>
+<li><strong>复用被打断的文本请求</strong>（整份文本助手输入未变才复用已生成的值）</li>
+</ul>
+</li>
+<li><strong>安全设计</strong>：<strong>模型输出永不变成选择器、坐标、shell 命令或可执行 JS</strong>；每个被执行的目标都从观察到的节点解析，执行器会重查页面新鲜度与点击遮挡；文本助手的输出必须先解析成一个小 JSON 对象才能输入。</li>
+<li><strong>用法</strong>：
+<ul>
+<li>跑 demo：<pre><code class="language-bash">git clone https://github.com/browser-use/jev-ultrafast.git
+cd jev-ultrafast
+uv sync
+cp .env.example .env          # 填 TYPESAFE_API_KEY 与 TEXT_MODEL_API_KEY
+uv run jev
+</code></pre>
+打开 <strong>http://127.0.0.1:8766</strong> → 点 <strong>Start demo → Run automatically</strong>。inspector 显示编号元素、操作概率、目标概率与已执行动作；<strong>Choose next</strong> 会在执行前暂停。Chrome 经 <strong>Browser Harness</strong> 连接（<code>uv sync</code> 已装），需要时 <code>uv run browser-harness --doctor</code>，并按提示允许 Chrome 远程调试。示例里 <code>TEXT_MODEL_API_KEY</code> 是 OpenRouter key，默认模型 <code>inception/mercury-2.5</code> 且关闭推理；Gemini / GLM / DeepSeek 也能走 OpenAI 兼容的文本助手（需自行配模型、端点与推理设置）。</li>
+<li>当库用：<pre><code class="language-python">from jev_ultrafast import Agent
+
+with Agent(
+    &quot;https://www.google.com/travel/flights?hl=en&quot;,
+    &quot;Find one-way flights from Zurich to London on September 20, 2026, &quot;
+    &quot;for one adult in economy. Stop when matching flight options are visible.&quot;,
+) as agent:
+    for state in agent.run():
+        print(state[&quot;elapsed_ms&quot;], state[&quot;status&quot;])
+</code></pre>
+跑：<code>uv run --env-file .env python your_script.py</code>；换任务可用 <code>examples/run.py --url ... --goal '...'</code>；<code>examples/flights.py --keep-open</code> 会执行搜索并校验真实路线/日期/结果、保存 trace（<strong>不选座、不下单</strong>）。</li>
+</ul>
+</li>
+<li><strong>性能数据（README 原文口径）</strong>：视频记录的是 <strong>7,073 ms</strong> 的一次 Google Flights 跑（计时从首次页面观察之后算起，含模型调用、生成文本、浏览器操作、过期决策与加载等待；1× 播放，独立复核了单程、Zurich、London、2026-09-20 与可见航班选项）。<strong>6 次交替对照</strong>（同模型同设置）两版都 <strong>3/3 通过</strong>：中位任务耗时 <strong>9.450 s → 7.092 s（降 25%）</strong>，中位浏览器协议调用数 <strong>1,092 → 101</strong>。同一策略打开指定 Wikipedia 文章 <strong>2.798 s</strong>，通过一个本地酒店搜索/筛选任务 <strong>1.896 s</strong>。⚠️ 作者明确声明：这是<strong>一个任务在一个浏览器 profile 上重复三次</strong>，<strong>不是通用可靠性基准</strong>。</li>
+<li><strong>已知边界（作者自述 MVP）</strong>：<code>DONE</code> 仍须独立校验结果；DOM 读取只覆盖常见 HTML/ARIA 控件，<strong>并非完整 accessible-name 规范</strong>；<strong>Shadow DOM、iframe、canvas、文件上传、弹窗标签、嵌套滚动、任意键盘控件均不支持</strong>；占用的标签页<strong>共用你现有 Chrome profile</strong>。</li>
+<li><strong>要点</strong>：<strong>MIT</strong> 开源；主语言 <strong>Python</strong>；核心小到可通读，6 个文件各司其职——<code>agent.py</code>（完整循环与文本助手交接）/ <code>snapshot.js</code>（原子 DOM 快照、索引控件、新鲜度护栏）/ <code>browser.py</code>（浏览器连接、当前几何、执行）/ <code>model.py</code>（动态操作-目标头与文本生成）/ <code>questions.py</code>（模型指令）/ <code>demo.py</code>（本地 inspector）；约 <strong>12.0k Star / 745 Fork / 82 open issues / 29 watchers</strong>（2026-09-21 数据），仓库创建于 <strong>2026-09-16</strong>、最新推送 2026-09-18 —— <strong>上线 5 天即破万星</strong>；<strong>无 release、无 tag</strong>（跟随 <code>main</code> 分发）；仓库体量约 <strong>4.4MB</strong>。开发校验：<code>uv run ruff check .</code> / <code>uv run pytest</code> / <code>node --check jev_ultrafast/*.js</code> / <code>uv build</code>（<strong>测试离线</strong>，<code>scripts/check_guards.py</code> 不开模型调用；live 示例与录制脚本会产生<strong>付费 API 调用</strong>）。
+<ul>
+<li>⚠️ <strong>强依赖付费 API</strong>：必须自备 <code>TYPESAFE_API_KEY</code>（TypeSafe Jev）+ <code>TEXT_MODEL_API_KEY</code>，本地跑 demo 即产生真实费用；与下一条 <code>fast-jev-compaction</code> 同属 <strong>TypeSafe Jev 生态</strong>（前者用 Jev 选浏览器动作，后者用 Jev 决定上下文里什么该留）。</li>
+</ul>
+</li>
+</ul>
+
+</details>
+
+<a name="fast-jev-compaction" id="fast-jev-compaction"></a>
+<details>
+<summary><b>fast-jev-compaction</b> · <code>tamaratran/fast-jev-compaction</code> — Claude Code 插件：用 TypeSafe Jev 打分替代压缩摘要，只删过期工具调用、保留内容一字不改</summary>
+
+<ul>
+<li><strong>仓库</strong>：<a href="https://github.com/tamaratran/fast-jev-compaction">https://github.com/tamaratran/fast-jev-compaction</a>（npm 包 <code>fast-jev-compaction</code>）</li>
+<li><strong>定位</strong>：<strong>Claude Code 插件 + npm 库</strong>，用 <strong>Jev 决策</strong>替换 Claude Code 内建的压缩摘要。要解决的痛点：让 LLM&quot;总结&quot;旧对话是<strong>有损</strong>的 —— 一个文件路径、一段精确报错、一条约束或一条命令，都可能在以后要紧时消失。这个库<strong>从不改写任何内容</strong>：只删掉 Jev 判定&quot;不再需要&quot;的工具调用与工具结果，判断时把<strong>整段对话</strong>喂给 Jev；用户与助手的文字<strong>逐字保留、顺序不变</strong>。仓库同时是 npm 包（<code>src/</code>）与 Claude Code 插件（<code>hooks/</code>、<code>.claude-plugin/</code>）。</li>
+<li><strong>工作机制（7 步）</strong>：
+<ol>
+<li>每个 <code>tool_use</code> 按 <code>tool_use_id</code> 与其 <code>tool_result</code> 配对；<strong>首条消息</strong>与<strong>最新 <code>preserveRecentMessages</code> 条</strong>被钉住，永不触碰。</li>
+<li>送给 Jev 的 <strong>state = 目前整段对话</strong>（从旧到新），其中每个工具结果被换成一行短注（<code>ok, 4213 chars (omitted)</code>）；工具输入与文本都保留，<strong>不做任何总结</strong>。</li>
+<li>state 按 <strong><code>maxStateTokens</code>（默认 25k）</strong> 分级压缩，前一级不够才上下一级：工具输入截到 1000 → 200 → 60 字符；长文本缩成&quot;头 + 尾&quot;（从最旧的非钉住消息开始）；旧的非钉住消息折叠成 <code>[… N chars omitted …]</code>；旧的工具调用压成一行（<code>t12 Read file_path=src/a.ts → ok 480ch</code>）；旧的纯调用消息直接剔除；连续的纯调用消息折成一条。<strong>仍放不下就抛错</strong>。token 数为<strong>无分词器估算</strong>（每 6 个字母算 1 词、每个数字 0.5 token、其它符号约 1 token），刻意校准到略高于 Jev 自报的数。</li>
+<li>对每个非钉住调用，Jev 回答两个 <code>noul</code> 问题：这个<strong>调用</strong>要不要留（&quot;知道做过它&quot;、连同输入，还有意义吗）、这个<strong>结果</strong>要不要逐字留（内容还需要，且重跑工具也拿不回来）。</li>
+<li>问题按 <strong><code>maxRequestTokens</code>（默认 30k，压在 Jev 的 32k 请求上限之下）</strong> 拆成多批，<strong>每批都重发同一份完整 state</strong>，并发执行后合并答案。</li>
+<li>逐调用按 <strong><code>keepThreshold</code>（默认 0.5）</strong> 决策：<code>keepResult ≥ 阈值</code> → 调用与结果都留；否则 <code>keepCall ≥ 阈值</code> → 只留调用，把结果截到前 <code>truncateHeadChars</code> 字符 + 一行注；都不达标 → 调用与结果一起删。</li>
+<li>重建消息列表：内容全丢的消息被移除，未触碰的消息<strong>以同一对象返回</strong>，<strong>绝不出现只有结果没有调用的状态</strong>。</li>
+</ol>
+<ul>
+<li>出错策略：<strong>Jev 失败、答案格式错误、缺 key、历史塞不下 —— 一律抛错</strong>，由调用方（或 Claude Code hook）决定回退。</li>
+</ul>
+</li>
+<li><strong>用法</strong>：
+<ul>
+<li>当库用：<code>npm install fast-jev-compaction</code> + <code>export TYPESAFE_API_KEY=...</code><pre><code class="language-ts">import { compactMessages, reductionRatio, type Message } from 'fast-jev-compaction';
+
+const result = await compactMessages(transcript, { preserveRecentMessages: 4 });
+console.log(result.messages, result.decisions, result.stats);
+if (reductionRatio(result) &lt; 0.25) {
+  // 不划算：保留原对话，或改用摘要
+}
+</code></pre>
+<code>Message</code> 是 Claude Code <code>SessionMessage</code> 的子集，<strong>可直接把会话记录传进去</strong>。想换传输层就实现 <code>JevAsker</code>（只需一个 <code>ask(state, questions)</code>）再调 <code>compact(messages, asker, options)</code>；<code>buildJevRequest</code> / <code>parseJevResponse</code> 给出 HTTP 请求体与响应校验；底层构件 <code>collectToolCalls</code> / <code>fitState</code> / <code>batchCalls</code> / <code>decideCall</code> / <code>applyDecisions</code> 也都导出。</li>
+<li>当 Claude Code 插件用：属<strong>早期准入的 function hooks 特性（函数钩子：允许插件替换 Claude Code 内建行为；Claude Code 2.1.274+）</strong>，需在 <code>~/.claude/settings.json</code> 打开开关：<pre><code class="language-json">{ &quot;env&quot;: { &quot;CLAUDE_CODE_ENABLE_FUNCTION_HOOKS&quot;: &quot;1&quot;, &quot;TYPESAFE_API_KEY&quot;: &quot;&lt;your key&gt;&quot; } }
+</code></pre>
+然后 <code>claude plugin marketplace add tamaratran/fast-jev-compaction</code> + <code>claude plugin install fast-jev-compaction@fast-jev-compaction</code>（安装时提示填 API key、阈值、<code>truncateHeadChars</code> 等；用默认即读环境变量），重启或 <code>/reload-plugins</code>。此后 <code>/compact</code> 与自动压缩都走 Jev：成功时提示 <code>fast-jev-compaction: kept N/M messages, no summary (…)</code>，Jev 删不够（会话太短）或失败时提示 <code>fallback to built-in summary (…)</code>。不安装、直接从检出目录跑：<code>CLAUDE_CODE_ENABLE_FUNCTION_HOOKS=1 claude --plugin-dir .</code>（无需发布步骤，marketplace 就是这个仓库的 <code>.claude-plugin/marketplace.json</code>）。</li>
+<li>开发：<code>npm install</code> → <code>npm run typecheck</code>（库 + hook）/ <code>npm test</code> / <code>npm run build</code> / <code>npm run validate:plugin</code>；<code>TYPESAFE_API_KEY=&quot;$(cat ~/.typesafe_key)&quot; npm run demo</code> 是唯一的联网检查（<strong>单测用假 Jev，永不接触 TypeSafe</strong>）。</li>
+<li>另有 <strong>macOS SwiftUI 演示 App</strong> <code>demo/JevDemo</code>（<code>demo/JevDemo/build.sh</code> 构建并启动，按空格重播）：在仿 Claude Code 终端里<strong>演绎</strong>压缩流程——被 Jev 放手的调用与结果变红折叠消失，其余一字不变；它<strong>从不调 API</strong>，只为录屏存在。</li>
+</ul>
+</li>
+<li><strong>可调项（默认值）</strong>：<code>apiKey</code>(读 <code>TYPESAFE_API_KEY</code>) / <code>model</code>(<code>jev-latest</code>) / <code>baseUrl</code>(<code>https://api.typesafe.ai/v1/systemone</code>) / <code>fetch</code>(原生) / <code>goal</code>(最近 3 条用户提示) / <code>keepThreshold</code>(0.5) / <code>preserveRecentMessages</code>(6) / <code>maxStateTokens</code>(25000) / <code>maxRequestTokens</code>(30000) / <code>truncateHeadChars</code>(300)。<code>result.stats</code> 给出前后消息数与字符数、各原因决策计数、state 估计 token 数、用到哪一级压缩、以及请求数。</li>
+<li><strong>自述局限</strong>：<strong>只有工具调用与结果是候选</strong>，文字消息在输出里永不删除或缩短（只在 Jev 看到的 state 里被缩写）；token 数是字符数估算而非真分词器；校准是<strong>请求级</strong>的 —— <strong>概率不等于&quot;删了安全&quot;的证明</strong>（助手总能重跑工具）；每次请求都重发整份 state，历史接近上限时&quot;每几个问题&quot;就要一次请求。</li>
+<li><strong>要点</strong>：<strong>MIT</strong> 开源；主语言 <strong>TypeScript</strong>；约 <strong>5.3k Star / 289 Fork / 59 open issues / 12 watchers</strong>（2026-09-21 数据），仓库创建于 <strong>2026-09-17</strong>、最新推送 2026-09-18（<strong>上线 4 天 5 千星</strong>）；<strong>无 release、无 tag</strong>；仓库体量仅 <strong>245KB</strong>（小到能通读）。
+<ul>
+<li>⚠️ <strong>强依赖付费 API 与早期特性</strong>：缺 <code>TYPESAFE_API_KEY</code> 直接抛错，<strong>不会静默降级</strong>；插件形态依赖 Claude Code 2.1.274+ 的 function hooks 开关。</li>
+<li>⚠️ <strong>与 WorkBuddy 的关系</strong>：<strong>插件形态不可直接安装</strong>（Claude Code 专有 + <code>CLAUDE_CODE_ENABLE_FUNCTION_HOOKS</code>），但其 <code>compactMessages</code> 是<strong>纯 npm 库</strong>，将来 WorkBuddy 侧若要接类似能力可直接引它当依赖。</li>
+<li>⚠️ 与 <code>browser-use/jev-ultrafast</code> 同属 <strong>TypeSafe Jev 生态</strong>：那边用 Jev 选浏览器动作，这边用 Jev 决定上下文里什么该留。</li>
+</ul>
+</li>
+</ul>
+
+</details>
+
+<a name="agent-native" id="agent-native"></a>
+<details>
+<summary><b>Agent-Native</b> · <code>BuilderIO/agent-native</code> — Builder.io 开源：TypeScript agentic 应用框架，一份 action 同时给 agent 当工具、给 UI 当代码调用</summary>
+
+<ul>
+<li><strong>仓库</strong>：<a href="https://github.com/BuilderIO/agent-native">https://github.com/BuilderIO/agent-native</a></li>
+<li><strong>定位</strong>：Builder.io 开源的 TypeScript agentic（以 AI 智能体为一等交互方）应用框架，解决「AI Agent 与 UI 两张皮」的问题：一份 action（带参数校验的函数）同时暴露给 agent 当工具、给 UI 组件当代码调用，也走 HTTP / MCP / A2A / CLI——agent 走与 UI 按钮完全相同的代码路径，共用同一套校验、权限与实现。</li>
+<li><strong>能力/特性</strong>：Shared actions（一份 action 同时暴露给 UI / agent / HTTP / MCP / A2A / CLI）| Shared data（agent 的产出出现在 UI，UI 的操作对 agent 可见）| Shared application state（agent 拿到当前页面、选中记录等 UI 状态）| Agent chat（同屏里委派工作、提问、审阅结果）| 认证与权限 | Skills 与记忆 | Automations（按计划或事件跑 agent 任务）| Agent teams（同工作区或跨连接的 agent 之间委派）| PostgreSQL 后端（生产用 PostgreSQL、本地开发用 PGlite，可跑在任何 Nitro 兼容宿主）</li>
+<li><strong>用法</strong>：
+<ul>
+<li>脚手架：<code>npx --yes @agent-native/core@latest create my-agent --standalone --template chat</code></li>
+<li>定义 action：新建 <code>actions/hello.ts</code>，<code>import { defineAction } from &quot;@agent-native/core/action&quot;</code> + zod <code>z</code> schema + <code>run()</code>；agent 随即拿到名为 <code>hello</code> 的工具</li>
+<li>React 侧调同一函数：<code>useActionQuery(&quot;hello&quot;, { name: &quot;Alex&quot; })</code></li>
+<li>文档与示例：<code>https://agent-native.com/docs</code>；9 个开源 app（Clips / Design / Slides / Analytics / Calendar / Mail / Assets / Content / Plans）</li>
+</ul>
+</li>
+<li><strong>要点</strong>：MIT 开源（README 末尾声明）；技术栈 TypeScript + pnpm workspace；主旨是 agent 不点击 UI，走与 UI 相同的 action 层，两条路径共用同一套校验、权限与实现；统计（2026-09-22 取）：约 6000 Star / 546 Fork / 82 open issues / 16 watchers；仓库创建 2026-03-12，最新推送 2026-09-22；体量约 351 MB；release 极密集，2026-09-21 一天内发布 <code>@agent-native/core@0.183.0</code>、<code>@agent-native/skills@0.2.730</code> 等多个包；⚠️ README 末尾写 License MIT，但仓库根没有 LICENSE 文件（根目录实测清单与 GitHub API <code>license</code> 字段为 null 均证实），此处如实记录差异</li>
+</ul>
+
+</details>
+
+<a name="ax" id="ax"></a>
+<details>
+<summary><b>AX</b> · <code>google/ax</code> — Google 开源的声明式智能体编排运行时，用 YAML 清单在集群里沙箱化、规模化运行自主智能体任务</summary>
+
+<ul>
+<li><strong>仓库</strong>：<a href="https://github.com/google/ax">https://github.com/google/ax</a></li>
+<li><strong>定位</strong>：把「自主智能体」当作一类新工作负载来调度——它有状态、需强隔离、会调模型 API 与工具、失控会烧钱。AX 用 <code>Task</code>/<code>Workspace</code>/<code>Gateway</code>/<code>Model</code> 四个原语以 <code>ax.io/v1alpha1</code> 清单声明式描述，自动沙箱、接线工作区、收敛网络出口，并支持 <code>ax suspend</code>/<code>resume</code> 暂停续跑、<code>ax ssh</code> 进沙箱观察，形态类似 <code>kubectl</code>，跑在 Agent Substrate 之上。</li>
+<li><strong>能力/特性</strong>：四大原语：<code>Task</code>（受限沙箱跑不信任代码）、<code>Workspace</code>（预接 Git/MCP/skill 包）、<code>Gateway</code>（出站流量白名单）、<code>Model</code>（平台用哪个 LLM，凭据走 K8s Secret）；<code>ax ssh</code> 进沙箱、<code>ax suspend</code>/<code>resume</code> 暂停续跑</li>
+<li><strong>用法</strong>：
+<ul>
+<li>安装：<code>go install github.com/google/ax/cmd/ax@latest</code></li>
+<li>提交：<code>ax apply -f task.yaml</code></li>
+<li>观察：<code>ax watch task test</code></li>
+<li>进沙箱：<code>ax ssh test -- ls -al /workspace</code></li>
+</ul>
+</li>
+<li><strong>要点</strong>：Go 编写；面向 Kubernetes 形态集群、可横向跑数十亿级任务；仍 alpha（API 可能破坏式变更）；与 kubectx 联动切集群</li>
+</ul>
+
+</details>
+
+<a name="univer" id="univer"></a>
+<details>
+<summary><b>Univer</b> · <code>dream-num/univer</code> — 开源 Office 套件运行时 SDK，一套架构覆盖表格、文档、幻灯片、PDF 的嵌入编辑与无头处理</summary>
+
+<ul>
+<li><strong>仓库</strong>：<a href="https://github.com/dream-num/univer">https://github.com/dream-num/univer</a></li>
+<li><strong>定位</strong>：给需要在自家产品里嵌 Office 能力的团队——不想被托管 App 或固定 UI 绑死。它提供可组合的插件化构建块（presets 快速起步、按需裁剪），同一套存储与计算运行时横跨表格/文档/幻灯片/画布/关系表/PDF，内容与引用跨工具联动；人和 AI Agent 能在同一份文件上协作。分开源版与 Pro 版。</li>
+<li><strong>能力/特性</strong>：六大件：电子表格、文档、演示文稿、画布、关系表、PDF；Web SDK（浏览器/Node 无头处理）、Server SDK（协作/格式转换）、AI SDK（检视/编辑/校验 Office 内容）；插件化扩展 + Facade API</li>
+<li><strong>用法</strong>：
+<ul>
+<li>上手：<code>npm</code> 安装 Univer 预设（presets）并按 docs.univer.ai 初始化运行时，Web / Server / AI 三套 SDK 任选</li>
+</ul>
+</li>
+<li><strong>要点</strong>：TypeScript 编写、monorepo；AI 侧配套 <code>univer-mcp</code>（自然语言驱动表格）与 <code>univer-sdk-skills</code>（给 Agent 的复用指令）；灵活但需自集成存储/身份/权限</li>
+</ul>
+
+</details>
+
+<a name="treg" id="treg"></a>
+<details>
+<summary><b>Treg</b> · <code>superdesigndev/treg</code> — 面向智能体工具的「OpenRouter」式统一注册表与代理网关，按调用计费并托管凭证</summary>
+
+<ul>
+<li><strong>仓库</strong>：<a href="https://github.com/superdesigndev/treg">https://github.com/superdesigndev/treg</a></li>
+<li><strong>定位</strong>：很多真实任务要用的外部工具（SEO、数据富集、广告管理等）被高额月费或注册墙挡住，单次任务不值得买订阅。Treg 把这些账户集中托管，智能体用一个基础 URL 加令牌就能调 60+ 提供商的 3000+ 端点或团队自有工具，按调用收几分之一美分；凭证始终留在服务端、零密钥接触。也支持完整自托管。</li>
+<li><strong>能力/特性</strong>：统一目录（3000+ 端点 / 60+ 提供商，按「任务」而非供应商检索）；自有工具三种形态（HTTP 端点 / CLI / Skills 包）；忠实代理中继（只重算头、注入凭证，不改上游逻辑）；多租户团队（最多 10 队，角色 owner/admin/member/viewer）；可自托管（FastAPI + SQLModel + Postgres）</li>
+<li><strong>用法</strong>：
+<ul>
+<li>安装：<code>curl -fsSL https://treg.to/install.sh</code> 然后 <code>sh install.sh</code></li>
+<li>登录：<code>treg login</code></li>
+<li>搜工具：<code>treg catalog search &quot;backlinks for a domain&quot;</code></li>
+<li>调用：<code>treg call tikhuk.tiktok.user.profile --query uniqueId=tiktok</code></li>
+<li>Claude Code 插件：<code>/plugin marketplace add superdesigndev/treg</code></li>
+</ul>
+</li>
+<li><strong>要点</strong>：Python（FastAPI）+ 少量 JS/TS；余额不足返回 HTTP 402 带 <code>topup_url</code>；可作为 Claude Code / Codex / MiniMax 插件分发，遵循 <code>agentskills.io</code> 的 <code>/.well-known/skills</code> 约定</li>
+</ul>
+
+</details>
+
+<a name="agent-substrate" id="agent-substrate"></a>
+<details>
+<summary><b>Agent Substrate</b> · <code>agent-substrate/substrate</code> — 为 Claude Code、CodeX 等 AI 编码智能体提供跨会话有状态运行环境的底层核心系统</summary>
+
+<ul>
+<li><strong>仓库</strong>：<a href="https://github.com/agent-substrate/substrate">https://github.com/agent-substrate/substrate</a></li>
+<li><strong>定位</strong>：解决「AI 编码代理跑起来后的基础设施」问题——跨会话保留系统与文件状态、管理 actor 工作负载的生命周期、做细粒度授权与网络出口管控。它为多种上游代理（Claude Code / CodeX / Antigravity）提供统一的、框架无关的有状态底座，自带微虚机（MicroVM）、OpenFGA 授权、OTLP 可观测与 Postgres 持久化；Google 的 AX 编排器即运行在它之上。</li>
+<li><strong>能力/特性</strong>：Actor 生命周期与编排（ActorTemplate / WorkerPool，含 wakeupProbe）；嵌入式 OpenFGA 授权（基于 Postgres）；egress-policy 出站流量管控；Kata 微虚机（arm64 友好）；OTLP 导出 actor 状态/崩溃事件</li>
+<li><strong>用法</strong>：
+<ul>
+<li>查策略：<code>kubectl ate get egress-policy</code>（或 <code>-o json/yaml</code>）</li>
+<li>建策略：<code>kubectl ate create egress-policy -f -</code></li>
+<li>构建：<code>ko build --push=false cmd/podcertcontroller</code></li>
+<li>校验：<code>make verify</code></li>
+</ul>
+</li>
+<li><strong>要点</strong>：Go 编写；含供 AI 用的 PR 审查技能（<code>.agents/skills/post-draft-review</code>）；与 Kubernetes 生态契合，面向平台工程师部署运维</li>
+</ul>
+
+</details>
+
+<a name="openhuman" id="openhuman"></a>
+<details>
+<summary><b>OpenHuman</b> · <code>tinyhumansai/openhuman</code> — 本地优先的开源 AI 助手框架，集成持久记忆与多智能体编排</summary>
+
+<ul>
+<li><strong>仓库</strong>：<a href="https://github.com/tinyhumansai/openhuman">https://github.com/tinyhumansai/openhuman</a></li>
+<li><strong>定位</strong>：多数助手冷启动对你一无所知、单循环只跑一个代理、且易供应商锁定；OpenHuman 以本地优先的记忆树(Obsidian 镜像)、可视化工作流画布与多代理图执行引擎，让个人在数分钟内获得带隐私保护的私人助理。</li>
+<li><strong>能力/特性</strong>：记忆树(Memory Tree+Obsidian) | 编排器(Workflows/检查点图) | 深度研究/执行器 | 15 消息渠道(Telegram/Discord/Slack/WhatsApp 等) | 隐私模式(Rust 核心) | TokenJuice 压缩</li>
+<li><strong>用法</strong>：
+<ul>
+<li>源码：<code>git submodule update --init --recursive &amp;&amp; pnpm install</code></li>
+<li>开发：<code>pnpm dev</code> / <code>pnpm --filter openhuman-app dev:app</code></li>
+<li>核心：<code>crates/openhuman-core</code>(openhuman-core CLI)</li>
+</ul>
+</li>
+<li><strong>要点</strong>：语言 Rust(core/desktop/embed/rpc/tui)+TypeScript(Web/Tauri)；5000+ MCP 服务器/90000+ Skills 集成；隐私模式一键离机；mascot 与主题工作室</li>
+</ul>
+
+</details>
+
+<a name="deepseek-harness" id="deepseek-harness"></a>
+<details>
+<summary><b>DeepSeek Harness</b> · <code>deepseek-ai/deepseek-harness</code> — DeepSeek 开源的插件化 Agent 构建框架（Everything is a Plugin）</summary>
+
+<ul>
+<li><strong>仓库</strong>：<a href="https://github.com/deepseek-ai/deepseek-harness">https://github.com/deepseek-ai/deepseek-harness</a></li>
+<li><strong>定位</strong>：构建 Agent 时插件体系杂乱、难以组合；DeepSeek Harness(dsh)以一切皆插件架构、基于 Cordis 的时空可组合编程范式，提供统一的 Agent harness 与 Web UI，开发者预览阶段快速迭代。</li>
+<li><strong>能力/特性</strong>：一切皆插件架构 | 基于 Cordis 框架 | Web UI(本地 127.0.0.1:3080) | dsh-plugin 主题发现 | 编码 Agent(coding-agent) | 技能(skills)</li>
+<li><strong>用法</strong>：
+<ul>
+<li>npm：<code>npx @deepseek-ai/dsh web</code></li>
+<li>源码：<code>git clone ... &amp;&amp; pnpm install &amp;&amp; pnpm run build &amp;&amp; pnpm dsh web</code></li>
+<li>文档：deepseek-harness.github.io</li>
+</ul>
+</li>
+<li><strong>要点</strong>：语言 TypeScript(pnpm/Node.js)；MIT；开发者预览(兼容性可能 Breaking)；含 SAFETY.md/AGENTS.md/CONTRIBUTING；arXiv 架构论文(2608.25512)</li>
+</ul>
+
+</details>
+
+<a name="paperclip" id="paperclip"></a>
+<details>
+<summary><b>Paperclip</b> · <code>paperclipai/paperclip</code> — 开源的工作场景 AI 智能体治理控制平面（control plane）</summary>
+
+<ul>
+<li><strong>仓库</strong>：<a href="https://github.com/paperclipai/paperclip">https://github.com/paperclipai/paperclip</a></li>
+<li><strong>定位</strong>：工作中缺乏统一方式治理 AI agents 的任务执行、应用连接授权、质量评估与状态可视化；Paperclip 以开源 app/控制平面，提供连接治理、评估、监控、多模型适配与内生公告，供运营人员自托管与监督。</li>
+<li><strong>能力/特性</strong>：Agent 任务监督 | 连接意图运行时(Connection Intent Runtime) | 评估体系(Runner/Product E2E) | 入职向导(ClipLab) | 应用内公告 | 多模型适配器(Claude/Codex/Grok/Gemini 等)</li>
+<li><strong>用法</strong>：
+<ul>
+<li>CLI 引导：<code>npx paperclipai onboard</code>(Custom setup 配 PG 端口/备份目录/服务端口)</li>
+<li>开发：<code>pnpm -r typecheck &amp;&amp; pnpm build</code></li>
+<li>测试：<code>pnpm exec vitest run &lt;path&gt;</code></li>
+</ul>
+</li>
+<li><strong>要点</strong>：语言 TypeScript/JavaScript(pnpm workspace 全栈 server/ui/cli/shared)；含 Python 评估脚本；提供公开评估中心 pages.paperclip.ing/evals/；Contributor Handbook 30 页</li>
+</ul>
+
+</details>
+
+<a name="semantica" id="semantica"></a>
+<details>
+<summary><b>Semantica</b> · <code>semantica-agi/semantica</code> — 面向上下文与可问责 AI 的图原生基础设施（知识图谱+MCP）</summary>
+
+<ul>
+<li><strong>仓库</strong>：<a href="https://github.com/semantica-agi/semantica">https://github.com/semantica-agi/semantica</a></li>
+<li><strong>定位</strong>：AI 系统（尤其 LLM/Agent）需要原生图结构管理结构化上下文，并通过决策记录/因果链实现可问责；Semantica 提供 ContextGraph、多源摄取、Explorer 服务与 MCP 服务器，支撑企业级知识图谱与可追溯决策。</li>
+<li><strong>能力/特性</strong>：图原生上下文(ContextGraph/本体/IRI) | 多源摄取(Looker/Git 等) | Explorer 可视化/服务 | MCP 服务器(semantica_mcp) | 因果分析(CausalChainAnalyzer) | 版本/快照 | 插件生态(17 skills)</li>
+<li><strong>用法</strong>：
+<ul>
+<li>安装：<code>pip install semantica</code> / <code>pip install semantica[ingest-looker]</code></li>
+<li>服务：<code>server start</code>(需 SEMANTICA_API_KEY)</li>
+<li>MCP：<code>semantica-mcp</code></li>
+<li>Docker：docker-compose.yml</li>
+</ul>
+</li>
+<li><strong>要点</strong>：语言 Python(&gt;=3.10,&lt;3.14，uv 锁定)；含少量 JS 用于 Pi 插件；安全加固(API-Key 鉴权/绑定 127.0.0.1/SSRF 防护)；移除含 CVE 的 chromadb/json-repair 依赖</li>
+</ul>
+
+</details>
+
+<a name="coder" id="coder"></a>
+<details>
+<summary><b>Coder</b> · <code>coder/coder</code> — 开源自托管云开发环境（CDE）平台：Terraform 定义工作区，AI 编码 agent 跑在自己的基础设施上</summary>
+
+<ul>
+<li><strong>仓库</strong>：<a href="https://github.com/coder/coder">https://github.com/coder/coder</a></li>
+<li><strong>定位</strong>：开源自托管的云开发环境平台（CDE，Cloud Development Environment：开发机跑在云端或自有服务器上，浏览器 / IDE 远程连入）。用 Terraform（基础设施即代码工具）模板声明工作区（EC2 VM / K8s Pod / Docker 容器），团队成员按需创建、闲置自动回收；AI 编码 agent 可被放进这些工作区运行，模型 key 与用户身份由平台侧统一管理、不落工作区。</li>
+<li><strong>能力/特性</strong>：Terraform 模板定义工作区（EC2 VM / Kubernetes Pod / Docker 容器等）| Coder Agents（可接 Anthropic / OpenAI / Google / Bedrock / 自托管模型，工作区里不放 LLM API key、每个动作带用户身份）| AI Gateway（AI 工具的集中认证、审计、成本控制）| IDE 集成（VS Code 扩展 / JetBrains Toolbox 插件 / Dev Containers）| Coder Registry（官方模板与模块，registry.coder.com）| 自托管 VS Code 扩展市场（限制/airgap 网络可用）| 闲置资源自动关停省成本</li>
+<li><strong>用法</strong>：
+<ul>
+<li>安装（Linux / macOS）：<code>curl -L https://coder.com/install.sh | sh</code>（Windows 从 GitHub Releases 取二进制 / 安装包）</li>
+<li>启动：<code>coder server</code> 后开 <code>http://localhost:3000</code> 创建首个用户、Docker 模板与第一个工作区</li>
+<li>生产部署：<code>coder server --postgres-url &lt;url&gt; --access-url &lt;url&gt;</code>（需 PostgreSQL 13+；不带参数则用内置数据库 + <code>*.try.coder.app</code> 评测地址）</li>
+<li>文档：<code>https://coder.com/docs</code>（Workspaces / Templates / Coder Agents / AI Gateway / Administration 各章节）</li>
+</ul>
+</li>
+<li><strong>要点</strong>：AGPL-3.0 开源（LICENSE 文件与 GitHub API <code>license</code> 字段一致；README 无独立 License 章节，顶部徽章链到 LICENSE）；主语言 Go；最新 release <code>v2.37.2</code>（2026-09-18 发布）；统计（2026-09-22 取）：约 16445 Star / 1565 Fork / 1078 open issues / 86 watchers；仓库创建 2021-12-22、最新推送 2026-09-22；体量约 509 MB；官方集成矩阵：Coder Registry、coderd Terraform Provider、Kubernetes Log Stream、GitHub Actions（setup-coder）、agents-chat-action（对 GitHub issue/PR 起 Coder Agents 会话）等；与 Agent-Native 的关系：那边是「构建 agentic 应用的框架」，这边是「承载 agent 与开发环境的基础设施」，定位互补</li>
+</ul>
+
+</details>
+
+<a name="cua" id="cua"></a>
+<details>
+<summary><b>Cua</b> · <code>trycua/cua</code> — 开源 computer-use 基础设施：驱动 + 云/本地虚拟桌面 + 专用小模型 + 基准测试，给 AI agent 一台能用的电脑</summary>
+
+<ul>
+<li><strong>仓库</strong>：<a href="https://github.com/trycua/cua">https://github.com/trycua/cua</a></li>
+<li><strong>定位</strong>：开源的 computer-use 基础设施（computer-use 指让 AI 像人一样操作整台电脑：看屏幕、动鼠标键盘）。要给 AI agent 一台「能用的电脑」需要一整套组件——驱动（操作 macOS / Windows / Linux 原生应用与浏览器）、云或本地虚拟桌面、专用小模型 CUA-S1、评测基准——本仓库把这套件全部打包。</li>
+<li><strong>能力/特性</strong>：Cua Fleets（run.cua.ai 云端隔离桌面池，代码认领桌面后用 Sandbox SDK 跑命令 / 截屏 / 操作应用）| Cua Driver（检视与操作 macOS / Windows / Linux 原生应用与浏览器，CLI / MCP / SDK 接入，支持后台投递不抢焦点）| CUA-S1（计算机使用的 System-1 专用小模型，首个研究剖面 FORMS：对结构化界面元素打分决策）| Lume（Apple Silicon 上用 Virtualization.Framework 管理本地 macOS / Linux VM）| Cua Bench（建 computer-use 任务、评测 agent、导出训练轨迹，模拟任务无需 VM / Docker / API key）| 可自带 agent 与模型</li>
+<li><strong>用法</strong>：
+<ul>
+<li>Cua Driver 安装（macOS / Linux）：<code>/bin/bash -c &quot;(curl -fsSL https://cua.ai/driver/install.sh)&quot;</code></li>
+<li>Cua Driver 安装（Windows PowerShell）：<code>irm https://cua.ai/driver/install.ps1 | iex</code></li>
+<li>Lume 安装（本地 macOS / Linux VM）：<code>/bin/bash -c &quot;(curl -fsSL https://cua.ai/lume/install.sh)&quot;</code></li>
+<li>Cua Bench：<code>uv tool install 'cua-bench[browser]'</code> + <code>uv tool run --from 'cua-bench[browser]' playwright install chromium</code>（需 Python 3.12 / 3.13 + uv）</li>
+<li>文档：<code>https://cua.ai/docs</code></li>
+</ul>
+</li>
+<li><strong>要点</strong>：MIT 开源（第三方组件各随其主：Kasm 为 MIT、OmniParser 为 CC-BY-4.0、可选 <code>cua-agent[omni]</code> 含 ultralytics AGPL-3.0）；统计（2026-09-22 取）：约 25730 Star / 1769 Fork / 1036 open issues / 89 watchers；仓库创建 2025-01-31、最新推送 2026-09-22；体量约 486 MB；⚠️ GitHub 语言统计显示 HTML（monorepo，含 Python 模型代码等多语言组件）；releases 均为 nightly 形态（如 <code>nightly-cua-driver-rs-v0.28.3-nightly.20260919.35421378483</code>）；五大组件关系：Fleets 与本地 sandbox 共用 Sandbox SDK（凭据 / 镜像 / 运行时要求不同）；Driver 经 CLI / MCP / SDK 可接 Claude Code、Codex、Cursor 等；CUA-S1 权重托管在 Hugging Face（<code>cua-ai/cua-s1-forms</code>），源码 MIT、自述早期 research release</li>
+</ul>
+
+</details>
+
+<a name="ai-memory" id="ai-memory"></a>
+<details>
+<summary><b>ai-memory</b> · <code>akitaonrails/ai-memory</code> — 给 20+ AI 编码 agent CLI 的长期记忆：git 版控 markdown wiki 为源，跨 agent / 跨机器交接，默认零 LLM 调用</summary>
+
+<ul>
+<li><strong>仓库</strong>：<a href="https://github.com/akitaonrails/ai-memory">https://github.com/akitaonrails/ai-memory</a></li>
+<li><strong>定位</strong>：给 20+ 种 AI 编码 agent CLI 补上「长期记忆」缺口的 Rust 单二进制服务。思路：记忆以 git 版控的 markdown wiki 为源（人可直接读改），程序侧建 SQLite 索引供检索；默认全程零 LLM 调用（不靠模型总结、靠检索），无 API 费用；跨 agent / 跨机器交接时记忆跟着 git 仓库走。</li>
+<li><strong>能力/特性</strong>：20+ harness 第一方集成（Claude Code / Codex / Cursor / Gemini CLI / OpenCode / Grok / Devin / Kimi / Kiro 等，MCP 注册 + 生命周期 hooks，矩阵由 CI 维护）| 跨 agent typed claim-once 交接协议 | git 版控 markdown wiki 为源 + SQLite FTS5 / 实体 / 可选向量融合检索 | 多用户鉴权、按人署名、审计日志内置 | 团队 / 多机：一人所学全员可检索，个人 handoff 保持私有 | <code>--enable-web</code> 起只读浏览器视图 + JSON API</li>
+<li><strong>用法</strong>：
+<ul>
+<li>Docker 起服务（默认 loopback 无鉴权；零 LLM 模式省略 LLM/EMBEDDING 环境变量即可，FTS5 搜索照常）：<code>docker run -d --name ai-memory -p 127.0.0.1:49374:49374 -v ai-memory-data:/data docker.io/akitaonrails/ai-memory:latest</code></li>
+<li>接入 agent：<code>ai-memory install-mcp --client claude-code --apply</code> + <code>ai-memory install-hooks --agent claude-code --apply</code>（换名即接入其它 harness）</li>
+<li>更省心：<code>ai-memory run claude</code>（首次自动装 hooks + MCP）、<code>ai-memory run codex --yolo</code>、<code>ai-memory continue</code>、<code>ai-memory bootstrap</code>、<code>ai-memory uninstall --apply</code></li>
+<li>Arch：<code>yay -S ai-memory-bin</code>（预编译）或 <code>yay -S ai-memory</code>（源码构建）</li>
+</ul>
+</li>
+<li><strong>要点</strong>：MIT 开源；主语言 Rust；单二进制 MCP/HTTP 服务器，一个数据目录：<code>wiki/</code>（markdown 源、git 版控）+ <code>raw/</code> + <code>db/</code>（SQLite FTS5 / 实体 / 可选向量索引，可随时从文件重建）+ <code>models/</code> + <code>logs/</code>；统计（2026-09-22 取）：约 7765 Star / 525 Fork / 26 open issues / 47 watchers；仓库创建 2026-05-21、最新推送 2026-09-22；最新 release <code>v2.4.0</code>（2026-09-21）；体量约 16 MB；定位差异：README 自带对 Mem0 / Zep / mcp-memory-service / basic-memory / Supermemory 等的逐项对比表，卖点是「你拥有的文件」+ 默认零 LLM 调用 + 一次接管 20+ agent CLI；⚠️ Windows 仅 WSL2（Windows 的 Linux 子系统）受支持、原生 Windows 为实验性；快速上手默认 loopback 无鉴权；⚠️ 支持矩阵里 Hermes Agent 标 Community（本机在用的 Hermes Agent 即此档）</li>
+</ul>
+
+</details>
+
+<a name="laya" id="laya"></a>
+<details>
+<summary><b>Laya</b> · <code>NandhaKishorM/laya</code> — 多语言、非自回归的「系统 1」决策引擎，单次前向推理即在 33ms 内给出类型化判断</summary>
+
+<ul>
+<li><strong>仓库</strong>：<a href="https://github.com/NandhaKishorM/laya">https://github.com/NandhaKishorM/laya</a></li>
+<li><strong>定位</strong>：面向需要快速、可信、可解释的分类与打分场景（工单路由、邮件与内容审核、JSON 状态判定）。它不走文本生成、只输出结构化类型化决策（<code>choice</code>/<code>score</code>/<code>noul</code>），因此无解析、无幻觉；用强化学习（RLCD）对照严格正确评分规则训练，并由 <code>Router</code> 按语种与上下文自动挑选 ModernBERT / mmBERT 检查点。</li>
+<li><strong>能力/特性</strong>：决策类型 <code>choice</code>（多选一）、<code>score</code>（打分）、<code>noul</code>（空/无）；覆盖 100+ 语言（<code>laya-multilingual</code>，比英文版快 2 倍）；单次 33ms、批处理 7.2ms/问（T4 实测）</li>
+<li><strong>用法</strong>：
+<ul>
+<li>Python：加载 <code>laya</code> / <code>laya-multilingual</code> / <code>laya-typed-decisions</code> 检查点，由 <code>Router</code> 按请求选择并单次前向推理得到类型化决策</li>
+</ul>
+</li>
+<li><strong>要点</strong>：Apache-2.0 许可；参数 322M–421M（mmBERT-base / ModernBERT-large）；非自回归、单前向、低延迟；适合做 Agent 的「快思考」决策层</li>
+</ul>
+
+</details>
+
+<a name="jev-chat-jarvis" id="jev-chat-jarvis"></a>
+<details>
+<summary><b>Jev Chat Jarvis</b> · <code>jev-chat/jev-chat-jarvis</code> — Android 端非侵入式「对话副驾」，读屏识别聊天意图并生成候选回复但不自动发送</summary>
+
+<ul>
+<li><strong>仓库</strong>：<a href="https://github.com/jev-chat/jev-chat-jarvis">https://github.com/jev-chat/jev-chat-jarvis</a></li>
+<li><strong>定位</strong>：给在微信/QQ/X/飞书等聊天 App、想要「意图识别 + 风险规避 + 快速回复建议」的手机用户。它先用判断模型识别对方真实意图、危险等级（1–9）与最佳动作，再让生成模型起草 3 条口语化候选排序后填入输入框——但永不自动发送，控制权与隐私始终在用户手里（不 hook、不改包、只走系统无障碍读屏）。</li>
+<li><strong>能力/特性</strong>：判断 + 候选回复双模型（意图/危险等级/该不该回 → 3 条候选排序）；本地知识库（常驻笔记、联系人档案、可选聊天历史）；三路接口可配（判断/回复/视觉，内置 OpenRouter、DeepSeek 预设）；无障碍读屏 + ML Kit 中文离线 OCR 兜底</li>
+<li><strong>用法</strong>：
+<ul>
+<li>安装：<code>adb install -r apk/jev-assistant-v1.3-release.apk</code>（需 Android 11+，或从 Releases 下载 APK）</li>
+<li>构建：<code>./gradlew assembleDebug</code></li>
+</ul>
+</li>
+<li><strong>要点</strong>：Kotlin（Android 主程序）+ 少量 Python 脚手架；聊天内容只发往用户自配接口、密钥存 App 私有空间；升级 1.3 需重开关机无障碍以启用截屏</li>
+</ul>
+
+</details>
+
+<a name="claude-code-templates" id="claude-code-templates"></a>
+<details>
+<summary><b>Claude Code Templates</b> · <code>davila7/claude-code-templates</code> — 通过 npx 一键为 Claude Code 安装现成 agents / commands / hooks / MCP / skills 的 CLI 与模板库</summary>
+
+<ul>
+<li><strong>仓库</strong>：<a href="https://github.com/davila7/claude-code-templates">https://github.com/davila7/claude-code-templates</a></li>
+<li><strong>定位</strong>：解决手动配置 Claude Code 繁琐的问题——开发者不想从零写代理、命令、MCP 集成、钩子与设置。它用统一 CLI（<code>npx</code> 即开即用、无需全局装）把这套配置标准化、一键化，并附带会话分析、对话监控、健康检查、插件面板等运维小工具。</li>
+<li><strong>能力/特性</strong>：组件齐全：Agents（领域专家如安全审计员/React 性能优化/数据库架构师）、Commands（如 <code>/generate-tests</code>）、MCPs（GitHub/Postgres/Stripe/AWS/OpenAI）、Settings、Hooks（提交前校验）、Skills（PDF/Excel 等）；附加 CLI 工具（Analytics / Conversation Monitor / Health Check / Plugin Dashboard）</li>
+<li><strong>用法</strong>：
+<ul>
+<li>装代理：<code>npx claude-code-templates@latest --agent development-tools/code-reviewer --yes</code></li>
+<li>装命令：<code>npx claude-code-templates@latest --command performance/optimize-bundle --yes</code></li>
+<li>装 MCP：<code>npx claude-code-templates@latest --mcp database/postgresql-integration --yes</code></li>
+<li>看分析：<code>npx claude-code-templates@latest --analytics</code></li>
+</ul>
+</li>
+<li><strong>要点</strong>：Node.js（npx 分发）+ Rust 版 CLI 核心（<code>cct</code>，Homebrew/cargo-binstall）；面向所有用 Claude Code 的开发者；还含 Dashboard 站点与 Cloudflare Workers</li>
+</ul>
+
+</details>
+
+<a name="harvey-labs" id="harvey-labs"></a>
+<details>
+<summary><b>Harvey LAB</b> · <code>harveyai/harvey-labs</code> — 面向真实法律场景的 LLM Agent 开源基准与执行评估工具链</summary>
+
+<ul>
+<li><strong>仓库</strong>：<a href="https://github.com/harveyai/harvey-labs">https://github.com/harveyai/harvey-labs</a></li>
+<li><strong>定位</strong>：此前缺乏在真实、复杂法律环境下系统化衡量 AI Agent 能力的标准基准；本项目以 2010 个任务、横跨 27 个法律实践领域的数据集加执行 harness，供研究人员与 LegalTech 团队严谨评测并引用。</li>
+<li><strong>能力/特性</strong>：任务数据集 | 执行 harness | LLM 裁判评分 | 文档提取(openpyxl/python-pptx)</li>
+<li><strong>用法</strong>：
+<ul>
+<li>可编辑安装：<code>uv sync</code></li>
+<li>运行：<code>python -m lab_core.harness.run</code></li>
+<li>评估：<code>python -m lab_core.evaluation.run_eval</code></li>
+<li>列任务：<code>python -m lab_core.utils.list_tasks</code></li>
+</ul>
+</li>
+<li><strong>要点</strong>：语言 Python(3.12/3.13，uv 管理)；包名 lab_core v1.1.0；可引用(BibTeX v1.0)；含 Ruff/Pyright CI；docs/tutorial.md 端到端演练</li>
+</ul>
+
+</details>
+
+<a name="orca" id="orca"></a>
+<details>
+<summary><b>Orca</b> · <code>stablyai/orca</code> — 面向并行 AI 编码智能体的桌面/移动 AI 开发环境（ADE）与 CLI</summary>
+
+<ul>
+<li><strong>仓库</strong>：<a href="https://github.com/stablyai/orca">https://github.com/stablyai/orca</a></li>
+<li><strong>定位</strong>：开发者同时驱动多个编码 Agent 时缺乏统一界面并行管理各自隔离的 git worktree、终端与上下文；Orca 把一个提示扇出到多个 Agent 与跨设备监控变为可行，支持在桌面、移动端与远程无头运行时中编排。</li>
+<li><strong>能力/特性</strong>：并行 worktree | 移动端伴侣 | 终端分屏 | 设计模式(Chromium 点击) | GitHub/Linear 集成 | Orca CLI | SSH worktree</li>
+<li><strong>用法</strong>：
+<ul>
+<li>桌面(macOS)：<code>brew install --cask stablyai/orca/orca</code></li>
+<li>无头：<code>orca serve</code></li>
+<li>打开：<code>orca open</code></li>
+<li>状态：<code>orca status</code></li>
+<li>worktree：<code>orca worktree create</code></li>
+</ul>
+</li>
+<li><strong>要点</strong>：语言 TypeScript(Electron+React+Expo)；支持 Claude Code/Codex/Cursor/Copilot/Muse/OpenCode 等；App Store/TestFlight/APK 移动端；i18n 多语言</li>
+</ul>
+
+</details>
+
+<a name="officecli" id="officecli"></a>
+<details>
+<summary><b>OfficeCLI</b> · <code>iOfficeAI/OfficeCLI</code> — 专为 AI 代理设计的跨平台 Office CLI，单一二进制处理 Word/Excel/PPT</summary>
+
+<ul>
+<li><strong>仓库</strong>：<a href="https://github.com/iOfficeAI/OfficeCLI">https://github.com/iOfficeAI/OfficeCLI</a></li>
+<li><strong>定位</strong>：传统文档处理依赖安装 Office 或特定库，AI 代理难以确定性操控文档；OfficeCLI 以内置渲染/公式引擎、路径寻址与 JSON 输出，让代理在无人干预下完成渲染、查看、修复循环，无需任何 Office 环境。</li>
+<li><strong>能力/特性</strong>：创建/读取/修改 | 高保真 HTML 渲染(view html/screenshot/watch) | 公式与透视引擎(350+ 函数) | 模板合并({{key}}) | 三层架构(Read/DOM/Raw XML) | 驻留模式 | MCP 服务器</li>
+<li><strong>用法</strong>：
+<ul>
+<li>安装：`curl -fsSL .../install.sh</li>
+<li>bash`(mac/linux)</li>
+<li>创建：<code>officecli create deck.pptx</code></li>
+<li>获取：<code>officecli get deck.pptx '/slide[1]/shape[1]' --json</code></li>
+<li>合并：<code>officecli merge tpl.docx out.docx --data '{&quot;client&quot;:&quot;Acme&quot;}'</code></li>
+<li>MCP：<code>officecli mcp claude</code></li>
+</ul>
+</li>
+<li><strong>要点</strong>：语言 C#/.NET(输出自包含二进制，无运行时依赖)；提供 Python SDK(officecli-sdk)与 Node SDK(@officecli/sdk)；跨平台 mac/linux/windows 各架构；确定性 JSON 错误码</li>
+</ul>
+
+</details>
+
+<a name="supervision" id="supervision"></a>
+<details>
+<summary><b>supervision</b> · <code>roboflow/supervision</code> — Roboflow 出品的 Python 计算机视觉工具库（检测/追踪/标注/数据集）</summary>
+
+<ul>
+<li><strong>仓库</strong>：<a href="https://github.com/roboflow/supervision">https://github.com/roboflow/supervision</a></li>
+<li><strong>定位</strong>：计算机视觉工程中需要可复用的加载、标注、追踪与数据集处理代码；supervision 以模型无关设计，无缝接入 Ultralytics/Transformers/MMDetection 等，覆盖从推理结果处理到数据集格式转换的全流程。</li>
+<li><strong>能力/特性</strong>：模型连接器 | 标注器(BoxAnnotator 等) | 数据集工具(加载/切分/合并/保存) | 追踪与区域计数 | 教程/cheatsheet/cookbooks</li>
+<li><strong>用法</strong>：
+<ul>
+<li>安装：<code>pip install supervision</code></li>
+<li>推理：<code>sv.Detections.from_ultralytics(result)</code></li>
+<li>标注：<code>box_annotator.annotate(scene=image, detections=detections)</code></li>
+<li>数据集：<code>sv.DetectionDataset.from_coco(...)</code></li>
+</ul>
+</li>
+<li><strong>要点</strong>：语言 Python(&gt;=3.9)；模型无关；MIT；PyPI 周下载量高；配套 notebooks/inference/autodistill/maestro 生态</li>
+</ul>
+
+</details>
+
+<a name="prime-agent" id="prime-agent"></a>
+<details>
+<summary><b>Prime Agent</b> · <code>PrimeIntellect-ai/prime-agent</code> — 自进化的 RLM 编码/研究智能体运行时，含持久 Python 环境与后台 daemon</summary>
+
+<ul>
+<li><strong>仓库</strong>：<a href="https://github.com/PrimeIntellect-ai/prime-agent">https://github.com/PrimeIntellect-ai/prime-agent</a></li>
+<li><strong>定位</strong>：大多数编码助手在单一聊天窗口内运行、上下文随会话消散；Prime Agent 以递归语言模型(RLM)把上下文当变量、子代理当函数调用，并用 Continual Harness 把补充提示/记忆/技能持久化，让有用的工作上下文跨越会话存活。</li>
+<li><strong>能力/特性</strong>：持久 Python REPL | 子代理(rlm.spawn) | /refine 自改进 | 可执行技能 | 后台 daemon | Agent 间通信 | 心跳/计划/自主模式</li>
+<li><strong>用法</strong>：
+<ul>
+<li>安装：`curl .../install.sh</li>
+<li>sh`(mac/linux)</li>
+<li>启动：<code>prime-agent</code></li>
+<li>会话：<code>prime-agent agents</code>/<code>attach</code>/<code>--resume</code></li>
+<li>状态：<code>prime-agent status</code></li>
+<li>修复：<code>prime-agent doctor</code></li>
+</ul>
+</li>
+<li><strong>要点</strong>：语言 TypeScript(Node.js)；MIT；RLM 编程模型(prompt-as-variable)；/autonomous 有界自主模式；基于 pi 构建；适合长任务/评测</li>
+</ul>
+
+</details>
+
+<a name="hindsight" id="hindsight"></a>
+<details>
+<summary><b>Hindsight</b> · <code>vectorize-io/hindsight</code> — 为 AI Agent 提供能随时间持续学习的长期记忆系统（而非只做对话历史召回）。</summary>
+
+<ul>
+<li><strong>仓库</strong>：<a href="https://github.com/vectorize-io/hindsight">https://github.com/vectorize-io/hindsight</a></li>
+<li><strong>定位</strong>：传统 agent 记忆多停留在「召回对话历史」，无法积累经验。Hindsight 用仿生数据结构（世界事实 / 经历 / 观察 / 心智模型）组织记忆，让 agent 从经验形成信念并据反馈持续调整行为；面向构建编码代理（Claude Code、Codex、Cursor 等）与自主任务型 AI Agent（如 AI 员工）的开发者。</li>
+<li><strong>能力/特性</strong>：retain / recall / reflect 三操作：recall 并行跑语义、BM25、图、时间四种检索再用互逆排序融合 + 交叉编码器重排；后台把零散事实 consolidate 成 observations（带证据与置信计数）与 mental models（数据库直读的已定论知识）</li>
+<li><strong>用法</strong>：
+<ul>
+<li>Docker（推荐）：<code>docker run -it --pull always --name hindsight -p 8888:8888 -p 9999:9999 -e HINDSIGHT_API_LLM_API_KEY=$OPENAI_API_KEY -v hindsight-data:/home/hindsight/.pg0 ghcr.io/vectorize-io/hindsight:latest</code></li>
+<li>裸机：<code>pip install hindsight-api &amp;&amp; hindsight-api</code>（API 默认 8888，UI 9999）</li>
+<li>客户端：<code>pip install hindsight-client</code> / <code>npm install @vectorize-io/hindsight-client</code> / <code>curl -fsSL https://hindsight.vectorize.io/get-cli</code> 后执行其中的 bash 安装脚本</li>
+<li>编码代理一键接入：<code>npx @vectorize-io/hindsight-coding-agents install all</code></li>
+</ul>
+</li>
+<li><strong>要点</strong>：记忆存于 <code>banks</code>，每 bank 内置一个 MCP 端点 <code>http://localhost:8888/mcp/{bank_id}/</code>；LLM 支持 25+ 提供商（openai / anthropic / gemini / deepseek / ollama 等），存储后端 PostgreSQL+pgvector 或 Oracle AI Database 23ai；提供 Python / Node / Go / CLI 客户端与 <code>hindsight-litellm</code> 两行代码包装现有 OpenAI 客户端</li>
+</ul>
+
+</details>
+
+<a name="cli-anything" id="cli-anything"></a>
+<details>
+<summary><b>CLI-Anything</b> · <code>HKUDS/CLI-Anything</code> — 把任意软件自动改造成 AI Agent 可直接调用的命令行工具。</summary>
+
+<ul>
+<li><strong>仓库</strong>：<a href="https://github.com/HKUDS/CLI-Anything">https://github.com/HKUDS/CLI-Anything</a></li>
+<li><strong>定位</strong>：AI Agent 擅长推理却不擅长操作真实专业软件，现有方案多依赖脆弱的 UI 自动化或阉割版重写、丢失大部分能力。CLI-Anything 用全自动 7 阶段流水线，把任意带代码库的专业软件自动生成为「代理原生」命令行工具——直连真实后端、零截图零 RPA（机器人流程自动化）、输出结构化 JSON；面向想给 Claude Code/Cursor/Codex 等编码代理接上真实生产力软件的开发者，也面向代理自身（CLI-Hub 元技能让代理自主发现/安装/使用 CLI）。</li>
+<li><strong>能力/特性</strong>：7 阶段流水线自动完成架构设计、实现、测试规划与文档；生成的 CLI 用 <code>pip install -e .</code> 即上 PATH，无配置包裹；智能会话管理（撤销/重做 + 统一 REPL）；2,280+ 测试在 18 款主流软件上验证</li>
+<li><strong>用法</strong>：
+<ul>
+<li>安装 CLI-Hub：<code>pip install cli-anything-hub</code></li>
+<li>元技能：<code>npx skills add HKUDS/CLI-Anything --skill cli-hub-meta-skill -g -y</code></li>
+<li>Claude Code：<code>/plugin marketplace add HKUDS/CLI-Anything</code> 后 <code>/plugin install cli-anything</code></li>
+<li>为某软件生成 CLI：<code>cd &lt;software&gt;/agent-harness &amp;&amp; pip install -e .</code>（或 Claude Code 里 <code>/cli-anything ./gimp</code>）</li>
+</ul>
+</li>
+<li><strong>要点</strong>：CLI-Hub 是现成 CLI 注册表：<code>cli-hub list / search / install / launch</code>；适配 Claude Code、Cursor、Pi、OpenClaw、Codex、Hermes 等编码代理，兼容 SKILL 协议；已覆盖 Blender、LibreOffice、FFmpeg、GIMP、Audacity 等 18+ 款软件</li>
+</ul>
+
+</details>
+
+<a name="vibe-coding-cn" id="vibe-coding-cn"></a>
+<details>
+<summary><b>Vibe Coding CN</b> · <code>2025Emma/vibe-coding-cn</code> — 中文圈的 Vibe Coding 方法论指南（道法术器）：规划驱动 + 模块化的 AI 结对编程全流程，附工具链与提示词模板</summary>
+
+<ul>
+<li><strong>仓库</strong>：<a href="https://github.com/2025Emma/vibe-coding-cn">https://github.com/2025Emma/vibe-coding-cn</a></li>
+<li><strong>定位</strong>：中文圈的 Vibe Coding（凭直觉与 AI 结对写代码的开发方式）方法论指南，组织成四层结构：道（理念）→ 法（流程）→ 术（技巧）→ 器（工具清单）。核心主张是「规划驱动 + 模块化」：先让 AI 出方案、确认后再动手，而非边聊边写；附编码模型分级参考、项目目录模板与提示词库。</li>
+<li><strong>能力/特性</strong>：完整工作流方法论（元方法论 + 道 / 法 / 术 / 器）| 器·工具四小节：IDE &amp; 终端、AI 模型 &amp; 服务、开发与辅助工具、资源与模板 | 编码模型性能分级参考 | 通用项目架构模板 + 项目目录结构概览 | 提示词库 / 元提示词（在线表格）| i18n 简体中文 / English 双版本 | Telegram 交流群与频道</li>
+<li><strong>用法</strong>：
+<ul>
+<li>读法：按「道 → 法 → 术 → 器」顺序过一遍方法论，再按需取「器」里的工具清单与模板</li>
+<li>起步：新建项目后按模板建目录，在终端打开 Claude Code 或 Codex CLI 用 <code>/init</code> 生成引导规则</li>
+<li>卡壳：Claude Code 用 <code>/rewind</code> 回退；常用 <code>/clear</code> 或 <code>/compact</code>（保留历史对话）；省时大法（风险自负）：<code>claude --dangerously-skip-permissions</code> 或 <code>codex --yolo</code></li>
+<li>模型分级：README 的「编码模型性能分级参考」给选型参考</li>
+</ul>
+</li>
+<li><strong>要点</strong>：MIT 开源；GitHub 语言统计显示 Python（附属脚本，本体为 Markdown 文档）；统计（2026-09-22 取）：约 22992 Star / 2422 Fork / 8 open issues / 106 watchers；体量约 28 MB；⚠️ 仓库 2025-12-17 创建后零推送（pushed_at 即创建当天），静态清单但 Star 持续上涨；⚠️ 作者关系：GitHub API <code>fork: false</code>（非 GitHub fork）；README 自述「入门指南这里是原作者的，不是我写的」，贡献 / Issue / PR 链接全部指向原作者 <code>tukuaiai/vibe-coding-cn</code>——本仓库为转载续更版，此处如实记录</li>
+</ul>
+
+</details>
+
+<a name="awesome-vibe-coding" id="awesome-vibe-coding"></a>
+<details>
+<summary><b>Awesome Vibe Coding</b> · <code>filipecalegario/awesome-vibe-coding</code> — vibe coding 资源大列表（Awesome List）：12 类工具 / 文档 / 社区全覆盖，五语种并行维护</summary>
+
+<ul>
+<li><strong>仓库</strong>：<a href="https://github.com/filipecalegario/awesome-vibe-coding">https://github.com/filipecalegario/awesome-vibe-coding</a></li>
+<li><strong>定位</strong>：vibe coding 领域的 Awesome List（按主题分类的资源大列表，开源社区惯例叫法），由一位巴西教授维护的索引仓库：12 个分类覆盖从浏览器工具、IDE、插件到 CLI 与社区；最大特色是英 / 葡 / 韩 / 中 / 日五个语种 README 并行维护，中文读者可直接读 <code>README-CN.md</code>。</li>
+<li><strong>能力/特性</strong>：12 分类：概念介绍 / Browser-based Tools / IDE 与编辑器 / Mobile Apps / Plugins &amp; Extensions / Local Apps / Command Line Tools / AI 编码任务管理 / AI 编码文档 / 社区与职位板 / 新闻与社交媒体 / Contribute | 五语种 README：English / Português / 한국어 / 中文（README-CN.md）/ 日本語 | 条目带 🔥 热度标记 | 收录条目示例：Bolt.new、Cursor、anthropics/claude-code</li>
+<li><strong>用法</strong>：
+<ul>
+<li>当索引用：按分类浏览，需要某类工具（如 CLI 类 agent）时先看对应章节再点出去</li>
+<li>想投稿：读 CONTRIBUTING.md 后发 Issue / PR（现积压 185 个 open issues）</li>
+<li>中文读者直接看 <code>README-CN.md</code></li>
+</ul>
+</li>
+<li><strong>要点</strong>：CC0-1.0（⚠️ README 无 License 章节，LICENSE 文件为 CC0-1.0，GitHub API 检测一致——如实记录差异）；纯 Markdown（GitHub 语言统计为 null）；体量仅 221 KB；统计（2026-09-22 取）：约 5271 Star / 696 Fork / 185 open issues / 59 watchers；仓库创建 2025-03-13、最后内容推送 2026-04-16（约 5 个月前，更新趋缓）；topics 含 awesome-list / vibe-coding / cursor / lovable 等</li>
+</ul>
+
+</details>
+
+<a name="project-based-learning" id="project-based-learning"></a>
+<details>
+<summary><b>Project-Based Learning</b> · <code>practical-tutorials/project-based-learning</code> — 精选的从零构建项目式编程教程索引（awesome list）</summary>
+
+<ul>
+<li><strong>仓库</strong>：<a href="https://github.com/practical-tutorials/project-based-learning">https://github.com/practical-tutorials/project-based-learning</a></li>
+<li><strong>定位</strong>：开发者想通过动手从零构建真正理解技术底层，却苦于资料零散；本仓库按技术分类汇总 30+ 类（渲染器/数据库/OS/编译器/Web 服务器等）的高质量分步教程链接，社区可 PR 贡献。</li>
+<li><strong>能力/特性</strong>：30+ 技术分类 | 每类多语言教程(C/C++/Python/Go/Rust/JS) | 文章/视频/代码库 | 社区贡献(PR/Issue)</li>
+<li><strong>用法</strong>：
+<ul>
+<li>浏览：<code>git clone https://github.com/practical-tutorials/project-based-learning.git</code> 后阅读 README（链接列表，无运行命令）</li>
+</ul>
+</li>
+<li><strong>要点</strong>：载体 Markdown(README)；awesome-list 性质；2026 引入 README-as-data CI(check_readme.py 校验链接/去重/死链周扫)；无主语言</li>
+</ul>
+
+</details>
+
+<a name="ai-agent-book" id="ai-agent-book"></a>
+<details>
+<summary><b>深入理解 AI Agent</b> · <code>bojieli/ai-agent-book</code> — 开源教材《深入理解 AI Agent：设计原理与工程实践》（含 PDF 与 109 实验）</summary>
+
+<ul>
+<li><strong>仓库</strong>：<a href="https://github.com/bojieli/ai-agent-book">https://github.com/bojieli/ai-agent-book</a></li>
+<li><strong>定位</strong>：市面缺乏把 AI Agent 从原理讲到工程实战、且配套可运行实验的中文系统教材；本书围绕 Agent = LLM + 上下文 + 工具 用 10 章展开，正文、配图与 109 个配套实验全部开源，可亲手跑通。</li>
+<li><strong>能力/特性</strong>：10 章正文 | 109 配套实验(本地/复现轨道) | 15 语言译本 | 电子书(PDF/EPUB/在线) | 附录 22 外部仓库 | 姊妹篇《AI Infra》</li>
+<li><strong>用法</strong>：
+<ul>
+<li>阅读：bojieli.github.io/ai-agent-book/astro/</li>
+<li>编译 EPUB：见 EPUB 构建说明</li>
+<li>编译 PDF：<code>cd book &amp;&amp; bash build_pdf.sh</code>(需 pandoc/xelatex/ElegantBook)</li>
+<li>实验：<code>uv run python chapter1/context/main.py</code></li>
+</ul>
+</li>
+<li><strong>要点</strong>：语言 Markdown(书稿)+Python(实验, 3.11-3.13)；作者 李博杰；CC 许可；2.0 版重组章节；支持多语言翻译与社区贡献</li>
+</ul>
+
+</details>
+
+<a name="build-your-own-x" id="build-your-own-x"></a>
+<details>
+<summary><b>Build Your Own X</b> · <code>codecrafters-io/build-your-own-x</code> — codecrafters 维护的从零重建你最爱的技术分步教程合集</summary>
+
+<ul>
+<li><strong>仓库</strong>：<a href="https://github.com/codecrafters-io/build-your-own-x">https://github.com/codecrafters-io/build-your-own-x</a></li>
+<li><strong>定位</strong>：仅会用不懂底层实现是学习瓶颈；本仓库以 Feynman 无法创造即未理解为信条，按 30+ 类技术（3D 渲染器/区块链/DB/OS/神经网络/Web 浏览器等）汇总分步指南，帮助学习者通过重建真正掌握原理。</li>
+<li><strong>能力/特性</strong>：30+ 技术分类 | 每类多语言教程 | 文章/视频/代码库 | 社区贡献(PR/Issue) | 待审提交 review</li>
+<li><strong>用法</strong>：
+<ul>
+<li>浏览：<code>git clone https://github.com/codecrafters-io/build-your-own-x.git</code> 后读 README（链接列表，无运行命令）</li>
+</ul>
+</li>
+<li><strong>要点</strong>：载体 Markdown(README)；awesome-list 性质；由 codecrafters-io 维护（Build-your-own-X 课程同源）；覆盖 C/C++/Python/Go/Rust/JS 等</li>
+</ul>
+
+</details>
+
+<a name="awesome-design-md" id="awesome-design-md"></a>
+<details>
+<summary><b>Awesome DESIGN.md</b> · <code>VoltAgent/awesome-design-md</code> — 汇集各大品牌设计系统的 DESIGN.md 文件，供 AI 直接生成一致 UI</summary>
+
+<ul>
+<li><strong>仓库</strong>：<a href="https://github.com/VoltAgent/awesome-design-md">https://github.com/VoltAgent/awesome-design-md</a></li>
+<li><strong>定位</strong>：Google Stitch 提出的 DESIGN.md 是纯文本设计系统文档，AI Agent 放入项目根即懂 UI 该长什么样；本仓库提供从真实网站提取的即用 DESIGN.md 集合，省去从零编写的麻烦。</li>
+<li><strong>能力/特性</strong>：品牌设计系统集合 | 纯 Markdown(DESIGN.md) | 放入项目根即生效 | 兼容 Google Stitch/任意 AI 编码 agent</li>
+<li><strong>用法</strong>：
+<ul>
+<li>浏览仓库选取某品牌 DESIGN.md 放入项目根目录即可（链接/文档集合，无安装命令）</li>
+</ul>
+</li>
+<li><strong>要点</strong>：载体 Markdown；概念源自 Google Stitch；与 AGENTS.md(如何构建)/DESIGN.md(长啥样) 分工；awesome-list 性质；无主语言</li>
+</ul>
+
+</details>
+
+<a name="ai-engineering-from-scratch" id="ai-engineering-from-scratch"></a>
+<details>
+<summary><b>AI Engineering From Scratch</b> · <code>rohitg00/ai-engineering-from-scratch</code> — 从零构建 AI 的免费开源课程（20 阶段 523 课，含技能/MCP 产出）</summary>
+
+<ul>
+<li><strong>仓库</strong>：<a href="https://github.com/rohitg00/ai-engineering-from-scratch">https://github.com/rohitg00/ai-engineering-from-scratch</a></li>
+<li><strong>定位</strong>：现有 AI 学习材料零散、不成体系，导致只会调 API 不懂原理；本课程以脊柱式 20 阶段体系（环境到数学到自主智能体到多智能体到生产部署），每课产出可复用工件（提示词/技能/智能体/MCP），可备考 Claude 认证。</li>
+<li><strong>能力/特性</strong>：20 阶段(Phase 0-19) | 523 课(约 342h) | 多语言实现(Python/TS/Rust/Julia) | 统一教学循环 | AI 导师技能 | 六卷电子书 | i18n(含中文) | 认证学院</li>
+<li><strong>用法</strong>：
+<ul>
+<li>克隆：<code>git clone ... &amp;&amp; cd ... &amp;&amp; python3 phases/00-.../verify.py --route beginner</code></li>
+<li>装技能：<code>npx skills add rohitg00/ai-engineering-from-scratch</code></li>
+<li>全装：<code>python3 scripts/install_skills.py &lt;target&gt;</code></li>
+<li>电子书：<code>python3 scripts/build_book.py</code></li>
+</ul>
+</li>
+<li><strong>要点</strong>：语言 Python(核心)/TS/Rust/Julia(教学)；免费开源；每课 SHIP IT 产出 SKILL.md/agent/MCP；含 MCP 专项 17 课、Agent Skills 专项 5 课</li>
+</ul>
+
+</details>
+
+</div>
+<script>
+  function markTarget() {
+    document.querySelectorAll(".flash").forEach(function (e) { e.classList.remove("flash"); });
+    var h = decodeURIComponent(location.hash || "").replace(/^#/, "");
+    if (!h) return;
+    var a = document.getElementById(h);
+    if (!a) return;
+    var box = a.nextElementSibling;
+    while (box && box.nodeType === 3) box = box.nextElementSibling;
+    if (box && box.tagName === "DETAILS") {
+      box.classList.add("flash");
+      if (!box.open) box.open = true;
+    }
+  }
+  window.addEventListener("hashchange", markTarget);
+  markTarget();
+</script>
+<script>
+(function () {
+  var input = document.getElementById("ghSearch");
+  if (!input) return;
+  var tbody = document.querySelector("table tbody");
+  if (!tbody) return;
+  var rows = Array.prototype.slice.call(tbody.querySelectorAll("tr"));
+  var anchors = Array.prototype.slice.call(document.querySelectorAll("a[name][id]"));
+  var map = {};
+  anchors.forEach(function (a) {
+    var n = a.getAttribute("name");
+    if (n !== a.getAttribute("id")) return;
+    var box = a.nextElementSibling;
+    while (box && box.nodeType === 3) box = box.nextElementSibling;
+    if (!box || box.tagName !== "DETAILS") return;
+    map[n] = { anchor: a, details: box, tr: null, text: "" };
+  });
+  rows.forEach(function (tr) {
+    var link = tr.querySelector('a[href^="#"]');
+    if (!link) return;
+    var slug = link.getAttribute("href").slice(1);
+    if (map[slug]) map[slug].tr = tr;
+  });
+  Object.keys(map).forEach(function (slug) {
+    var m = map[slug];
+    m.text = ((m.tr ? m.tr.textContent : "") + " " + (m.details ? m.details.textContent : "")).toLowerCase();
+  });
+  var groupHeaders = rows.filter(function (tr) { return !tr.querySelector('a[href^="#"]'); });
+  var total = Object.keys(map).length;
+  var label = document.getElementById("ghCount");
+  function applyFilter(raw) {
+    var q = (raw || "").trim().toLowerCase();
+    var visible = 0;
+    Object.keys(map).forEach(function (slug) {
+      var m = map[slug];
+      var show = !q || m.text.indexOf(q) !== -1;
+      if (m.tr) m.tr.style.display = show ? "" : "none";
+      if (m.details) m.details.style.display = show ? "" : "none";
+      if (m.anchor) m.anchor.style.display = show ? "" : "none";
+      if (show) visible++;
+    });
+    var cur = null, any = false;
+    for (var i = 0; i < rows.length; i++) {
+      var tr = rows[i];
+      if (groupHeaders.indexOf(tr) !== -1) {
+        if (cur) cur.style.display = any ? "" : "none";
+        cur = tr; any = false; tr.style.display = "none";
+      } else if (tr.style.display !== "none") {
+        any = true;
+      }
+    }
+    if (cur) cur.style.display = any ? "" : "none";
+    if (label) label.textContent = q ? ("匹配 " + visible + " / " + total) : "";
+  }
+  input.addEventListener("input", function () { applyFilter(this.value); });
+  input.addEventListener("keydown", function (e) { if (e.key === "Escape") { this.value = ""; applyFilter(""); } });
+})();
+</script>
+</body>
+</html>
