@@ -4,6 +4,8 @@
 
 **把平时收集、调研过的 GitHub 项目，按统一格式整理成一份零基础友好的静态网页索引**
 
+*A curated, offline-friendly Chinese index of 61 GitHub projects — AI tools, agent skills, MCP, platforms & learning resources.*
+
 ![Total Projects](https://img.shields.io/badge/收录项目-61-0969da) ![Static](https://img.shields.io/badge/纯静态-零依赖-2da44e) ![Offline](https://img.shields.io/badge/离线可用-双击即开-8250df) ![Maintained](https://img.shields.io/badge/AI技能自动维护-manage--skill-f0883e)
 
 </div>
@@ -26,6 +28,8 @@
 
 ## 🚀 快速开始
 
+**✨ 在线预览（无需下载）**：**[GitHub Pages 实时版 →](https://novaapex.github.io/my-github-list/)**
+
 1. 下载本仓库中的 `github.html`
 2. 用任意现代浏览器打开即可（无需服务器、无需联网）
 3. 顶部搜索框可当"工具速查表"用：想找某类工具（如 `docker`、`MCP`、`TypeScript`）直接搜
@@ -44,6 +48,12 @@
 | 🌐 平台与框架 | 15 |
 | 📚 学习资料与方法论 | 8 |
 | **合计** | **61** |
+
+## 🤝 参与完善
+
+- 发现值得收录的项目？[提个 Issue](https://github.com/NovaApex/my-github-list/issues) 告诉我仓库地址即可
+- **收录标准**：官方文档 / README 可查证、对开发者有实际价值、与 AI 工具链 / Agent 生态 / 开发效率相关
+- Star 数、版本号等数据过期或事实有误，同样欢迎指出
 
 ## 🤖 manage-skill：AI 自动维护体系
 
@@ -105,5 +115,7 @@ skills/manage-skill/
 <div align="center">
 
 **⭐ 持续更新中 · 由 [manage-skill](skills/manage-skill/SKILL.md) 驱动维护**
+
+**📄 License: [CC0-1.0](LICENSE) · 自由使用、转载与二次整理**
 
 </div>
