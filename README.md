@@ -28,7 +28,7 @@
 
 ## 🚀 快速开始
 
-**✨ 在线预览（无需下载）**：**[GitHub Pages 实时版 →](https://novaapex.github.io/my-github-list/)**
+**✨ 在线预览（无需下载）**：**[GitHub Pages 实时版 →](https://novaapex.github.io/awesome-ai-ecosystem-cn/)**
 
 1. 下载本仓库中的 `github.html`
 2. 用任意现代浏览器打开即可（无需服务器、无需联网）
@@ -51,7 +51,7 @@
 
 ## 🤝 参与完善
 
-- 发现值得收录的项目？[提个 Issue](https://github.com/NovaApex/my-github-list/issues) 告诉我仓库地址即可
+- 发现值得收录的项目？[提个 Issue](https://github.com/NovaApex/awesome-ai-ecosystem-cn/issues) 告诉我仓库地址即可
 - **收录标准**：官方文档 / README 可查证、对开发者有实际价值、与 AI 工具链 / Agent 生态 / 开发效率相关
 - Star 数、版本号等数据过期或事实有误，同样欢迎指出
 
