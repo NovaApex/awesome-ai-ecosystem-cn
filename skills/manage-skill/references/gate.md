@@ -29,6 +29,7 @@
 - 事实性信息（License、平台支持、命令、数据）必须来自 README/Release/API 原文，禁止 AI 转述编造；拿不准就标注"待核实"
 - 数字类信息（Star 数、版本号）必须带取数日期
 - ⚠️ 标记的异常信息（如仓库停更、转载）不得删改美化
+- **更新类变更**（对比更新既有条目）：只做增量补充/修正，不得丢失原有有效信息；旧统计数据应更新并替换取数日期，而非删除后不补
 
 ## 重点 3：HTML 结构正确
 
@@ -36,7 +37,10 @@
 
 - [ ] `<details>` 放进了正确的分类分区 `<section class="cat">` 内（5 类：dev / tool / skill / plat / learn，判断依据是项目性质而非个人偏好）
 - [ ] `id` 为英文短横线 slug，且全文件唯一（重复 id 会破坏搜索与锚点）
-- [ ] 四个 data 属性齐全且正确：`data-cat`（分类 key）、`data-name`（项目名）、`data-repo`（owner/repo）、`data-blurb`（与 summary 钩子一致）
+- [ ] 四个基础 data 属性齐全且正确：`data-cat`（分类 key）、`data-name`（项目名）、`data-repo`（owner/repo）、`data-blurb`（与 summary 钩子一致）
+- [ ] 新增条目带 `data-added="YYYY-MM-DD"`（收录日期，格式正确）；更新旧条目时应顺手补上
+- [ ] 「🆕 本周新增」速览行由页面脚本自动渲染：核对新增条目 `data-added` 日期正确即可，速览行内容不做人工核对与改动
+- [ ] 页面结构资产未被破坏：`<style>`、两个 `<script>` 块、`<div id="weeklyNew">` 容器、`details` 的 `scroll-margin-top` 等保持原样（完整清单见 SKILL.md「页面结构资产地图」）
 - [ ] summary 行格式：`<b>项目名</b> · <a href="仓库地址"><code>owner/repo</code></a> — 钩子`
 - [ ] 新增/删除条目后，对应 `<h2>` 的分类计数、顶部 `<blockquote>` 的总数已同步更新
 - [ ] 未改动 `<style>`、搜索脚本、`<footer>` 维护说明等公共部分

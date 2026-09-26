@@ -3,7 +3,6 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="收录 61 个 GitHub 优质项目的中文速览索引：AI 工具 / Agent 技能 / MCP / 平台框架，纯静态、离线可用、支持全文搜索。">
 <title>GitHub 项目简介索引</title>
 <style>
   html { scroll-behavior: smooth; }
@@ -27,7 +26,7 @@
         padding: 12px 14px; overflow-x: auto; }
   pre code { background: none; padding: 0; }
   details { background: #fff; border: 1px solid #d0d7de; border-radius: 10px;
-            padding: 10px 16px; margin: 14px 0; }
+            padding: 10px 16px; margin: 14px 0; scroll-margin-top: 72px; }
   summary { cursor: pointer; font-size: 15px; padding: 6px 4px; border-radius: 6px; user-select: none; }
   summary:hover { background: #f6f8fa; }
   .flash { animation: flash 1.6s ease-out 1; }
@@ -52,6 +51,18 @@
   #backTop:hover { color: #0969da; border-color: #0969da; }
   footer { margin-top: 40px; padding-top: 16px; border-top: 1px solid #d0d7de;
            color: #656d76; font-size: 13px; }
+  .weekly { margin: 0 0 14px; padding: 10px 14px; background: #fff;
+    border: 1px solid #d0d7de; border-left: 4px solid #1a7f37; border-radius: 8px; font-size: 14px; }
+  .weekly .asof { color: #656d76; font-size: 12px; margin: 0 4px 0 6px; }
+  .weekly a { display: inline-block; margin: 2px 8px 2px 0; padding: 1px 10px;
+    border: 1px solid #b7e3c0; border-radius: 999px; background: #f6fff9;
+    font-size: 13px; font-weight: 500; }
+  .weekly a:hover { border-color: #1a7f37; color: #1a7f37; text-decoration: none; }
+  .weekly a .d { color: #656d76; font-size: 11px; font-weight: 400; margin-left: 6px; }
+  details.isnew { border-color: #1a7f3755; }
+  summary .nb { display: inline-block; margin: 0 8px 0 0; padding: 0 8px;
+    border-radius: 999px; background: #ddf4e4; color: #1a7f37;
+    font-size: 12px; font-weight: 600; line-height: 18px; vertical-align: 1px; }
   @media (max-width: 600px) { .searchbar input[type=search] { max-width: 100%; } }
 </style>
 </head>
@@ -59,8 +70,9 @@
 <div class="page">
 <h1>GitHub 项目简介索引</h1>
 <blockquote>
-<p><strong>这是什么</strong>：61 个 GitHub 项目的中文速览索引，按 5 大类分区、默认折叠——分类标题即目录，点开即浏览。<strong>怎么读</strong>：点顶部分类导航展开类别 → 扫每条摘要行的一句话 → 感兴趣的点开看细节（摘要行里的仓库名可点击直达 GitHub）；或直接用搜索，命中的分区会自动展开。</p>
+<p><strong>这是什么</strong>：62 个 GitHub 项目的中文速览索引，按 5 大类分区、默认折叠——分类标题即目录，点开即浏览。<strong>怎么读</strong>：点顶部分类导航展开类别 → 扫每条摘要行的一句话 → 感兴趣的点开看细节（摘要行里的仓库名可点击直达 GitHub）；或直接用搜索，命中的分区会自动展开。</p>
 </blockquote>
+<div class="weekly" id="weeklyNew" hidden></div>
 <div class="searchbar">
   <div class="searchrow">
     <input type="search" id="ghSearch" placeholder="🔍 搜索项目名 / 仓库 / 简介 / 技术词（如 docker、MCP、TypeScript）" aria-label="搜索 GitHub 项目">
@@ -525,7 +537,7 @@ gradle buildGhidra                                  # 产物在 build/dist/
 </section>
 
 <section class="cat collapsed" id="cat-skill">
-<h2>🧩 Agent 技能、插件与组件（18）</h2>
+<h2>🧩 Agent 技能、插件与组件（19）</h2>
 <details id="i-have-adhd" data-cat="skill" data-name="i-have-adhd" data-repo="ayghri/i-have-adhd" data-blurb="为 ADHD 读者改写 AI 回复的输出风格 skill：动作优先、编号步骤、可见进度">
 <summary><b>i-have-adhd</b> · <a href="https://github.com/ayghri/i-have-adhd"><code>ayghri/i-have-adhd</code></a> — 为 ADHD 读者改写 AI 回复的输出风格 skill：动作优先、编号步骤、可见进度</summary>
 
@@ -896,6 +908,24 @@ claude plugin install sales@knowledge-work-plugins
 </ul>
 </li>
 <li><strong>要点</strong>：语言 Markdown(SKILL.md)+脚本；MIT；v2 实验版(简报推断/设计系统映射/GSAP 骨架/预检)；含 image-to-code、brandkit 等；框架无关</li>
+</ul>
+
+</details>
+
+<details id="impeccable" data-cat="skill" data-name="Impeccable" data-repo="pbakaus/impeccable" data-added="2026-09-26" data-blurb="给 AI 编码代理注入设计语言的规范 + 61 条反 AI slop 确定性检测规则（skill + CLI 双形态）">
+<summary><b>Impeccable</b> · <a href="https://github.com/pbakaus/impeccable"><code>pbakaus/impeccable</code></a> — 给 AI 编码代理注入设计语言的规范 + 61 条反 AI slop 确定性检测规则（skill + CLI 双形态）</summary>
+
+<ul>
+<li><strong>定位</strong>：AI 生成前端普遍陷入“AI slop”（紫色渐变、侧边描边、bounce 缓动、暗色发光等陈词滥调）；Impeccable 由 Paul Bakaus（jQuery UI 联合创始人）开发，以 1 个 skill + 24 个命令的设计语言规范约束 AI 编码代理，并用 61 条确定性检测规则兜底把关。</li>
+<li><strong>能力/特性</strong>：设计语言 skill + 24 命令 | 61 条确定性反模式检测器（AI slop + 通用设计质量：行长/内边距/触控目标/标题层级等）| 浏览器实时迭代 | CI 友好 JSON 输出 | ignores 白名单机制</li>
+<li><strong>用法</strong>：
+<ul>
+<li>安装：<code>npx impeccable install</code> → AI 工具内 <code>/impeccable init</code></li>
+<li>独立检测（无需 AI harness）：<code>npx impeccable detect src/</code>（支持目录/HTML 文件/URL）</li>
+<li>CI：<code>npx impeccable detect --json .</code>；白名单：<code>npx impeccable ignores add-value overused-font Inter --reason &quot;Brand font&quot;</code></li>
+</ul>
+</li>
+<li><strong>要点</strong>：语言 JavaScript + Rust 检测引擎二进制；官网 impeccable.style；Apache-2.0；⭐ 71.2k / 🍴 4.3k（2026-09-26 取）；2025-11 创建、2026-09 仍在活跃更新；与 taste-skill / UI UX Pro Max 同赛道，但唯一提供“确定性规则引擎”可脱离 AI 独立运行</li>
 </ul>
 
 </details>
@@ -1287,7 +1317,7 @@ orx paper &lt;arxiv-id-or-doi&gt;      # 拉论文（arXiv / DOI）
 <li>测试：<code>pnpm exec vitest run &lt;path&gt;</code></li>
 </ul>
 </li>
-<li><strong>要点</strong>：语言 TypeScript/JavaScript(pnpm workspace 全栈 server/ui/cli/shared)；含 Python 评估脚本；提供公开评估中心 pages.paperclip.ing/evals/；Contributor Handbook 30 页</li>
+<li><strong>要点</strong>：语言 TypeScript/JavaScript(pnpm workspace 全栈 server/ui/cli/shared)；含 Python 评估脚本；提供公开评估中心 pages.paperclip.ing/evals/；Contributor Handbook 30 页；MIT；⭐ 85,058 / 🍴 15,241（2026-09-26 取）</li>
 </ul>
 
 </details>
@@ -1539,6 +1569,94 @@ orx paper &lt;arxiv-id-or-doi&gt;      # 拉论文（arXiv / DOI）
   topBtn.addEventListener("click", function () {
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
+})();
+</script>
+<script>
+/* 本周新增速览：自然周（本周一 00:00 本地时间）起算，读取 data-added 自动渲染（独立块，不依赖上方脚本） */
+(function () {
+  var DAY = 86400000, now = new Date();
+  function localMidnight(s) {
+    var p = (s || "-").split("-");
+    if (p.length !== 3) return NaN;
+    var d = new Date(+p[0], +p[1] - 1, +p[2]);
+    return isNaN(d.getTime()) ? NaN : d.getTime();
+  }
+  var todayMid = new Date(now.getFullYear(), now.getMonth(), now.getDate()).getTime();
+  var weekStart = todayMid - ((now.getDay() + 6) % 7) * DAY; /* 周一 00:00 本地时间 */
+  function dayLabel(t) { /* 本周内：今天 / 昨天 / 周X */
+    var days = Math.round((todayMid - t) / DAY);
+    if (days <= 0) return "今天";
+    if (days === 1) return "昨天";
+    var wd = new Date(t).getDay();
+    return "周" + (wd === 0 ? "日" : "一二三四五六".charAt(wd - 1));
+  }
+  var fresh = [];
+  Array.prototype.slice.call(document.querySelectorAll("details[id][data-added]")).forEach(function (d) {
+    var t = localMidnight(d.getAttribute("data-added"));
+    if (isNaN(t) || t < weekStart) return;
+    fresh.push({ id: d.id, name: d.getAttribute("data-name") || d.id, blurb: d.getAttribute("data-blurb") || "", t: t });
+    d.classList.add("isnew");
+    var s = d.querySelector("summary");
+    if (s && !s.querySelector(".nb")) {
+      var b = document.createElement("span");
+      b.className = "nb";
+      b.textContent = "NEW";
+      s.insertBefore(b, s.firstChild);
+    }
+  });
+  var box = document.getElementById("weeklyNew");
+  if (!box) return;
+  fresh.sort(function (a, b) { return b.t - a.t; });
+  var pad = function (n) { return (n < 10 ? "0" : "") + n; };
+  var asof = now.getFullYear() + "-" + pad(now.getMonth() + 1) + "-" + pad(now.getDate());
+  box.textContent = "";
+  var title = document.createElement("strong");
+  title.textContent = "🆕 本周新增";
+  box.appendChild(title);
+  var asofEl = document.createElement("span");
+  asofEl.className = "asof";
+  asofEl.textContent = "（截至 " + asof + "）";
+  box.appendChild(asofEl);
+  if (fresh.length) {
+    fresh.forEach(function (f) {
+      var a = document.createElement("a");
+      a.href = "#" + f.id;
+      a.title = f.blurb;
+      a.textContent = f.name;
+      var ds = document.createElement("span");
+      ds.className = "d";
+      ds.textContent = "· " + dayLabel(f.t);
+      a.appendChild(ds);
+      box.appendChild(a);
+    });
+  } else {
+    var none = document.createElement("span");
+    none.style.color = "#656d76";
+    none.textContent = "本周暂无新增";
+    box.appendChild(none);
+  }
+  /* 点击接管：先展开再平滑滚动，修复"目标折叠中导致原生锚点跳转失败" */
+  box.addEventListener("click", function (e) {
+    var t = e.target;
+    var a = t.closest ? t.closest("a") : null;
+    if (!a) return;
+    var el = document.getElementById((a.getAttribute("href") || "").slice(1));
+    if (!el) return;
+    e.preventDefault();
+    var sec = el.closest("section.cat");
+    if (sec) sec.classList.remove("collapsed");
+    if (!el.open) el.open = true;
+    Array.prototype.slice.call(document.querySelectorAll(".flash")).forEach(function (n) {
+      n.classList.remove("flash");
+    });
+    el.classList.add("flash");
+    var href = a.getAttribute("href");
+    if (location.hash !== href) {
+      try { history.replaceState(null, "", href); } catch (err) { location.hash = href.slice(1); }
+    }
+    el.scrollIntoView({ behavior: "smooth", block: "start" });
+  });
+  box.hidden = false;
 })();
 </script>
 </body>
