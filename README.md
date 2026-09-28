@@ -1,6 +1,6 @@
-<div align="center">
-
 [![M8ven Score](https://m8ven.ai/badge/mcp/novaapex-awesome-ai-ecosystem-cn-1wh55i?v=b6fdf6c4f03f0485fafa8ac89be9b7d6)](https://m8ven.ai/mcp/novaapex-awesome-ai-ecosystem-cn-1wh55i)
+
+<div align="center">
 
 # 🧠 Awesome AI Ecosystem CN
 
