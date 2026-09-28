@@ -1,5 +1,3 @@
-[![M8ven Score](https://m8ven.ai/badge/mcp/novaapex-awesome-ai-ecosystem-cn-1wh55i?v=b6fdf6c4f03f0485fafa8ac89be9b7d6)](https://m8ven.ai/mcp/novaapex-awesome-ai-ecosystem-cn-1wh55i)
-
 <div align="center">
 
 # 🧠 Awesome AI Ecosystem CN
@@ -8,7 +6,7 @@
 
 *A self-maintaining, offline-first Chinese index of 62 hand-picked GitHub projects: AI dev tools · agent skills · platforms · learning resources.*
 
-![Projects](https://img.shields.io/badge/收录项目-62-0969da) ![Static](https://img.shields.io/badge/纯静态-零依赖-2da44e) ![Offline](https://img.shields.io/badge/离线可用-双击即开-8250df) ![Maintained](https://img.shields.io/badge/维护方式-Agent_Skill_流水线-f0883e)
+![Projects](https://img.shields.io/badge/收录项目-62-0969da) ![Static](https://img.shields.io/badge/纯静态-零依赖-2da44e) ![Offline](https://img.shields.io/badge/离线可用-双击即开-8250df) ![Maintained](https://img.shields.io/badge/维护方式-Agent_Skill_流水线-f0883e) [![M8ven Score](https://m8ven.ai/badge/mcp/novaapex-awesome-ai-ecosystem-cn-1wh55i?v=b6fdf6c4f03f0485fafa8ac89be9b7d6)](https://m8ven.ai/mcp/novaapex-awesome-ai-ecosystem-cn-1wh55i)
 
 [📖 在线阅读](https://novaapex.github.io/awesome-ai-ecosystem-cn/) · [⬇️ 下载单文件](./github.html) · [🤖 维护流水线](./skills/manage-skill/SKILL.md)
 
