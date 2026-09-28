@@ -1,5 +1,7 @@
 <div align="center">
 
+[![M8ven Score](https://m8ven.ai/badge/mcp/novaapex-awesome-ai-ecosystem-cn-1wh55i?v=b6fdf6c4f03f0485fafa8ac89be9b7d6)](https://m8ven.ai/mcp/novaapex-awesome-ai-ecosystem-cn-1wh55i)
+
 # 🧠 Awesome AI Ecosystem CN
 
 **62 个 AI 生态核心项目的中文速览索引 —— 一份"会自己维护自己"的 awesome list**
