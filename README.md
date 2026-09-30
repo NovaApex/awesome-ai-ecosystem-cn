@@ -2,11 +2,11 @@
 
 # 🧠 Awesome AI Ecosystem CN
 
-**62 个 AI 生态核心项目的中文速览索引 —— 一份"会自己维护自己"的 awesome list**
+**63 个 AI 生态核心项目的中文速览索引 —— 一份"会自己维护自己"的 awesome list**
 
-*A self-maintaining, offline-first Chinese index of 62 hand-picked GitHub projects: AI dev tools · agent skills · platforms · learning resources.*
+*A self-maintaining, offline-first Chinese index of 63 hand-picked GitHub projects: AI dev tools · agent skills · platforms · learning resources.*
 
-![Projects](https://img.shields.io/badge/收录项目-62-0969da) ![Static](https://img.shields.io/badge/纯静态-零依赖-2da44e) ![Offline](https://img.shields.io/badge/离线可用-双击即开-8250df) ![Maintained](https://img.shields.io/badge/维护方式-Agent_Skill_流水线-f0883e) [![M8ven Score](https://m8ven.ai/badge/mcp/novaapex-awesome-ai-ecosystem-cn-1wh55i?v=b6fdf6c4f03f0485fafa8ac89be9b7d6)](https://m8ven.ai/mcp/novaapex-awesome-ai-ecosystem-cn-1wh55i)
+![Projects](https://img.shields.io/badge/收录项目-63-0969da) ![Static](https://img.shields.io/badge/纯静态-零依赖-2da44e) ![Offline](https://img.shields.io/badge/离线可用-双击即开-8250df) ![Maintained](https://img.shields.io/badge/维护方式-Agent_Skill_流水线-f0883e) [![M8ven Score](https://m8ven.ai/badge/mcp/novaapex-awesome-ai-ecosystem-cn-1wh55i?v=b6fdf6c4f03f0485fafa8ac89be9b7d6)](https://m8ven.ai/mcp/novaapex-awesome-ai-ecosystem-cn-1wh55i)
 
 [📖 在线阅读](https://novaapex.github.io/awesome-ai-ecosystem-cn/) · [⬇️ 下载单文件](./github.html) · [🤖 维护流水线](./skills/manage-skill/SKILL.md)
 
@@ -26,7 +26,7 @@
 
 ## 📖 这是什么
 
-一个纯静态单文件 **`github.html`**，62 张项目卡片，每张固定五段结构：
+一个纯静态单文件 **`github.html`**，63 张项目卡片，每张固定五段结构：
 
 > **定位**（是什么、解决什么问题）→ **能力/特性** → **用法**（最小可运行示例）→ **要点**（License、Star/Fork + 取数日期、踩坑记录）
 
@@ -84,23 +84,23 @@ git clone https://github.com/NovaApex/awesome-ai-ecosystem-cn.git
 ## 🗂️ 仓库结构
 
 ```text
-├── github.html           # 全部内容：62 张卡片 + 搜索 + 本周新增速览（单文件）
+├── github.html           # 全部内容：63 张卡片 + 搜索 + 本周新增速览（单文件）
 ├── index.html            # 在线版跳转
 ├── skills/
 │   └── manage-skill/     # 维护流水线：SKILL.md（流程）+ gate.md（审查标准）
 └── README.md
 ```
 
-## 🧭 分类速览（62 个项目，截至 2026-09-26）
+## 🧭 分类速览（63 个项目，截至 2026-09-30）
 
 | 分类 | 数量 | 收录逻辑 |
 |---|---:|---|
 | 🛠️ AI 开发工具与运行环境 | 14 | 让 AI Agent 干活的基建：浏览器控制、代码审查、长期记忆、云开发环境 |
 | 🧰 领域专用工具 | 6 | 逆向、语音、视觉、法律基准等垂直领域利器 |
 | 🧩 Agent 技能、插件与组件 | 19 | 给编码 Agent 装专业技能：设计品味、安全审计、上下文治理、CAD 生成 |
-| 🌐 平台与框架 | 15 | Agent 治理与编排：多 Agent 管理、评估体系、控制平面 |
+| 🌐 平台与框架 | 16 | Agent 治理与编排：多 Agent 管理、评估体系、控制平面 |
 | 📚 学习资料与方法论 | 8 | 体系化知识：框架演进、方法论、实践指南 |
-| **合计** | **62** | |
+| **合计** | **63** | |
 
 ## 🤝 参与收录
 
